@@ -1,0 +1,63 @@
+{
+ "creation": "2022-03-09 13:26:54.094708",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parameters",
+  "units",
+  "specified_value",
+  "test_method",
+  "observation_value",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "parameters",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parameters"
+  },
+  {
+   "fieldname": "units",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Units"
+  },
+  {
+   "fieldname": "specified_value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Specified Value"
+  },
+  {
+   "fieldname": "test_method",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Test Method"
+  },
+  {
+   "fieldname": "observation_value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Observation Value"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remarks"
+  }
+ ],
+ "istable": 1,
+ "modified": "2022-03-09 13:26:54.094708",
+ "modified_by": "Administrator",
+ "module": "bindal_qc",
+ "name": "Masterbatch QC Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

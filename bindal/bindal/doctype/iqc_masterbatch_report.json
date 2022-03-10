@@ -1,0 +1,128 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2022-03-09 13:24:23.869593",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "technical_data_sheet_of_master_batch_section",
+  "material_description",
+  "purchase_receipt_no",
+  "purchase_receipt_date",
+  "mfg_date",
+  "column_break_5",
+  "quantity",
+  "batch_number",
+  "master_batch_code",
+  "section_break_9",
+  "masterbatch_qc_items",
+  "section_break_11",
+  "prepared_by",
+  "column_break_13",
+  "approved_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "IQC-"
+  },
+  {
+   "fieldname": "technical_data_sheet_of_master_batch_section",
+   "fieldtype": "Section Break",
+   "label": "TECHNICAL DATA SHEET OF MASTER BATCH"
+  },
+  {
+   "fieldname": "material_description",
+   "fieldtype": "Data",
+   "label": "Material Description"
+  },
+  {
+   "fieldname": "purchase_receipt_no",
+   "fieldtype": "Data",
+   "label": "Purchase Receipt No."
+  },
+  {
+   "fieldname": "purchase_receipt_date",
+   "fieldtype": "Date",
+   "label": "Purchase Receipt Date"
+  },
+  {
+   "fieldname": "mfg_date",
+   "fieldtype": "Date",
+   "label": "MFG. Date"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Data",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "batch_number",
+   "fieldtype": "Data",
+   "label": "Batch Number"
+  },
+  {
+   "fieldname": "master_batch_code",
+   "fieldtype": "Data",
+   "label": "Master Batch Code"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "masterbatch_qc_items",
+   "fieldtype": "Table",
+   "label": "Masterbatch QC Items",
+   "options": "Masterbatch QC Items"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Data",
+   "label": "Prepared By"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By"
+  }
+ ],
+ "modified": "2022-03-09 13:24:49.009767",
+ "modified_by": "Administrator",
+ "module": "bindal_qc",
+ "name": "IQC Masterbatch Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

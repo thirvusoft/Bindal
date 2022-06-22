@@ -6,6 +6,7 @@ frappe.query_reports["ToDo Due and Overdue report"] = {
         "label": __("Todo Type"),
         "fieldtype": "Select",
         "options": ["Corporate"],
+        "default": "Corporate"
         },
 ],
 }

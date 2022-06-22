@@ -47,17 +47,18 @@ def execute(filters=None):
 		else:
 			number_of_days_overdue = 0
 		num_of_day = str(number_of_days_overdue) + " days"
-		data.append([todo_data['owner'],todo_data['pch_subject'],todo_data['priority'],todo_data['date'].strftime("%d-%m-%y"),todo_data['status'],todo_data['pch_frequency'],num_of_due_day,num_of_day
+		data.append([todo_data['name'],todo_data['owner'],todo_data['pch_subject'],todo_data['priority'],todo_data['date'].strftime("%d-%m-%y"),todo_data['status'],todo_data['pch_frequency'],num_of_due_day,num_of_day
             ])
 	return columns,data
 
 def fetching_po_details(pch_type):
-	t_data = frappe.db.sql("""select pch_type,owner,pch_subject,priority,date,status,pch_frequency from `tabToDo` where pch_type='"""+pch_type+"""'""", as_dict=1)
+	t_data = frappe.db.sql("""select name,pch_type,owner,pch_subject,priority,date,status,pch_frequency from `tabToDo` where pch_type='"""+pch_type+"""'""", as_dict=1)
 	return t_data
 
 def get_columns():
 	"""return columns"""
 	columns = [
+		_("Record ID")+"::100",
 		_("Allocate To")+"::100",
 		_("Subject")+"::100",
 		_("priority")+"::100",

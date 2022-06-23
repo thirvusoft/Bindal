@@ -1,10 +1,7 @@
 # Copyright (c) 2013, pavithra M R and contributors
 # For license information, please see license.txt
-from __future__ import unicode_literals
-from xml.etree.ElementTree import tostring
 import frappe
 from frappe import _, msgprint
-from frappe.utils import flt, getdate, comma_and
 from collections import defaultdict
 from datetime import datetime
 from datetime import date
@@ -52,7 +49,7 @@ def execute(filters=None):
 	return columns,data
 
 def fetching_po_details(pch_type):
-	t_data = frappe.db.sql("""select name,pch_type,owner,pch_subject,priority,date,status,pch_frequency from `tabToDo` where pch_type='"""+pch_type+"""'""", as_dict=1)
+	t_data = frappe.db.sql("""select name,owner,pch_subject,priority,date,status,pch_frequency from `tabToDo` where pch_type='"""+pch_type+"""'""", as_dict=1)
 	return t_data
 
 def get_columns():

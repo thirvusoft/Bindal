@@ -46,13 +46,7 @@ frappe.ui.form.on('Gate Entry', {
 	}
 	}
 	});
-frappe.ui.form.on('Gate Entry', {
-refresh:function(frm,cdt,cdn)
-	{
-		var d = locals[cdt][cdn];
-		frm.toggle_display("weightment_details_section", false);
-	   }
-	});
+
 frappe.ui.form.on('Gate Entry', {
 weighment_required:function(frm,cdt,cdn)
 	{
@@ -68,9 +62,6 @@ weighment_required:function(frm,cdt,cdn)
 	}
 	});
 	
-
-
-
 frappe.ui.form.on('Gate Entry', {
 type:function(frm,cdt,cdn)
 	{

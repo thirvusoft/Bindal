@@ -74,7 +74,8 @@ type:function(frm,cdt,cdn)
 	    d.document_details = " ";
 		frm.toggle_display("other_document_description", true);
 		frm.toggle_display("document_details", true);
-        frm.toggle_display("other_document_description_outward", false);
+    frm.toggle_display("other_document_description_outward", false);
+    frm.toggle_display("estimated_net_weight", false); 
 		}
 	    else if(d.type == "Outward")
 		{
@@ -84,6 +85,7 @@ type:function(frm,cdt,cdn)
 		frm.toggle_display("other_document_description_outward", true);
 		frm.toggle_display("other_document_description", false);
 		frm.toggle_display("document_details", true);
+   
 		}
 		else
 		{
@@ -91,7 +93,12 @@ type:function(frm,cdt,cdn)
 		frm.toggle_display("other_document_description_outward", false);
 		frm.toggle_display("other_document_description", false);
 		frm.toggle_display("document_details", false);
+    frm.toggle_display("estimated_net_weight", false);
 		}
+    if(d.type == "Outward" && d.supporting_document =="Delivery Note") 
+    {
+      frm.toggle_display("estimated_net_weight", true); 
+    }
 	}
 });
 	

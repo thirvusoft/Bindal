@@ -125,14 +125,17 @@ frappe.ui.form.on('Gate Entry', {
     var so_record_number = d.record_number;
     var so = fetch_so_child_items(so_record_number);
     console.log("so",so);
-   
+     
         for(var j=0;j<so.length;j++)
         {
         var child = cur_frm.add_child("item");
         frappe.model.set_value(child.doctype, child.name, "item_name",so[j]['item_name']);
         frappe.model.set_value(child.doctype, child.name, "uom",so[j]['uom']);
         frappe.model.set_value(child.doctype, child.name, "qty",so[j]['pending_qty']);
+       
+            
         }
+       
         frm.refresh_field("item");
     }
     if(d.type == "Outward" && d.supporting_document == "Delivery Note")
@@ -140,15 +143,18 @@ frappe.ui.form.on('Gate Entry', {
     console.log("njfjdnuh");
     var dn_record_number = d.record_number;
     var dn = fetch_dn_child_items(dn_record_number);
-    console.log("dn",dn);
-   
+    console.log("Delivery Note Item",dn);
+     var tot_weight = 0;
         for(var j=0; j<dn.length;j++)
         {
         var child = cur_frm.add_child("item");
         frappe.model.set_value(child.doctype, child.name, "item_name",dn[j]['item_name']);
         frappe.model.set_value(child.doctype, child.name, "uom",dn[j]['uom']);
         frappe.model.set_value(child.doctype, child.name, "qty",dn[j]['qty']);
+        tot_weight = dn[j]['total_weight'] + tot_weight;
         }
+        console.log("tot_weight",tot_weight)
+        cur_frm.set_value("estimated_net_weight",tot_weight);
         frm.refresh_field("item");
     }
     }  

@@ -26,6 +26,7 @@ def fetch_so_name(name):
 @frappe.whitelist()
 def fetch_dn_name(name):
 	print("name",name)
-	dn_item_details=frappe.db.sql("""select item_name,uom,qty,parent from `tabDelivery Note Item` where parent='"""+name+"""' """, as_dict=1)
+	#dn_item_details=frappe.db.sql("""select item_name,uom,qty,parent from `tabDelivery Note Item` where parent='"""+name+"""' """, as_dict=1)
+	dn_item_details=frappe.db.sql("""select item_name,uom,qty,weight_per_unit,total_weight,parent from `tabDelivery Note Item` where parent='"""+name+"""' """, as_dict=1)
 	print("dn_item_details",dn_item_details)
 	return dn_item_details

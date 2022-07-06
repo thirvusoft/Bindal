@@ -23,6 +23,7 @@
   "driver_name",
   "weighment_required",
   "column_break_6",
+  "estimated_net_weight",
   "vehicle_type_and_model",
   "driver_number",
   "weightment_details_section",
@@ -170,9 +171,14 @@
    "fieldtype": "Table",
    "label": "Items",
    "options": "PO Item"
+  },
+  {
+   "fieldname": "estimated_net_weight",
+   "fieldtype": "Data",
+   "label": "Estimated Net Weight"
   }
  ],
- "modified": "2022-07-05 15:26:18.404185",
+ "modified": "2022-07-06 16:44:09.490616",
  "modified_by": "Administrator",
  "module": "bindal",
  "name": "Gate Entry",

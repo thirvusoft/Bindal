@@ -1,0 +1,198 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2022-06-24 10:53:14.728216",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "branch",
+  "bh",
+  "type",
+  "supporting_document",
+  "record_number",
+  "column_break_7",
+  "other_document_description",
+  "other_document_description_outward",
+  "document_details",
+  "section_break_7",
+  "get_items",
+  "item",
+  "section_break_3",
+  "vehicle_number",
+  "driver_name",
+  "weighment_required",
+  "column_break_6",
+  "vehicle_type_and_model",
+  "driver_number",
+  "weightment_details_section",
+  "types",
+  "date_time",
+  "column_break_16",
+  "weight",
+  "weighbridge",
+  "weighbridge_document"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nInward\nOutward"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vehicle_number",
+   "fieldtype": "Data",
+   "label": "Vehicle Number"
+  },
+  {
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_type_and_model",
+   "fieldtype": "Data",
+   "label": "Vehicle Type & Model"
+  },
+  {
+   "fieldname": "driver_number",
+   "fieldtype": "Data",
+   "label": "Driver Number"
+  },
+  {
+   "fieldname": "weighment_required",
+   "fieldtype": "Select",
+   "label": "Weighment Required",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "weightment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Weightment Details"
+  },
+  {
+   "fieldname": "types",
+   "fieldtype": "Data",
+   "label": "Types"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Date",
+   "label": "Date Time"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "weighbridge",
+   "fieldtype": "Data",
+   "label": "Weighbridge"
+  },
+  {
+   "fieldname": "weighbridge_document",
+   "fieldtype": "Data",
+   "label": "Weighbridge Document "
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "label": "Branch"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Record Number",
+   "options": "GATE-"
+  },
+  {
+   "fieldname": "supporting_document",
+   "fieldtype": "Link",
+   "label": "Supporting Document",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "record_number",
+   "fieldtype": "Dynamic Link",
+   "label": "Record Number",
+   "options": "supporting_document"
+  },
+  {
+   "fieldname": "bh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_document_description",
+   "fieldtype": "Select",
+   "label": "Other-Document description",
+   "options": "\nSupplier Invoice\nReturnable Gate Pass\nOther"
+  },
+  {
+   "fieldname": "document_details",
+   "fieldtype": "Data",
+   "label": "Document Details"
+  },
+  {
+   "fieldname": "other_document_description_outward",
+   "fieldtype": "Select",
+   "label": "Other-Document description",
+   "options": "\nReturnable Gate Pass\nNon-Returnable Gate Pass\nOther"
+  },
+  {
+   "fieldname": "get_items",
+   "fieldtype": "Button",
+   "label": "Get Items"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "PO Item"
+  }
+ ],
+ "modified": "2022-07-05 15:26:18.404185",
+ "modified_by": "Administrator",
+ "module": "bindal",
+ "name": "Gate Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

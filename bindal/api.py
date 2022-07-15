@@ -14,3 +14,10 @@ def fetch_acc_dimension_company():
     company=frappe.db.sql("""select company from `tabAccounting Dimension Detail` as adetail join `tabAccounting Dimension` as ad on ad.name = adetail.parent""", as_dict=1)
     print("company_details",company)
     return company 
+
+@frappe.whitelist()
+def send_email(email_address):
+    print("0000000000000000name",email_address)
+    frappe.sendmail(recipients=email_address,
+	subject="Subject of the email",
+	message= "Content of the email")

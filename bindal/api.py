@@ -1,8 +1,6 @@
 from __future__ import unicode_literals
 import frappe
 from datetime import datetime
-#import smtplib
-import config
 
 @frappe.whitelist()
 def get_stock_qty(item_code,warehouse):
@@ -44,9 +42,9 @@ def fetch_acc_dimension_company():
 
 @frappe.whitelist()
 def send_email_for_due_date():
-    """sending email to owner accoring to action date"""
     print("Inside Function")
-    if frappe.db.exists('Email Template', "Todo"):
+    if frappe.db.exists('Email Template','Todo'):
+        print("Inside Function")
         next_action_template = frappe.get_doc('Email Template', "Todo")
         next_actions_list = frappe.db.get_list('ToDo',fields=['*'],filters={"date":frappe.utils.nowdate(),"status":["!=","Closed"]})
         print("hai",next_actions_list)
@@ -55,9 +53,5 @@ def send_email_for_due_date():
             frappe.sendmail(
                 recipients= action.pch_recipient_list,
                 subject=next_action_template.pch_subject,
-                message=message,
-#               reference_doctype=action.parenttype,
-#                reference_name=action.parent
-            )
-    else: 
-        frappe.msgprint(('Please Configure "Opportunity Next Action" Email Template'))
+                message=message)
+   

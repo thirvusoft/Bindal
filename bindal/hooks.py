@@ -127,3 +127,8 @@ app_license = "MIT"
 # 	"Task": "bindal.task.get_dashboard_data"
 # }
 
+scheduler_events = {
+ 	"daily": [
+ 		"bindal.api.send_email_for_due_date"
+ 	]
+ }

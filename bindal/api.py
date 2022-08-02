@@ -42,16 +42,25 @@ def fetch_acc_dimension_company():
 
 @frappe.whitelist()
 def send_email_for_due_date():
-    print("Inside Function")
-    if frappe.db.exists('Email Template','Todo'):
-        print("Inside Function")
-        next_action_template = frappe.get_doc('Email Template', "Todo")
+    if frappe.db.exists('Email Template','Send Mail'):
+        next_action_template = frappe.get_doc('Email Template', "Send Mail")
         next_actions_list = frappe.db.get_list('ToDo',fields=['*'],filters={"date":frappe.utils.nowdate(),"status":["!=","Closed"]})
-        print("hai",next_actions_list)
+        print("Todo doc details",next_actions_list)
+        print("next_action_template",next_action_template.response)
         for action in next_actions_list :       
             message = frappe.render_template(next_action_template.response, action)
+            print("message",message)
+            recipients= action.pch_recipient_list
+            print("recipients",recipients)
+            subject=next_action_template.subject
+            print("subject",subject)
             frappe.sendmail(
                 recipients= action.pch_recipient_list,
-                subject=next_action_template.pch_subject,
-                message=message)
-   
+                subject=next_action_template.subject,
+                message=message,
+                reference_doctype=action.parenttype,
+                reference_name=action.parent
+            )
+    else:
+        frappe.msgprint(('Please Configure Email Template'))
+

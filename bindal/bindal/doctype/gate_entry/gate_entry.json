@@ -86,11 +86,6 @@
    "label": "Types"
   },
   {
-   "fieldname": "date_time",
-   "fieldtype": "Date",
-   "label": "Date Time"
-  },
-  {
    "fieldname": "column_break_16",
    "fieldtype": "Column Break"
   },
@@ -176,9 +171,14 @@
    "fieldname": "estimated_net_weight",
    "fieldtype": "Data",
    "label": "Estimated Net Weight"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Date Time"
   }
  ],
- "modified": "2022-07-06 16:44:09.490616",
+ "modified": "2022-08-24 14:38:09.621244",
  "modified_by": "Administrator",
  "module": "bindal",
  "name": "Gate Entry",

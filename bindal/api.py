@@ -57,9 +57,9 @@ def send_email_for_due_date():
         for own in owner :
             full_name = frappe.db.get_list("User",filters={"name":own},fields=["full_name"]) 
         if no_of_days.days == 0:
-            subject = """ ALERT, Task """+action.pch_subject+""" is due today """+p_date.strftime("%d/%m/%Y")+""" """
+            subject = """ ALERT, Task """+action.pch_subject+""" is due today """+p_date+""" """
             message = """ Hai """+full_name[0].full_name+""" , <br><br> Task No """+action.name+""" , """+action.pch_subject+""" has been assigned to you and is: 
-            due today """+p_date.strftime("%d/%m/%Y")+""" <br><br> Please ensure that you complete this task and update on ERPNext that you have completed the task. <br><br>
+            due today """+p_date+""" <br><br> Please ensure that you complete this task and update on ERPNext that you have completed the task. <br><br>
             Since this task is: due today , please meet Kapil Gupta and/or Ajay Tickoo and discuss what support you need to complete the task today.<br>
             """                    
             print("message",message)
@@ -72,9 +72,9 @@ def send_email_for_due_date():
             message=message
             )
         if no_of_days.days < 0:
-            subject = """ ALERT, Task """+action.pch_subject+""" is due on """+p_date.strftime("%d/%m/%Y")+""" """
+            subject = """ ALERT, Task """+action.pch_subject+""" is due on """+p_date+""" """
             message = """ Hai """+full_name[0].full_name+""" ,<br><br> Task No """+action.name+""" , """+action.pch_subject+""" has been assigned to you and is: 
-            Overdue("""+p_date.strftime("%d/%m/%Y")+""") <br><br>
+            Overdue("""+p_date+""") <br><br>
             Since this task is: Overdue , please meet Kapil Gupta and/or Ajay Tickoo and discuss what support you need to complete the task today.<br><br>
             please meet Kapil Gupta and/or Ajay Tickoo today without fail and discuss how you are going to complete the task today. Not completing the task today may invite disciplinary action."""                    
             print("message",message)
@@ -87,10 +87,10 @@ def send_email_for_due_date():
             message=message
             )
         if no_of_days.days == 1:
-            subject = """ ALERT, Task """+action.pch_subject+""" is due on """+p_date.strftime("%d/%m/%Y")+""" """
+            subject = """ ALERT, Task """+action.pch_subject+""" is due on """+p_date+""" """
             message = """ Hai """+full_name[0].full_name+""" ,<br><br> 
             Task No """+action.name+""" , """+action.pch_subject+""" has been assigned to you and is: 
-            due tomorrow ("""+p_date.strftime("%d/%m/%Y")+""") <br><br> 
+            due tomorrow ("""+p_date+""") <br><br> 
             Please ensure that you complete this task and update on ERPNext that you have completed the task.
             """                    
             print("message",message)
@@ -103,10 +103,10 @@ def send_email_for_due_date():
             message=message
             )
         if no_of_days.days > 1:
-            subject = """ ALERT, Task """+action.pch_subject+""" is s due on """+p_date.strftime("%d/%m/%Y")+"""  <br><br> """
+            subject = """ ALERT, Task """+action.pch_subject+""" is s due on """+p_date+"""  <br><br> """
             message = """ Hai """+full_name[0].full_name+""" ,<br><br> 
             Task No """+action.name+""" , """+action.pch_subject+""" has been assigned to you and is: 
-            due on ("""+p_date.strftime("%d/%m/%Y")+""") <br><br> 
+            due on ("""+p_date+""") <br><br> 
             Please ensure that you complete this task and update on ERPNext that you have completed the task.<br><br> 
             """                    
             print("message",message)
@@ -118,3 +118,10 @@ def send_email_for_due_date():
             subject=subject,
             message=message
             )
+
+@frappe.whitelist()
+def fetch_po_details(name):
+	print("name",name)
+	po_details=frappe.db.sql("""select supplier_name,address_display from `tabPurchase Order` where name ='"""+name+"""' """, as_dict=1)
+	print("po_details",po_details)
+	return po_details

@@ -34,6 +34,6 @@ def fetch_dn_name(name):
 @frappe.whitelist()
 def fetch_stock_details(name):
 	print("name",name)
-	dn_item_details=frappe.db.sql("""select name,inward_or_outward,purchase_order,supplier_name,supplier_address,expected_date_of_return,btpl_responsible_person,vendor_responsible_person from `tabStock Entry` where name ='"""+name+"""' """, as_dict=1)
+	dn_item_details=frappe.db.sql("""select name,inward_or_outward,purchase_order,name_of_supplier,address_of_supplier,expected_date_of_return,btpl_responsible_person,vendor_responsible_person from `tabStock Entry` where name ='"""+name+"""' """, as_dict=1)
 	print("dn_item_details",dn_item_details)
 	return dn_item_details

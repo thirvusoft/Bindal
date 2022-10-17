@@ -329,34 +329,39 @@ function fetch_so_child_items(so_record_number) {
       other_document_description : function(frm, cdt, cdn) 
       {
       var d = locals[cdt][cdn];
-      if(d.other_document_description == "Supplier Invoice")
+      if(d.other_document_description == "Supplier Invoice" || d.other_document_description == "Returnable Gate Pass")
       {
-            frm.toggle_display("supplier_name", true);
+         frm.toggle_display("supplier_name", true);
         frm.toggle_display("supplier_bill_no", true);
       }
+      
       else
       {
-            frm.toggle_display("supplier_name", false);
+        frm.toggle_display("supplier_name", false);
         frm.toggle_display("supplier_bill_no", false);  
       }
+      
       }
       });
+    /*
       frappe.ui.form.on('Gate Entry', {
       type : function(frm, cdt, cdn) 
       {
       if(d.type == "Outward")
       {
-          frm.toggle_display("supplier_name", false);
-        frm.toggle_display("supplier_bill_no", false);  
+      frm.toggle_display("supplier_name", false);
+      frm.toggle_display("supplier_bill_no", false);  
       }
       }
       });
+*/
       frappe.ui.form.on('Gate Entry', {
       refresh : function(frm, cdt, cdn) 
-    
       {
-          frm.toggle_display("supplier_name", false);
+        //frm.toggle_display("supplier_name", false);
         frm.toggle_display("supplier_bill_no", false);  
       
       }
       });
+            
+    

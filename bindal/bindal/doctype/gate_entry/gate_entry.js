@@ -175,13 +175,6 @@ type:function(frm,cdt,cdn)
       }
       });
 */
-      frappe.ui.form.on('Gate Entry', {
-      refresh : function(frm, cdt, cdn) 
-      {
-        //frm.toggle_display("supplier_name", false);
-        frm.toggle_display("supplier_bill_no", false);  
-      
-      }
-      });
+ 
             
     

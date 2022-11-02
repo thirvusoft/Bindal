@@ -14,7 +14,6 @@
   "column_break_7",
   "other_document_description",
   "other_document_description_outward",
-  "document_details",
   "section_break_7",
   "get_items",
   "item",
@@ -22,6 +21,7 @@
   "vehicle_number",
   "driver_name",
   "weighment_required",
+  "supplier_bill_date",
   "column_break_6",
   "estimated_net_weight",
   "vehicle_type_and_model",
@@ -142,11 +142,6 @@
    "options": "\nSupplier Invoice\nReturnable Gate Pass\nOther"
   },
   {
-   "fieldname": "document_details",
-   "fieldtype": "Data",
-   "label": "Document Details"
-  },
-  {
    "fieldname": "other_document_description_outward",
    "fieldtype": "Select",
    "label": "Other-Document description",
@@ -176,9 +171,14 @@
    "fieldname": "date_time",
    "fieldtype": "Datetime",
    "label": "Date Time"
+  },
+  {
+   "fieldname": "supplier_bill_date",
+   "fieldtype": "Date",
+   "label": "Supplier Bill Date"
   }
  ],
- "modified": "2022-08-24 14:38:09.621244",
+ "modified": "2022-11-02 16:08:44.830189",
  "modified_by": "Administrator",
  "module": "bindal",
  "name": "Gate Entry",

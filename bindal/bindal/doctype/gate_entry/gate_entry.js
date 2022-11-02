@@ -65,8 +65,7 @@ weighment_required:function(frm,cdt,cdn)
 frappe.ui.form.on('Gate Entry', {
 type:function(frm,cdt,cdn)
 	{
-		var d = locals[cdt][cdn];
-		
+		var d = locals[cdt][cdn];		
 		if(d.type == "Inward")
 		{
 		cur_frm.refresh();
@@ -74,8 +73,8 @@ type:function(frm,cdt,cdn)
 	    d.document_details = " ";
 		frm.toggle_display("other_document_description", true);
 		frm.toggle_display("document_details", true);
-    frm.toggle_display("other_document_description_outward", false);
-    frm.toggle_display("estimated_net_weight", false); 
+    	frm.toggle_display("other_document_description_outward", false);
+    	frm.toggle_display("estimated_net_weight", false); 
 		}
 	    else if(d.type == "Outward")
 		{
@@ -85,7 +84,14 @@ type:function(frm,cdt,cdn)
 		frm.toggle_display("other_document_description_outward", true);
 		frm.toggle_display("other_document_description", false);
 		frm.toggle_display("document_details", true);
-   
+		frm.toggle_display("supplier_name", false); 	
+		frm.toggle_display("supplier_bill_no", false);
+		}
+		else if(d.type == " ")
+		{
+		cur_frm.refresh();
+		frm.toggle_display("supplier_name", false);
+		frm.toggle_display("supplier_bill_no", false);
 		}
 		else
 		{
@@ -93,7 +99,7 @@ type:function(frm,cdt,cdn)
 		frm.toggle_display("other_document_description_outward", false);
 		frm.toggle_display("other_document_description", false);
 		frm.toggle_display("document_details", false);
-    frm.toggle_display("estimated_net_weight", false);
+    	frm.toggle_display("estimated_net_weight", false);
 		}
     if(d.type == "Outward" && d.supporting_document =="Delivery Note") 
     {
@@ -107,17 +113,18 @@ type:function(frm,cdt,cdn)
     
     var d = locals[cdt][cdn];
     var record_number = d.record_number;
-    if(d.other_document_description == "Supplier Invoice" && d.supporting_document =="Purchase Order")
+    if(d.other_document_description == "Supplier Invoice" || d.supporting_document =="Purchase Order" || d.supporting_document =="Purchase Order")
     {
      var supplier=fetch_supplier(record_number); 
       console.log("supplier",supplier);
       cur_frm.set_value("supplier_name",supplier);
     }
+	else{
+		cur_frm.set_value("supplier_name"," ");
+		}
         }});
     function fetch_supplier(record_number) 
     {
-        
-        console.log("entered into function");
         var sup = "";
         frappe.call({
             method: 'frappe.client.get_value',
@@ -149,7 +156,7 @@ type:function(frm,cdt,cdn)
       other_document_description : function(frm, cdt, cdn) 
       {
       var d = locals[cdt][cdn];
-      if(d.other_document_description == "Supplier Invoice" || d.other_document_description == "Returnable Gate Pass")
+      if(d.other_document_description == "Supplier Invoice" || d.other_document_description == "Returnable Gate Pass" || d.type == "Inward")
       {
          frm.toggle_display("supplier_name", true);
         frm.toggle_display("supplier_bill_no", true);
@@ -163,6 +170,7 @@ type:function(frm,cdt,cdn)
       
       }
       });
+	  
     /*
       frappe.ui.form.on('Gate Entry', {
       type : function(frm, cdt, cdn) 

@@ -23,7 +23,6 @@
   "weighment_required",
   "supplier_bill_date",
   "column_break_6",
-  "estimated_net_weight",
   "vehicle_type_and_model",
   "driver_number",
   "weightment_details_section",
@@ -163,11 +162,6 @@
    "options": "PO Item"
   },
   {
-   "fieldname": "estimated_net_weight",
-   "fieldtype": "Data",
-   "label": "Estimated Net Weight"
-  },
-  {
    "fieldname": "date_time",
    "fieldtype": "Datetime",
    "label": "Date Time"
@@ -178,7 +172,7 @@
    "label": "Supplier Bill Date"
   }
  ],
- "modified": "2022-11-02 16:08:44.830189",
+ "modified": "2022-11-03 15:44:26.919251",
  "modified_by": "Administrator",
  "module": "bindal",
  "name": "Gate Entry",

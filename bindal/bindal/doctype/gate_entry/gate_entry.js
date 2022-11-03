@@ -113,6 +113,7 @@ type:function(frm,cdt,cdn)
     
     var d = locals[cdt][cdn];
     var record_number = d.record_number;
+	console.log("record_number",record_number);
     if(d.other_document_description == "Supplier Invoice" || d.supporting_document =="Purchase Order" || d.supporting_document =="Purchase Order")
     {
      var supplier=fetch_supplier(record_number); 

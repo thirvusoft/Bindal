@@ -37,3 +37,12 @@ def fetch_stock_details(name):
 	dn_item_details=frappe.db.sql("""select name,inward_or_outward,purchase_order,name_of_supplier,address_of_supplier,expected_date_of_return,btpl_responsible_person,vendor_responsible_person from `tabStock Entry` where name ='"""+name+"""' """, as_dict=1)
 	print("dn_item_details..",dn_item_details)
 	return dn_item_details
+
+#@frappe.whitelist()
+#def get_weight(weight,name):
+#	print("weight...........name...",weight,name)
+#	gate_entry = frappe.get_doc("Gate Entry",name)
+#	gate_entry.estimated_net_weight = weight
+#	print("gate_entry record",gate_entry.estimated_net_weight)
+#	gate_entry.save()
+	#return dn_item_details

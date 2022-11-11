@@ -26,12 +26,9 @@
   "vehicle_type_and_model",
   "driver_number",
   "weightment_details_section",
-  "types",
-  "date_time",
-  "column_break_16",
-  "weight",
-  "weighbridge",
-  "weighbridge_document"
+  "laden_weight",
+  "unladen_weight",
+  "net_actual_weight_of_consigmnet"
  ],
  "fields": [
   {
@@ -78,30 +75,6 @@
    "fieldname": "weightment_details_section",
    "fieldtype": "Section Break",
    "label": "Weightment Details"
-  },
-  {
-   "fieldname": "types",
-   "fieldtype": "Data",
-   "label": "Types"
-  },
-  {
-   "fieldname": "column_break_16",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "weight",
-   "fieldtype": "Data",
-   "label": "Weight"
-  },
-  {
-   "fieldname": "weighbridge",
-   "fieldtype": "Data",
-   "label": "Weighbridge"
-  },
-  {
-   "fieldname": "weighbridge_document",
-   "fieldtype": "Data",
-   "label": "Weighbridge Document "
   },
   {
    "fieldname": "branch",
@@ -162,17 +135,27 @@
    "options": "PO Item"
   },
   {
-   "fieldname": "date_time",
-   "fieldtype": "Datetime",
-   "label": "Date Time"
-  },
-  {
    "fieldname": "supplier_bill_date",
    "fieldtype": "Date",
    "label": "Supplier Bill Date"
+  },
+  {
+   "fieldname": "laden_weight",
+   "fieldtype": "Data",
+   "label": "Laden Weight"
+  },
+  {
+   "fieldname": "unladen_weight",
+   "fieldtype": "Data",
+   "label": "Unladen Weight"
+  },
+  {
+   "fieldname": "net_actual_weight_of_consigmnet",
+   "fieldtype": "Data",
+   "label": "Net Actual Weight of Consigmnet"
   }
  ],
- "modified": "2022-11-03 15:44:26.919251",
+ "modified": "2022-11-10 10:33:36.145533",
  "modified_by": "Administrator",
  "module": "bindal",
  "name": "Gate Entry",

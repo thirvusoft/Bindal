@@ -108,49 +108,7 @@ type:function(frm,cdt,cdn)
 	}
 });
 
-    frappe.ui.form.on('Gate Entry', {
-    record_number: function(frm, cdt, cdn) {
     
-    var d = locals[cdt][cdn];
-    var record_number = d.record_number;
-	console.log("record_number",record_number);
-    if(d.other_document_description == "Supplier Invoice" || d.supporting_document =="Purchase Order" || d.supporting_document =="Purchase Order")
-    {
-     var supplier=fetch_supplier(record_number); 
-      console.log("supplier",supplier);
-      cur_frm.set_value("supplier_name",supplier);
-    }
-	else{
-		cur_frm.set_value("supplier_name"," ");
-		}
-        }});
-    function fetch_supplier(record_number) 
-    {
-        var sup = "";
-        frappe.call({
-            method: 'frappe.client.get_value',
-            args: {
-                'doctype': 'Purchase Order',
-                'fieldname': 'supplier_name',
-    
-                 'filters': {
-                    name: record_number,
-                                }
-            },
-            async: false,
-            callback: function(r) {
-                if (r.message) {
-                    // console.log(r.qty);
-                     sup = r.message.supplier_name;
-                   
-                    console.log("w",sup);
-                    console.log("readings-----------" + JSON.stringify(r.message));
-    
-                }
-            }
-        });
-        return  sup;
-    }
     
     
     frappe.ui.form.on('Gate Entry', {

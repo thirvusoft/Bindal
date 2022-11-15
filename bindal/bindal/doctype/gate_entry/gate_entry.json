@@ -21,7 +21,6 @@
   "vehicle_number",
   "driver_name",
   "weighment_required",
-  "supplier_bill_date",
   "column_break_6",
   "vehicle_type_and_model",
   "driver_number",
@@ -135,11 +134,6 @@
    "options": "PO Item"
   },
   {
-   "fieldname": "supplier_bill_date",
-   "fieldtype": "Date",
-   "label": "Supplier Bill Date"
-  },
-  {
    "fieldname": "laden_weight",
    "fieldtype": "Data",
    "label": "Laden Weight"
@@ -155,7 +149,7 @@
    "label": "Net Actual Weight of Consigmnet"
   }
  ],
- "modified": "2022-11-10 10:33:36.145533",
+ "modified": "2022-11-15 15:41:26.750401",
  "modified_by": "Administrator",
  "module": "bindal",
  "name": "Gate Entry",

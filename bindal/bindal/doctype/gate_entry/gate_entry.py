@@ -17,17 +17,17 @@ def fetch_po_name(name):
 	return po_item_details
 
 @frappe.whitelist()
-def fetch_so_name(name):
+def fetch_si_name(name):
 	#print("name",name)
-	so_item_details=frappe.db.sql("""select item_code,description,item_name,uom,qty,weight_per_unit,total_weight,(qty-delivered_qty) as pending_qty,parent from `tabSales Invoice Item` where parent='"""+name+"""' """, as_dict=1)
+	si_item_details=frappe.db.sql("""select name,item_code,description,item_name,uom,qty,weight_per_unit,weight_uom,total_weight,(qty-delivered_qty) as pending_qty,parent,stock_uom,conversion_factor from `tabSales Invoice Item` where parent='"""+name+"""' """, as_dict=1)
 	#print("po_item_details..........",so_item_details)
-	return so_item_details
+	return si_item_details
 
 @frappe.whitelist()
 def fetch_dn_name(name):
 	#print("name",name)
 	#dn_item_details=frappe.db.sql("""select item_name,uom,qty,parent from `tabDelivery Note Item` where parent='"""+name+"""' """, as_dict=1)
-	dn_item_details=frappe.db.sql("""select item_code,description,item_name,uom,qty,weight_per_unit,total_weight,parent from `tabDelivery Note Item` where parent='"""+name+"""' """, as_dict=1)
+	dn_item_details=frappe.db.sql("""select name,item_code,description,item_name,uom,qty,weight_per_unit,weight_uom,total_weight,parent,stock_uom,conversion_factor from `tabDelivery Note Item` where parent='"""+name+"""' """, as_dict=1)
 	#print("dn_item_details",dn_item_details)
 	return dn_item_details
 

@@ -68,30 +68,55 @@ def check_record_repeated(record_number):
 	print("gate_entry_details..",gate_details)
 	po = []
 	result = []
-	for i in po_details:
-		for j in gate_details:
-			if i['name'] == j['record_number'] and i['item_code'] == j['item_code']:
-				print("qty........[]]]][][000.",i['qty'] - j['qty'])
-				innerJson_b = {
-				"record_number":j['record_number'],
-				"supplier_name":i['supplier_name'],
-				"child_record_name":i['child_record_name'],
-				"item_code":i['item_code'],
-				"description":i['description'],
-				"item_name":i['item_name'],
-				"uom":i['uom'],
-				"qty":i['qty'] - j['qty'],
-				"weight_per_unit":i['weight_per_unit'],
-				"weight_uom":i['weight_uom'],
-				"total_weight":i['total_weight'],
-				"pending_qty":i['pending_qty'],
-				"stock_uom":i['stock_uom'],
-				"conversion_factor":i['conversion_factor']
-			}
-				result.append(innerJson_b)
-	print("result",result)
-	return result			
-	
+	if gate_details != []:
+		for i in po_details:
+			for j in gate_details:
+				if i['name'] == j['record_number'] and i['item_code'] == j['item_code']:
+					print("qty........[]]]][][000.",i['qty'] - j['qty'])
+					innerJson_b = {
+					"record_number":j['record_number'],
+					"supplier_name":i['supplier_name'],
+					"child_record_name":i['child_record_name'],
+					"item_code":i['item_code'],
+					"description":i['description'],
+					"item_name":i['item_name'],
+					"uom":i['uom'],
+					"qty":i['qty'] - j['qty'],
+					"weight_per_unit":i['weight_per_unit'],
+					"weight_uom":i['weight_uom'],
+					"total_weight":i['total_weight'],
+					"pending_qty":i['pending_qty'],
+					"stock_uom":i['stock_uom'],
+					"conversion_factor":i['conversion_factor']
+				}
+					result.append(innerJson_b)
+		print("result",result)
+		return result			
+	if gate_details == []:
+		print("empy gateentry")
+		for i in po_details:
+			print("new gate_entry")
+			innerJson_b = {
+			"record_number":record_number,
+			"supplier_name":i['supplier_name'],
+			"child_record_name":i['child_record_name'],
+			"item_code":i['item_code'],
+			"description":i['description'],
+			"item_name":i['item_name'],
+			"uom":i['uom'],
+			"qty":i['qty'],
+			"weight_per_unit":i['weight_per_unit'],
+			"weight_uom":i['weight_uom'],
+			"total_weight":i['total_weight'],
+			"pending_qty":i['pending_qty'],
+			"stock_uom":i['stock_uom'],
+			"conversion_factor":i['conversion_factor']
+		}
+			print("json",innerJson_b)
+			result.append(innerJson_b)
+		print("result",result)
+		return result				
+
 @frappe.whitelist()
 def check_record_repeated_si(record_number):
 	print("si record_number............",record_number)
@@ -105,30 +130,52 @@ def check_record_repeated_si(record_number):
 	gate_si_details=frappe.db.sql("""select gt.name,gt.record_number,gti.item_code,sum(gti.qty) as qty from `tabGate Entry` as gt inner join `tabPO Item` as gti on gt.name=gti.parent where gt.record_number='"""+record_number+"""' group by gti.item_code""", as_dict=1)
 	print("gate_entry_details..",gate_si_details)
 	result1 = []
-	for i in si_details:
-		for j in gate_si_details:
-			if i['name'] == j['record_number'] and i['item_code'] == j['item_code']:
-				print("hai")
-				print("qty........[]]]][][000.",i['qty'] - j['qty'])
-				innerJson_b = {
-				"record_number":j['record_number'],
-				"child_record_name":i['child_record_name'],
-				"item_code":i['item_code'],
-				"description":i['description'],
-				"item_name":i['item_name'],
-				"uom":i['uom'],
-				"qty":i['qty'] - j['qty'],
-				"weight_per_unit":i['weight_per_unit'],
-				"weight_uom":i['weight_uom'],
-				"total_weight":i['total_weight'],
-				"pending_qty":i['pending_qty'],
-				"stock_uom":i['stock_uom'],
-				"conversion_factor":i['conversion_factor']
-			}
-				result1.append(innerJson_b)
-	print("result11.....",result1)
-	return result1			
-					
+	if gate_si_details != []:
+		for i in si_details:
+			for j in gate_si_details:
+				if i['name'] == j['record_number'] and i['item_code'] == j['item_code']:
+					print("hai")
+					print("qty........[]]]][][000.",i['qty'] - j['qty'])
+					innerJson_b = {
+					"record_number":j['record_number'],
+					"child_record_name":i['child_record_name'],
+					"item_code":i['item_code'],
+					"description":i['description'],
+					"item_name":i['item_name'],
+					"uom":i['uom'],
+					"qty":i['qty'] - j['qty'],
+					"weight_per_unit":i['weight_per_unit'],
+					"weight_uom":i['weight_uom'],
+					"total_weight":i['total_weight'],
+					"pending_qty":i['pending_qty'],
+					"stock_uom":i['stock_uom'],
+					"conversion_factor":i['conversion_factor']
+				}
+					result1.append(innerJson_b)
+		print("result11.....",result1)
+		return result1	
+	if gate_si_details == []:
+		print("new sales Invoice")
+		for i in si_details:
+			innerJson_b = {
+			"record_number":record_number,
+			"child_record_name":i['child_record_name'],
+			"item_code":i['item_code'],
+			"description":i['description'],
+			"item_name":i['item_name'],
+			"uom":i['uom'],
+			"qty":i['qty'],
+			"weight_per_unit":i['weight_per_unit'],
+			"weight_uom":i['weight_uom'],
+			"total_weight":i['total_weight'],
+			"pending_qty":i['pending_qty'],
+			"stock_uom":i['stock_uom'],
+			"conversion_factor":i['conversion_factor']
+		}
+			result1.append(innerJson_b)
+		print("result11.....",result1)
+		return result1	
+
 @frappe.whitelist()
 def check_record_repeated_de(record_number):
 	print("de record_number............",record_number)
@@ -140,25 +187,46 @@ def check_record_repeated_de(record_number):
 	gate_de_details=frappe.db.sql("""select gt.name,gt.record_number,gti.item_code,sum(gti.qty) as qty from `tabGate Entry` as gt inner join `tabPO Item` as gti on gt.name=gti.parent where gt.record_number='"""+record_number+"""' group by gti.item_code""", as_dict=1)
 	print("gate_entry_details..",gate_de_details)
 	result2 = []
-	for i in de_details:
-		for j in gate_de_details:
-			if i['name'] == j['record_number'] and i['item_code'] == j['item_code']:
-				print("hai")
-				print("qty........[]]]][][000.",i['qty'] - j['qty'])
-				innerJson_b = {
-				"record_number":j['record_number'],
-				"child_record_name":i['child_record_name'],
-				"item_code":i['item_code'],
-				"description":i['description'],
-				"item_name":i['item_name'],
-				"uom":i['uom'],
-				"qty":i['qty'] - j['qty'],
-				"weight_per_unit":i['weight_per_unit'],
-				"weight_uom":i['weight_uom'],
-				"total_weight":i['total_weight'],
-				"stock_uom":i['stock_uom'],
-				"conversion_factor":i['conversion_factor']
-			}
-				result2.append(innerJson_b)
-	print("result12.....",result2)
-	return result2	
+	if gate_de_details != []:
+		for i in de_details:
+			for j in gate_de_details:
+				if i['name'] == j['record_number'] and i['item_code'] == j['item_code']:
+					print("hai")
+					print("qty........[]]]][][000.",i['qty'] - j['qty'])
+					innerJson_b = {
+					"record_number":j['record_number'],
+					"child_record_name":i['child_record_name'],
+					"item_code":i['item_code'],
+					"description":i['description'],
+					"item_name":i['item_name'],
+					"uom":i['uom'],
+					"qty":i['qty'] - j['qty'],
+					"weight_per_unit":i['weight_per_unit'],
+					"weight_uom":i['weight_uom'],
+					"total_weight":i['total_weight'],
+					"stock_uom":i['stock_uom'],
+					"conversion_factor":i['conversion_factor']
+				}
+					result2.append(innerJson_b)
+		print("result12.....",result2)
+		return result2	
+	if gate_de_details == []:
+		for i in de_details:
+			print("new de")
+			innerJson_b = {
+			"record_number":record_number,
+			"child_record_name":i['child_record_name'],
+			"item_code":i['item_code'],
+			"description":i['description'],
+			"item_name":i['item_name'],
+			"uom":i['uom'],
+			"qty":i['qty'],
+			"weight_per_unit":i['weight_per_unit'],
+			"weight_uom":i['weight_uom'],
+			"total_weight":i['total_weight'],
+			"stock_uom":i['stock_uom'],
+			"conversion_factor":i['conversion_factor']
+		}
+			result2.append(innerJson_b)
+		print("result12.....",result2)
+		return result2	

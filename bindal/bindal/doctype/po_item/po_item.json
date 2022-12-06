@@ -4,23 +4,17 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "item_code",
   "item_name",
   "uom",
-  "weight_uom",
-  "qty",
-  "po_qty",
-  "pending_qty",
-  "received_qty_in_stock_uom",
-  "column_break_10",
-  "child_record_name",
-  "supporting_document",
-  "record_number",
-  "weight_per_unit_of_stock_uom",
-  "conversion_factor",
-  "weight_of_received_qty"
+  "qty"
  ],
  "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
   {
    "fieldname": "uom",
    "fieldtype": "Data",
@@ -28,90 +22,14 @@
    "label": "Uom"
   },
   {
-   "fieldname": "item_name",
-   "fieldtype": "Data",
-   "in_global_search": 1,
-   "in_list_view": 1,
-   "label": "Item Name"
-  },
-  {
-   "fieldname": "child_record_name",
-   "fieldtype": "Data",
-   "label": "Child Record Name",
-   "read_only": 1
-  },
-  {
-   "fieldname": "item_code",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Item Code",
-   "options": "Item"
-  },
-  {
-   "fieldname": "weight_uom",
-   "fieldtype": "Data",
-   "label": "Weight UOM"
-  },
-  {
    "fieldname": "qty",
-   "fieldtype": "Float",
-   "label": "Qty",
-   "read_only": 1
-  },
-  {
-   "fieldname": "po_qty",
-   "fieldtype": "Float",
-   "label": "PO Qty",
-   "read_only": 1
-  },
-  {
-   "fieldname": "pending_qty",
-   "fieldtype": "Float",
-   "label": "Pending Qty",
-   "read_only": 1
-  },
-  {
-   "fieldname": "received_qty_in_stock_uom",
-   "fieldtype": "Float",
-   "label": "Received Qty in Stock UOM"
-  },
-  {
-   "fieldname": "column_break_10",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "supporting_document",
    "fieldtype": "Data",
-   "label": "Supporting Document",
-   "read_only": 1
-  },
-  {
-   "fieldname": "record_number",
-   "fieldtype": "Data",
-   "label": "Record_Number",
-   "read_only": 1
-  },
-  {
-   "fieldname": "weight_per_unit_of_stock_uom",
-   "fieldtype": "Float",
-   "label": "Weight per Unit of Stock UOM",
-   "read_only": 1
-  },
-  {
-   "fieldname": "conversion_factor",
-   "fieldtype": "Float",
-   "label": "Conversion Factor",
-   "read_only": 1
-  },
-  {
-   "fieldname": "weight_of_received_qty",
-   "fieldtype": "Float",
-   "label": "Weight of Received Qty",
-   "read_only": 1
+   "in_list_view": 1,
+   "label": "Qty"
   }
  ],
  "istable": 1,
- "modified": "2022-12-06 12:15:35.383288",
+ "modified": "2022-07-04 14:56:17.794553",
  "modified_by": "Administrator",
  "module": "bindal",
  "name": "PO Item",

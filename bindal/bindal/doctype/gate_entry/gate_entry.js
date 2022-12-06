@@ -20,6 +20,7 @@ frappe.ui.form.on('Gate Entry', {
     var estimated_total_weight_of_consignment = 0;
      for(var k = 0;k<data.length; k++)
         {
+      
         var child = cur_frm.add_child("item");
         frappe.model.set_value(child.doctype, child.name, "child_record_name",data[k]['child_record_name']);
         console.log("........00000...qty",data[k]['qty']);
@@ -27,6 +28,7 @@ frappe.ui.form.on('Gate Entry', {
         frappe.model.set_value(child.doctype, child.name, "item_name",data[k]['item_name']);
         frappe.model.set_value(child.doctype, child.name, "pending_qty",data[k]['pending_qty']); 
         frappe.model.set_value(child.doctype, child.name, "qty",data[k]['qty']);
+        frappe.model.set_value(child.doctype, child.name, "po_qty",data[k]['qty']);
         frappe.model.set_value(child.doctype, child.name, "record_number",data[k]['record_number']);
         frappe.model.set_value(child.doctype, child.name, "stock_uom",data[k]['stock_uom']);
         frappe.model.set_value(child.doctype, child.name, "weight_uom",data[k]['weight_uom']);
@@ -45,7 +47,7 @@ frappe.ui.form.on('Gate Entry', {
         weight_per_unit = fetched_item_master_details[0]['weight_per_unit']
         console.log("weight_per_unit",weight_per_unit)
         weight_per_u = weight_per_u + weight_per_unit;
-        console.log("weight_per_u",weight_per_u)
+        console.log("weight_per_u2222222222222222...........",weight_per_u)
         }
         }
         
@@ -273,7 +275,7 @@ frappe.ui.form.on('Gate Entry', {
 	return {
     filters: [
                 ["Purchase Order","supplier",'=',supplier_name],
-                ["Purchase Order","docstatus", "=", "1"],
+                ["Purchase Order","docstatus", "=", "0"],
              ]};
 			});
 	}
@@ -1009,10 +1011,19 @@ type:function(frm,cdt,cdn)
     var weighment = 0;
     var weight_per_unit;
     var weight_per_u = 0;
+    var qty = 0;
     var estimated_total_weight_of_consignment = 0;
      for(var k = 0;k<itemss.length; k++)
         {
+        if(d.supporting_document == "Sales Invoice" || d.supporting_document == "Delivery Note" )
+        {
         console.log("qty99999999999",itemss[k]['qty']);
+        qty = itemss[k]['qty']
+        }
+        else if(d.supporting_document == "Purchase Order")
+        {
+        qty = itemss[k]['po_qty']
+        }
         if(itemss[k]['item_code'])
         {
         var gate_item_name = itemss[k]['item_code']
@@ -1027,7 +1038,7 @@ type:function(frm,cdt,cdn)
         }
         }
         
-        var received_qty = itemss[k]['qty'] * itemss[k]['conversion_factor'];
+        var received_qty = qty * itemss[k]['conversion_factor'];
         var weight_of_received_qty = received_qty * weight_per_unit;
        
         estimated_total_weight_of_consignment = estimated_total_weight_of_consignment + weight_of_received_qty;
@@ -1058,3 +1069,42 @@ type:function(frm,cdt,cdn)
     });
     return p_record;
   }   
+
+  frappe.ui.form.on('Gate Entry', {
+    before_save: function(frm, cdt, cdn) 
+    {
+     var d = locals[cdt][cdn];
+    var itemss = frm.doc.item;
+    
+    for (var i = 0; i < itemss.length; i++) 
+    {
+    console.log("qty1111............", itemss[i]['qty']);
+    //itemss[i]['po_qty'] = itemss[i]['qty'];
+    if(itemss[i]['received_qty_in_stock_uom'] > itemss[i]['pending_qty'] )
+      {
+       frappe.msgprint("Received Qty in Stock UOM is greater than Pending Qty"); 
+       console.log("Received Qty in Stock UOM is greater than Pending Qty");
+       frappe.validated = false;
+    } }
+    }
+    });
+    
+    frappe.ui.form.on('Gate Entry',{ 
+    get_items:function(frm, cdt, cdn) {
+    var d = locals[cdt][cdn];
+    //var items = frm.doc.item;
+    console.log("entered ")
+    if(d.supporting_document == "Purchase Order")
+    {
+    cur_frm.fields_dict.item.grid.toggle_display("po_qty", true);
+    cur_frm.fields_dict.item.grid.toggle_display("qty", false);
+    }
+    if(d.supporting_document == "Sales Invoice" || d.supporting_document == "Delivery Note" )
+    {
+    cur_frm.fields_dict.item.grid.toggle_display("po_qty", false);
+    cur_frm.fields_dict.item.grid.toggle_display("qty", true);   
+    }
+    cur_frm.refresh_field("item");
+    }
+    });
+    

@@ -275,7 +275,7 @@ frappe.ui.form.on('Gate Entry', {
 	return {
     filters: [
                 ["Purchase Order","supplier",'=',supplier_name],
-                ["Purchase Order","docstatus", "=", "0"],
+                ["Purchase Order","docstatus", "=", "1"],
              ]};
 			});
 	}

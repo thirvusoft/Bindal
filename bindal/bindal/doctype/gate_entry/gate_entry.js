@@ -18,25 +18,25 @@ frappe.ui.form.on('Gate Entry', {
     var weight_per_unit;
     var weight_per_u = 0;
     var estimated_total_weight_of_consignment = 0;
+    
      for(var k = 0;k<data.length; k++)
         {
-      
+       
         var child = cur_frm.add_child("item");
         frappe.model.set_value(child.doctype, child.name, "child_record_name",data[k]['child_record_name']);
         console.log("........00000...qty",data[k]['qty']);
         frappe.model.set_value(child.doctype, child.name, "item_code",data[k]['item_code']);
         frappe.model.set_value(child.doctype, child.name, "item_name",data[k]['item_name']);
         frappe.model.set_value(child.doctype, child.name, "pending_qty",data[k]['pending_qty']); 
-        frappe.model.set_value(child.doctype, child.name, "qty",data[k]['qty']);
-        frappe.model.set_value(child.doctype, child.name, "po_qty",data[k]['qty']);
+        frappe.model.set_value(child.doctype, child.name, "po_qty",data[k]['po_qty']);
         frappe.model.set_value(child.doctype, child.name, "record_number",data[k]['record_number']);
         frappe.model.set_value(child.doctype, child.name, "stock_uom",data[k]['stock_uom']);
         frappe.model.set_value(child.doctype, child.name, "weight_uom",data[k]['weight_uom']);
         frappe.model.set_value(child.doctype, child.name, "conversion_factor",data[k]['conversion_factor']);
         frappe.model.set_value(child.doctype, child.name, "uom",data[k]['uom']);
         frappe.model.set_value(child.doctype, child.name, "supporting_document",d.supporting_document);
-        frappe.model.set_value(child.doctype, child.name, "received_qty_in_stock_uom",data[k]['qty'] * data[k]['conversion_factor']); 
-            if(data[k]['item_code'])
+        frappe.model.set_value(child.doctype, child.name, "received_qty_in_stock_uom",data[k]['po_qty'] * data[k]['conversion_factor']); 
+        if(data[k]['item_code'])
         {
         var gate_item_name = data[k]['item_code']
         var fetched_item_master_details = get_item_weight(gate_item_name);
@@ -45,22 +45,43 @@ frappe.ui.form.on('Gate Entry', {
         {
         frappe.model.set_value(child.doctype, child.name, "weight_per_unit_of_stock_uom",fetched_item_master_details[0]['weight_per_unit']);
         weight_per_unit = fetched_item_master_details[0]['weight_per_unit']
-        console.log("weight_per_unit",weight_per_unit)
         weight_per_u = weight_per_u + weight_per_unit;
-        console.log("weight_per_u2222222222222222...........",weight_per_u)
         }
         }
-        
-        var received_qty = data[k]['qty'] * data[k]['conversion_factor'];
-        var weight_of_received_qty = received_qty * weight_per_unit;
-        frappe.model.set_value(child.doctype, child.name, "weight_of_received_qty",weight_of_received_qty); 
+        //var received_qty = data[k]['qty'] * data[k]['conversion_factor'];
+        var weight_of_received_qty = 0;
+        weight_of_received_qty = d.received_qty * weight_per_unit;
+         
+        if(isNaN(weight_of_received_qty) || weight_of_received_qty == NaN || weight_of_received_qty == " ")
+        {
+        console.log("weight_of_received_qty.........",weight_of_received_qty);
+        frappe.model.set_value(child.doctype, child.name, "weight_of_received_qty",0.00); 
+        }
+        else
+        {
+          frappe.model.set_value(child.doctype, child.name, "weight_of_received_qty",weight_of_received_qty);   
+        }
         
         estimated_total_weight_of_consignment = estimated_total_weight_of_consignment + weight_of_received_qty;
-        weighment =weighment + (received_qty * weight_per_unit);
+        weighment =weighment + (d.received_qty * weight_per_unit);
         } 
         cur_frm.set_value("estimated_net_weight",weight_per_u);
-        cur_frm.set_value("estimated_total_weight_of_consignment",estimated_total_weight_of_consignment);
-        cur_frm.set_value("weighment",weighment);
+         if(isNaN(weight_of_received_qty) || weight_of_received_qty == NaN || weight_of_received_qty == " ")
+        {
+        cur_frm.set_value("estimated_total_weight_of_consignment",0.00);
+        }
+        else
+        {
+        cur_frm.set_value("estimated_total_weight_of_consignment",estimated_total_weight_of_consignment);   
+        }
+         if(isNaN(weighment) || weighment == NaN || weighment == " ")
+        {
+        cur_frm.set_value("weighment",0.00);
+        }
+        else
+        {
+            cur_frm.set_value("weighment",weighment);
+        }
         cur_frm.refresh_field("item");
   }
   
@@ -103,17 +124,43 @@ frappe.ui.form.on('Gate Entry', {
         console.log("weight_per_u",weight_per_u)
         }
       }
-        var received_qty = si_items[k]['qty'] * si_items[k]['conversion_factor'];
-        var weight_of_received_qty = received_qty * weight_per_unit;
-        frappe.model.set_value(child.doctype, child.name, "weight_of_received_qty",weight_of_received_qty); 
+        //var received_qty = si_items[k]['qty'] * si_items[k]['conversion_factor'];
+       var weight_of_received_qty = 0;
+        weight_of_received_qty = d.received_qty * weight_per_unit;
+         
+        if(isNaN(weight_of_received_qty) || weight_of_received_qty == NaN || weight_of_received_qty == " ")
+        {
+        console.log("weight_of_received_qty.........",weight_of_received_qty);
+        frappe.model.set_value(child.doctype, child.name, "weight_of_received_qty",0.00); 
+        }
+        else
+        {
+          frappe.model.set_value(child.doctype, child.name, "weight_of_received_qty",weight_of_received_qty);   
+        }
+        
         estimated_total_weight_of_consignment = estimated_total_weight_of_consignment + weight_of_received_qty;
-        weighment =weighment + (received_qty * weight_per_unit);
-    } 
+        weighment =weighment + (d.received_qty * weight_per_unit);
+        } 
         cur_frm.set_value("estimated_net_weight",weight_per_u);
-        cur_frm.set_value("estimated_total_weight_of_consignment",estimated_total_weight_of_consignment);
-        cur_frm.set_value("weighment",weighment);
+         if(isNaN(weight_of_received_qty) || weight_of_received_qty == NaN || weight_of_received_qty == " ")
+        {
+        cur_frm.set_value("estimated_total_weight_of_consignment",0.00);
+        }
+        else
+        {
+        cur_frm.set_value("estimated_total_weight_of_consignment",estimated_total_weight_of_consignment);   
+        }
+         if(isNaN(weighment) || weighment == NaN || weighment == " ")
+        {
+        cur_frm.set_value("weighment",0.00);
+        }
+        else
+        {
+            cur_frm.set_value("weighment",weighment);
+        }
         cur_frm.refresh_field("item");
-	}  
+  }
+  
  if(d.supporting_document == "Delivery Note")
 	{
 	var name = d.name;
@@ -155,17 +202,42 @@ frappe.ui.form.on('Gate Entry', {
         console.log("weight_per_u",weight_per_u)
         }
         }
-        var received_qty = dn_items[k]['qty'] * dn_items[k]['conversion_factor'];
-        var weight_of_received_qty = received_qty * weight_per_unit;
-        frappe.model.set_value(child.doctype, child.name, "weight_of_received_qty",weight_of_received_qty); 
+       // var received_qty = dn_items[k]['qty'] * dn_items[k]['conversion_factor'];
+        var weight_of_received_qty = 0;
+        weight_of_received_qty = d.received_qty * weight_per_unit;
+         
+        if(isNaN(weight_of_received_qty) || weight_of_received_qty == NaN || weight_of_received_qty == " ")
+        {
+        console.log("weight_of_received_qty.........",weight_of_received_qty);
+        frappe.model.set_value(child.doctype, child.name, "weight_of_received_qty",0.00); 
+        }
+        else
+        {
+          frappe.model.set_value(child.doctype, child.name, "weight_of_received_qty",weight_of_received_qty);   
+        }
+        
         estimated_total_weight_of_consignment = estimated_total_weight_of_consignment + weight_of_received_qty;
-        weighment =weighment + (received_qty * weight_per_unit);
-    } 
+        weighment =weighment + (d.received_qty * weight_per_unit);
+        } 
         cur_frm.set_value("estimated_net_weight",weight_per_u);
-        cur_frm.set_value("estimated_total_weight_of_consignment",estimated_total_weight_of_consignment);
-        cur_frm.set_value("weighment",weighment);
+         if(isNaN(weight_of_received_qty) || weight_of_received_qty == NaN || weight_of_received_qty == " ")
+        {
+        cur_frm.set_value("estimated_total_weight_of_consignment",0.00);
+        }
+        else
+        {
+        cur_frm.set_value("estimated_total_weight_of_consignment",estimated_total_weight_of_consignment);   
+        }
+         if(isNaN(weighment) || weighment == NaN || weighment == " ")
+        {
+        cur_frm.set_value("weighment",0.00);
+        }
+        else
+        {
+            cur_frm.set_value("weighment",weighment);
+        }
         cur_frm.refresh_field("item");
-	}  
+  }
   
   }
 });
@@ -1004,7 +1076,7 @@ type:function(frm,cdt,cdn)
       
    
  frappe.ui.form.on('Gate Entry', {
-  after_save: function(frm, cdt, cdn) 
+  before_save: function(frm, cdt, cdn) 
   {
     var d = locals[cdt][cdn];
     var itemss = frm.doc.item;
@@ -1013,42 +1085,28 @@ type:function(frm,cdt,cdn)
     var weight_per_u = 0;
     var qty = 0;
     var estimated_total_weight_of_consignment = 0;
-     for(var k = 0;k<itemss.length; k++)
+    //if(d.supporting_document == "Purchase Order")
+      //  {
+        for(var k = 0;k<itemss.length; k++)
         {
-        if(d.supporting_document == "Sales Invoice" || d.supporting_document == "Delivery Note" )
-        {
-        console.log("qty99999999999",itemss[k]['qty']);
-        qty = itemss[k]['qty']
-        }
-        else if(d.supporting_document == "Purchase Order")
-        {
-        qty = itemss[k]['po_qty']
-        }
-        if(itemss[k]['item_code'])
-        {
-        var gate_item_name = itemss[k]['item_code']
-        var fetched_item_master_details = get_item_weight1(gate_item_name);
-        console.log("fetched_item_master_details+++++++++",fetched_item_master_details)
-        if(fetched_item_master_details[0])
-        {
-        weight_per_unit = fetched_item_master_details[0]['weight_per_unit']
-        console.log("weight_per_unit",weight_per_unit)
-        weight_per_u = weight_per_u + weight_per_unit;
-        console.log("weight_per_u",weight_per_u)
-        }
-        }
-        
-        var received_qty = qty * itemss[k]['conversion_factor'];
-        var weight_of_received_qty = received_qty * weight_per_unit;
-       
+        //var received_qty = qty * itemss[k]['conversion_factor'];
+        console.log("received_qty rrrrrrrrrrrr",itemss[k]['received_qty']);
+        console.log("weight_per_unit_of_stock_uom rrrrrrrrrrrr",itemss[k]['weight_per_unit_of_stock_uom']);
+        var weight_of_received_qty = itemss[k]['received_qty'] * itemss[k]['weight_per_unit_of_stock_uom'];
+        console.log("weight_of_received_qty 000000000000",weight_of_received_qty);
         estimated_total_weight_of_consignment = estimated_total_weight_of_consignment + weight_of_received_qty;
-        weighment =weighment + (received_qty * weight_per_unit);
+        weighment =weighment +(itemss[k]['received_qty'] * itemss[k]['weight_per_unit_of_stock_uom']);
+        weight_per_u = weight_per_u + itemss[k]['weight_per_unit_of_stock_uom'];
+        console.log("weight_per_unit 88888888888",weight_per_u)
         } 
-        cur_frm.set_value("estimated_net_weight",weight_per_u);
+       
+         console.log("estimated_total_weight_of_consignment 111111111111111",estimated_total_weight_of_consignment);
         cur_frm.set_value("estimated_total_weight_of_consignment",estimated_total_weight_of_consignment);
+         console.log("weight_per_unit 999999999999",weight_per_u)
+        cur_frm.set_value("estimated_net_weight",weight_per_u);
         cur_frm.set_value("weighment",weighment);
         cur_frm.refresh_field("item");
-  }});
+}});
   
   
    function get_item_weight1(gate_item_name) {
@@ -1080,10 +1138,10 @@ type:function(frm,cdt,cdn)
     {
     console.log("qty1111............", itemss[i]['qty']);
     //itemss[i]['po_qty'] = itemss[i]['qty'];
-    if(itemss[i]['received_qty_in_stock_uom'] > itemss[i]['pending_qty'] )
+    if(itemss[i]['received_qty'] > itemss[i]['pending_qty'] )
       {
-       frappe.msgprint("Received Qty in Stock UOM is greater than Pending Qty"); 
-       console.log("Received Qty in Stock UOM is greater than Pending Qty");
+      frappe.msgprint("Received Qty is greater than the Pending Qty"); 
+       console.log("Received Qty is greater than the Pending Qty");
        frappe.validated = false;
     } }
     }
@@ -1107,4 +1165,22 @@ type:function(frm,cdt,cdn)
     cur_frm.refresh_field("item");
     }
     });
+    
+    
+    
+frappe.ui.form.on('PO Item', {
+received_qty : function(frm, cdt, cdn) 
+{
+var d = locals[cdt][cdn];
+console.log("rate selected");
+console.log("rate received_qty",d.received_qty);
+console.log("rate weight_per_unit_of_stock_uom",d.weight_per_unit_of_stock_uom);
+var weight_of_received_qty = d.received_qty * d.weight_per_unit_of_stock_uom;
+console.log("rate result",weight_of_received_qty);
+d.weight_of_received_qty = weight_of_received_qty;
+console.log("d.weight_of_received_qty",d.weight_of_received_qty);
+refresh_field(d.weight_of_received_qty);
+
+}
+});
     

@@ -13,7 +13,7 @@ class GateEntry(Document):
 def fetch_po_name(name):
 	#print("name",name)
 	po_item_details=frappe.db.sql("""select parent,item_code,description,name,item_name,uom,qty,weight_per_unit,weight_uom,total_weight,(qty-received_qty) as pending_qty,parent,stock_uom,conversion_factor from `tabPurchase Order Item` where parent='"""+name+"""' """, as_dict=1)
-	#print("po_item_details00000",po_item_details)
+	print("po_item_details00000",po_item_details)
 	return po_item_details
 
 @frappe.whitelist()
@@ -81,7 +81,7 @@ def check_record_repeated(record_number):
 					"description":i['description'],
 					"item_name":i['item_name'],
 					"uom":i['uom'],
-					"qty":i['qty'] - j['qty'],
+					"po_qty":i['qty'] - j['qty'],
 					"weight_per_unit":i['weight_per_unit'],
 					"weight_uom":i['weight_uom'],
 					"total_weight":i['total_weight'],
@@ -104,7 +104,7 @@ def check_record_repeated(record_number):
 			"description":i['description'],
 			"item_name":i['item_name'],
 			"uom":i['uom'],
-			"qty":i['qty'],
+			"po_qty":i['qty'],
 			"weight_per_unit":i['weight_per_unit'],
 			"weight_uom":i['weight_uom'],
 			"total_weight":i['total_weight'],

@@ -348,9 +348,19 @@ frappe.ui.form.on('Gate Entry', {
     filters: [
                 ["Purchase Order","supplier",'=',supplier_name],
                 ["Purchase Order","docstatus", "=", "1"],
+                ["Purchase Order","status", "IN", ["To Receive and Bill","To Receive"]],
+               
              ]};
 			});
-	}
+			
+
+     if(d.supplier_name == "" || d.supplier_name == undefined)
+{
+  console.log("yes");
+  cur_frm.set_value("record_number","");
+}     
+    }
+	
 }
 	});
 	
@@ -752,6 +762,7 @@ if(d.supporting_document == "" || d.supporting_document == undefined)
   cur_frm.clear_table("item"); 
  
 }
+
 }
 });
 
@@ -1263,3 +1274,6 @@ refresh_field(d.weight_of_received_qty);
       }
     }
       });
+      
+      
+   

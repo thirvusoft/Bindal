@@ -367,12 +367,12 @@ frappe.ui.form.on('Gate Entry', {
      
 	    { frm.set_df_property("supplier_name", "reqd", 0);
 	       cur_frm.refresh_field("supplier_name");
-	     	frm.set_query("record_number", function() {
-	return {
-    filters: [
+	     	//frm.set_query("record_number", function() {
+	//return {
+    //filters: [
                
-             ]};
-			});   
+      //       ]};
+			//});   
 	    }
 	}
 	});
@@ -745,9 +745,9 @@ if(d.supporting_document == "" || d.supporting_document == undefined)
 {
   console.log("yes");
   cur_frm.set_value("record_number","");
-  cur_frm.set_value("estimated_net_weight"," ");
+  //cur_frm.set_value("estimated_net_weight"," ");
   cur_frm.set_value("estimated_total_weight_of_consignment"," ");
-  cur_frm.set_value("weighment"," ");
+  //cur_frm.set_value("weighment"," ");
   cur_frm.set_value("type"," ");
   cur_frm.clear_table("item"); 
  
@@ -1014,7 +1014,7 @@ type:function(frm,cdt,cdn)
 		frm.toggle_display("other_document_description", true);
 		frm.toggle_display("document_details", true);
     	frm.toggle_display("other_document_description_outward", false);
-    	frm.toggle_display("estimated_net_weight", false); 
+    //	frm.toggle_display("estimated_net_weight", false); 
 		}
 	    else if(d.type == "Outward")
 		{
@@ -1041,12 +1041,12 @@ type:function(frm,cdt,cdn)
 		frm.toggle_display("other_document_description_outward", false);
 		frm.toggle_display("other_document_description", false);
 		frm.toggle_display("document_details", false);
-    	frm.toggle_display("estimated_net_weight", false);
+    //	frm.toggle_display("estimated_net_weight", false);
 		}
-    if(d.type == "Outward" && d.supporting_document =="Delivery Note") 
-    {
+    //if(d.type == "Outward" && d.supporting_document =="Delivery Note") 
+    //{
       //frm.toggle_display("estimated_net_weight", true); 
-    }
+    //}
 	}
 });
 
@@ -1221,3 +1221,45 @@ refresh_field(d.weight_of_received_qty);
     });
     return invoice;
   }
+
+
+
+  frappe.ui.form.on('Gate Entry', {
+    supporting_document : function(frm, cdt, cdn) 
+    {
+    var d = locals[cdt][cdn];
+    if(d.type == "Outward" && d.supporting_document == "Delivery Note")
+      {
+    cur_frm.refresh_field("record_number");
+      //frm.set_df_property("supplier_name", "reqd", 1);
+      console.log("entered to IF");    
+    frm.set_query("record_number", function() {
+    return {
+      filters: [
+                  //["Purchase Order","supplier",'=',supplier_name],
+                  ["Delivery Note","docstatus", "=", "1"],
+               ]};
+        });
+    }
+  }
+    });
+
+    frappe.ui.form.on('Gate Entry', {
+      supporting_document : function(frm, cdt, cdn) 
+      {
+      var d = locals[cdt][cdn];
+      if(d.type == "Outward" && d.supporting_document == "Sales Invoice")
+        {
+      cur_frm.refresh_field("record_number");
+        //frm.set_df_property("supplier_name", "reqd", 1);
+        console.log("entered to IF");    
+      frm.set_query("record_number", function() {
+      return {
+        filters: [
+                    //["Purchase Order","supplier",'=',supplier_name],
+                    ["Sales Invoice","docstatus", "=", "1"],
+                 ]};
+          });
+      }
+    }
+      });

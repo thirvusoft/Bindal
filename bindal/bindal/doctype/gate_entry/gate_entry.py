@@ -68,34 +68,34 @@ def check_record_repeated(record_number):
 	print("gate_entry_details..",gate_details)
 	po = []
 	result = []
-	if gate_details != []:
-		for i in po_details:
-			for j in gate_details:
-				if i['name'] == j['record_number'] and i['item_code'] == j['item_code']:
-					print("qty........[]]]][][000.",i['qty'] - j['qty'])
-					innerJson_b = {
-					"record_number":j['record_number'],
-					"supplier_name":i['supplier_name'],
-					"child_record_name":i['child_record_name'],
-					"item_code":i['item_code'],
-					"description":i['description'],
-					"item_name":i['item_name'],
-					"uom":i['uom'],
-					"po_qty":i['qty'] - j['qty'],
-					"weight_per_unit":i['weight_per_unit'],
-					"weight_uom":i['weight_uom'],
-					"total_weight":i['total_weight'],
-					"pending_qty":i['pending_qty'],
-					"stock_uom":i['stock_uom'],
-					"conversion_factor":i['conversion_factor']
-				}
-					result.append(innerJson_b)
-		print("result",result)
-		return result			
-	if gate_details == []:
+#	if gate_details != []:
+#		for i in po_details:
+#			for j in gate_details:
+#				if i['name'] == j['record_number'] and i['item_code'] == j['item_code']:
+#					print("qty........[]]]][][000.",i['qty'] - j['qty'])
+#					innerJson_b = {
+#					"record_number":j['record_number'],
+#					"supplier_name":i['supplier_name'],
+#					"child_record_name":i['child_record_name'],
+#					"item_code":i['item_code'],
+#					"description":i['description'],
+#					"item_name":i['item_name'],
+#					"uom":i['uom'],
+#					"po_qty":i['qty'] - j['qty'],
+#					"weight_per_unit":i['weight_per_unit'],
+#					"weight_uom":i['weight_uom'],
+#					"total_weight":i['total_weight'],
+#					"pending_qty":i['pending_qty'],
+#					"stock_uom":i['stock_uom'],
+#					"conversion_factor":i['conversion_factor']
+#				}
+#					result.append(innerJson_b)
+#		print("result",result)
+#		return result			
+	if gate_details == [] or gate_details != []:
 		print("empy gateentry")
 		for i in po_details:
-			print("new gate_entry")
+			print("new gate_entry",po_details)
 			innerJson_b = {
 			"record_number":record_number,
 			"supplier_name":i['supplier_name'],

@@ -41,18 +41,45 @@ def execute(filters=None):
 	for gate_data in d:
 		item_master = frappe.db.sql("""select over_delivery_receipt_allowance from `tabItem` where item_code='"""+gate_data['item_code']+"""' """, as_dict=1)
 		stock_settings=frappe.get_doc("Stock Settings")
-		result = item_master[0]['over_delivery_receipt_allowance'] - stock_settings.over_delivery_receipt_allowance
+		result = 0
+		if item_master[0]['over_delivery_receipt_allowance'] == 0 and stock_settings.over_delivery_receipt_allowance == 0:
+			result = 0
+		elif item_master[0]['over_delivery_receipt_allowance'] != 0 and stock_settings.over_delivery_receipt_allowance == 0:
+			result = item_master[0]['over_delivery_receipt_allowance']
+		elif item_master[0]['over_delivery_receipt_allowance'] == 0 and stock_settings.over_delivery_receipt_allowance != 0:
+			result = stock_settings.over_delivery_receipt_allowance
+		elif item_master[0]['over_delivery_receipt_allowance'] != 0 and stock_settings.over_delivery_receipt_allowance != 0:
+			result = item_master[0]['over_delivery_receipt_allowance']
 		print("result",result)
-		r = (gate_data['po_qty'] * result)/100
-		pending_qty_with_over_del_percentage = gate_data['pending_qty'] + r
-		blnce_with_over_delivery_percentage = pending_qty_with_over_del_percentage - gate_data['received_qty']
-		results = 1+(result/100)
-		resultess = gate_data['po_qty'] * results  
-		r_result = resultess - gate_data['received_qty']
+
+		r = 1+(result/100)
+		res = gate_data['po_qty'] * r
+
+		#Pending PO Quantity with over delivery percentage
+		pending_qty_with_over_del_percentage = 0
+		q = gate_data['po_qty'] - gate_data['pending_qty']
+		pending_qty_with_over_del_percentage = res - q
+		print("pending_qty_with_over_del_percentage",pending_qty_with_over_del_percentage)
+
+		#balance
+		balance = 0
+		if gate_data['received_qty'] > gate_data['po_qty'] :
+			balance = 0
+		else:
+			balance = gate_data['po_qty'] - gate_data['received_qty']
+		print("balance",balance)
+
+		#Balance with Over Delivery Percentage as per Gate Entry
+		balance_with_over_delivery_percentage = 0
+		if gate_data['received_qty'] > res:
+			balance_with_over_delivery_percentage = 0
+		else:
+			balance_with_over_delivery_percentage = res - gate_data['received_qty']
+
 		sum_data.append([gate_data['item_code'],gate_data['po_qty'],gate_data['uom'],
 		gate_data['pending_qty'],pending_qty_with_over_del_percentage,
 		gate_data['received_qty'],gate_data['stock_uom'],
-		gate_data['balance'],r_result
+		balance,balance_with_over_delivery_percentage
 		])
 	print("result............",sum_data)
 	return columns, sum_data
@@ -60,11 +87,10 @@ def execute(filters=None):
 def fetching_po_details(purchase_order):
 	print(".....",purchase_order)
 	gate_data = frappe.db.sql("""select gti.record_number,gti.item_code,gti.item_name,
-	gti.uom,gti.po_qty,gti.pending_qty,gti.stock_uom, gti.received_qty,
-	gti.pending_qty - gti.received_qty as balance 
+	gti.uom,gti.po_qty,gti.pending_qty,gti.stock_uom, gti.received_qty
 	from `tabGate Entry` as gt inner join `tabPO Item` as gti on gt.name=gti.parent  
 	where gti.record_number='"""+purchase_order+"""' and gt.docstatus=1 """, as_dict=1)
-	print("gate_data.....",gate_data)
+	print("gate_data....",gate_data)
 	return gate_data
 
 def get_columns():

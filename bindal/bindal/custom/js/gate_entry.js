@@ -90,15 +90,19 @@ frappe.ui.form.on("Gate Entry", {
       },
 })
 
-// frappe.ui.form.on("PO Item", {
-//   item_code:function(frm,cdt,cdn){
-//     let row = locals[cdt][cdn]
-//     frappe.db.get_value("Item", row.item_code, "last_updated_series", (r) => {
-//       frappe.model.set_value(cdt, cdn, "last_updated_series", r.last_updated_series);
-//     });
-//   },
-//   last_updated_series:function(frm,cdt,cdn){
-//     let row = locals[cdt][cdn]
-//     frappe.model.set_value(cdt, cdn, "current_series", row.last_updated_series+1);
-//   },
-// })
+frappe.ui.form.on("PO Item", {
+  custom_total_bundle:function(frm,cdt,cdn){
+    let row = locals[cdt][cdn]
+    frappe.model.set_value(row.doctype,row.name,"custom_pcs_per_bundle",row.po_qty / row.custom_total_bundle)
+  },
+  // item_code:function(frm,cdt,cdn){
+  //   let row = locals[cdt][cdn]
+  //   frappe.db.get_value("Item", row.item_code, "last_updated_series", (r) => {
+  //     frappe.model.set_value(cdt, cdn, "last_updated_series", r.last_updated_series);
+  //   });
+  // },
+  // last_updated_series:function(frm,cdt,cdn){
+  //   let row = locals[cdt][cdn]
+  //   frappe.model.set_value(cdt, cdn, "current_series", row.last_updated_series+1);
+  // },
+})

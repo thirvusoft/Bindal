@@ -19,7 +19,11 @@ def get_barcode(doc):
     for it in doc.item:
         item_doc = frappe.get_doc("Item",it.item_code)
         starting_count = frappe.get_value("Item",it.item_code,'last_updated_series')
-        for count in range(starting_count+1,int(it.po_qty)+starting_count+1,1):
+        if it.custom_barcode_with_bundle:
+            qty = it.custom_total_bundle
+        else:
+            qty = it.po_qty
+        for count in range(starting_count+1,int(qty)+starting_count+1,1):
             barcode = frappe.new_doc('Barcode Label')
             if "U1" in doc.naming_series.replace("-",''):
                 unit =  "U1"
@@ -30,7 +34,7 @@ def get_barcode(doc):
             else:
                 unit = "WH"
             if it.custom_barcode_with_bundle:
-                barcode.barcode = it.item_code +'-'+unit+'-'+ str((doc.name.split("-")[-1]))+'-'+'{:03d}'.format(count) + ' ('+str(it.custom_pcs_per_bundle)+""+it.custom_bundle_uom+')'
+                barcode.barcode = it.item_code +'-'+unit+'-'+ str((doc.name.split("-")[-1]))+'-'+'{:03d}'.format(count) + ' ('+str(round(it.custom_pcs_per_bundle))+""+it.uom+')'
             else:
                 barcode.barcode = it.item_code +'-'+unit+'-'+ str((doc.name.split("-")[-1]))+'-'+'{:03d}'.format(count)
 

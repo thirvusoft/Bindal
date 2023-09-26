@@ -14,10 +14,14 @@ def get_barcode(doc):
     doc = frappe.get_doc("Work Order",doc)
     item_doc = frappe.get_doc("Item",doc.production_item)
     starting_count = frappe.get_value("Item",doc.production_item,'last_updated_series')
-    for count in range(starting_count+1,int(doc.qty)+starting_count+1,1):
+    if doc.custom_barcode_with_bundle:
+        qty = doc.custom_total_bundle
+    else:
+        qty = doc.qty
+    for count in range(starting_count+1,int(qty)+starting_count+1,1):
         barcode = frappe.new_doc('Barcode Label')
         if doc.custom_barcode_with_bundle:
-            barcode.barcode = doc.production_item +'-'+ str(int(doc.name.split("-")[-1]))+'-'+'{:06d}'.format(count)+' ('+str(doc.custom_pcs_per_bundle)+""+doc.custom_bundle_uom+')'
+            barcode.barcode = doc.production_item +'-'+ str(int(doc.name.split("-")[-1]))+'-'+'{:06d}'.format(count)+' ('+str(doc.custom_pcs_per_bundle)+""+doc.stock_uom+')'
         else:
             barcode.barcode = doc.production_item +'-'+ str(int(doc.name.split("-")[-1]))+'-'+'{:06d}'.format(count)
         barcode.reference_doctype = "Work Order"

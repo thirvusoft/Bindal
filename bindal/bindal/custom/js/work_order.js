@@ -58,7 +58,9 @@ frappe.ui.form.on("Work Order", {
             // });
         }
     },
-
+    custom_total_bundle:function(frm){
+      frm.set_value("custom_pcs_per_bundle",frm.doc.qty / frm.doc.custom_total_bundle)
+    },
     load_print_page(frm) {
         const print_format = "Finished Goods Barcode"
         const letter_head = 0;

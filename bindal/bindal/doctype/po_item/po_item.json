@@ -1,10 +1,12 @@
 {
+ "actions": [],
  "creation": "2022-07-04 14:55:14.484553",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "item_name"
+  "item_name",
+  "barcode"
  ],
  "fields": [
   {
@@ -13,17 +15,27 @@
    "in_global_search": 1,
    "in_list_view": 1,
    "label": "Item Name"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "barcode",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Barcode",
+   "no_copy": 1
   }
  ],
  "istable": 1,
- "modified": "2022-12-07 11:19:45.022526",
+ "links": [],
+ "modified": "2023-09-20 15:55:26.956267",
  "modified_by": "Administrator",
- "module": "bindal",
+ "module": "Bindal",
  "name": "PO Item",
  "owner": "Administrator",
  "permissions": [],
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

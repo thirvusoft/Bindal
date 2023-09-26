@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "autoname": "naming_series:",
  "creation": "2022-06-24 10:53:14.728216",
  "doctype": "DocType",
@@ -6,6 +7,9 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
+  "barcode",
+  "barcode_item",
+  "barcode_type",
   "bh",
   "type",
   "supporting_document",
@@ -79,7 +83,7 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Record Number",
-   "options": "GATE-"
+   "options": "\nU1-GE-2324-\nGE-REJ-\nU2-GE-2324-\nU3-GE-2324-\nWH-GE-2324-\nGATE-U-1-\nGATE-U-2-\nGATE-U-3-\nGATE-WH-"
   },
   {
    "fieldname": "supporting_document",
@@ -151,13 +155,35 @@
    "options": "Gate Entry",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "barcode",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Barcode"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "barcode_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Barcode Type",
+   "options": "Series of Barcode\nSingle Barcode"
+  },
+  {
+   "fieldname": "barcode_item",
+   "fieldtype": "Data",
+   "label": "Barcode Item"
   }
  ],
  "is_submittable": 1,
- "modified": "2022-12-21 14:38:52.142342",
+ "links": [],
+ "modified": "2023-09-20 16:53:44.381614",
  "modified_by": "Administrator",
- "module": "bindal",
+ "module": "Bindal",
  "name": "Gate Entry",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -176,6 +202,7 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1,
  "track_seen": 1
 }

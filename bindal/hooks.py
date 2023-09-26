@@ -26,7 +26,10 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+			"Work Order" : "bindal/custom/js/work_order.js",
+			"Gate Entry":"bindal/custom/js/gate_entry.js"
+			}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -55,7 +58,8 @@ app_license = "MIT"
 # ------------
 
 # before_install = "bindal.install.before_install"
-# after_install = "bindal.install.after_install"
+after_install = "bindal.utils.py.stock_settings.stock_customization"
+after_migrate = "bindal.utils.py.stock_settings.stock_customization"
 
 # Desk Notifications
 # ------------------
@@ -79,13 +83,15 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Work Order": {
+		"on_submit":"bindal.bindal.custom.py.work_order.on_submit"
+	},
+	"Gate Entry": {
+		"on_submit":"bindal.bindal.custom.py.gate_entry.on_submit"
+	},
+
+}
 
 # Scheduled Tasks
 # ---------------
@@ -132,3 +138,11 @@ scheduler_events = {
  		"bindal.api.send_email_for_due_date"
  	]
  }
+
+jinja = {
+	"methods": [
+		"bindal.bindal.custom.py.work_order.barcode",
+		"bindal.bindal.custom.py.work_order.get_qr_code"
+
+	]
+}

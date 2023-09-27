@@ -22,7 +22,7 @@ def get_barcode(doc):
         if it.custom_barcode_with_bundle:
             qty = it.custom_total_bundle
         else:
-            qty = it.po_qty
+            qty = it.received_qty
         for count in range(starting_count+1,int(qty)+starting_count+1,1):
             barcode = frappe.new_doc('Barcode Label')
             if "U1" in doc.naming_series.replace("-",''):

@@ -21,7 +21,7 @@ def get_barcode(doc):
     for count in range(starting_count+1,int(qty)+starting_count+1,1):
         barcode = frappe.new_doc('Barcode Label')
         if doc.custom_barcode_with_bundle:
-            barcode.barcode = doc.production_item +'-'+ str(int(doc.name.split("-")[-1]))+'-'+'{:06d}'.format(count)+' ('+str(doc.custom_pcs_per_bundle)+""+doc.stock_uom+')'
+            barcode.barcode = doc.production_item +'-'+ str(int(doc.name.split("-")[-1]))+'-'+'{:06d}'.format(count)+'-'+str(doc.custom_pcs_per_bundle)+"-"+doc.stock_uom
         else:
             barcode.barcode = doc.production_item +'-'+ str(int(doc.name.split("-")[-1]))+'-'+'{:06d}'.format(count)
         barcode.reference_doctype = "Work Order"

@@ -34,7 +34,7 @@ def get_barcode(doc):
             else:
                 unit = "WH"
             if it.custom_barcode_with_bundle:
-                barcode.barcode = it.item_code +'-'+unit+'-'+ str((doc.name.split("-")[-1]))+'-'+'{:03d}'.format(count) + ' ('+str(round(it.custom_pcs_per_bundle))+""+it.uom+')'
+                barcode.barcode = it.item_code +'-'+unit+'-'+ str((doc.name.split("-")[-1]))+'-'+'{:03d}'.format(count) + '-'+str(round(it.custom_pcs_per_bundle))+"-"+it.uom
             else:
                 barcode.barcode = it.item_code +'-'+unit+'-'+ str((doc.name.split("-")[-1]))+'-'+'{:03d}'.format(count)
 

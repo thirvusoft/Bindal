@@ -49,7 +49,8 @@ def get_barcode(doc):
     return 1
 
 def on_submit(doc,event):
-    get_barcode(doc.name)
+    frappe.enqueue(get_barcode,queue="long",doc=doc.name)
+    # get_barcode(doc.name)
 
 @frappe.whitelist()
 def update_barcode(doc,data):

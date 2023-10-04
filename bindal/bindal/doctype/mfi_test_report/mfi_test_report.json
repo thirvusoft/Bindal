@@ -1,0 +1,530 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-09-29 14:51:15.466716",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "data_zfeim",
+  "naming_series",
+  "test_type",
+  "gate_entry",
+  "bh",
+  "supplier",
+  "material",
+  "grade",
+  "lot_no",
+  "column_break_7",
+  "test_method",
+  "applied_load",
+  "temp_c",
+  "pre_heating_time",
+  "section_break_3",
+  "density_spec",
+  "column_break_i8wmt",
+  "observation",
+  "column_break_6lanx",
+  "ash_content",
+  "section_break_lwo8g",
+  "trial_no_1",
+  "section_break_sezzm",
+  "weight_gm",
+  "cut_off_time_sec",
+  "mfi",
+  "column_break_meom6",
+  "sn_2_weight_gm",
+  "sn_2_cut_off_time_sec",
+  "sn_2_mfi",
+  "column_break_xyzdx",
+  "sn_3_weight_gm",
+  "sn_3_cut_off_time_sec",
+  "sn_3_mfi",
+  "section_break_1hx3g",
+  "trial_no_2",
+  "section_break_nrtul",
+  "sn_4_wg",
+  "sn_4_ct",
+  "sn_4_mfi",
+  "column_break_vgifj",
+  "sn_5_weight_gm",
+  "sn_5_cut_off_time_sec",
+  "sn_5_mfi",
+  "column_break_zqcc1",
+  "sn_6_weight_gm",
+  "sn_6_cut_off_time_sec",
+  "sn_6_mfi",
+  "section_break_njq3a",
+  "trial_no_3",
+  "section_break_rzxs4",
+  "sn_7_weight_gm",
+  "sn_7_cut_off_time_sec",
+  "sn_7_mfi",
+  "column_break_eifga",
+  "sn_8_weight_gm",
+  "sn_8_cut_off_time_sec",
+  "sn_8_mfi",
+  "column_break_npj0p",
+  "sn_9_weight_gm",
+  "sn_9_cut_off_time_sec",
+  "sn_9_mfi",
+  "section_break_qgkp3",
+  "trial_no_4",
+  "section_break_doffn",
+  "sn_10_weight_gm",
+  "sn_10_cut_off_time_sec",
+  "sn_10_mfi",
+  "column_break_j23iz",
+  "sn_11_weight_gm",
+  "sn_11_cut_off_time_sec",
+  "sn_11_mfi",
+  "column_break_isxds",
+  "sn_12_weight_gm",
+  "sn_12_cut_off_time_sec",
+  "sn_12_mfi",
+  "section_break_vms1t",
+  "average_value_of_mfi",
+  "value_in",
+  "section_break_egqs9",
+  "checked_by",
+  "column_break_oeesc",
+  "approved_by",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "data_zfeim",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Record Number"
+  },
+  {
+   "fieldname": "test_type",
+   "fieldtype": "Select",
+   "label": "Test Type",
+   "options": "Via Gate Entry\nRandom"
+  },
+  {
+   "fieldname": "gate_entry",
+   "fieldtype": "Link",
+   "label": "Gate Entry",
+   "options": "Gate Entry"
+  },
+  {
+   "fieldname": "bh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "material",
+   "fieldtype": "Data",
+   "label": "Material"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "label": "Grade"
+  },
+  {
+   "fieldname": "lot_no",
+   "fieldtype": "Data",
+   "label": "Lot No"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "test_method",
+   "fieldtype": "Data",
+   "label": "Test Method"
+  },
+  {
+   "fieldname": "applied_load",
+   "fieldtype": "Data",
+   "label": "Applied Load"
+  },
+  {
+   "fieldname": "temp_c",
+   "fieldtype": "Data",
+   "label": "Temp (C)"
+  },
+  {
+   "fieldname": "pre_heating_time",
+   "fieldtype": "Data",
+   "label": "Pre Heating Time"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "density_spec",
+   "fieldtype": "Data",
+   "label": "Density Spec"
+  },
+  {
+   "fieldname": "column_break_i8wmt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "observation",
+   "fieldtype": "Data",
+   "label": "Observation"
+  },
+  {
+   "fieldname": "column_break_6lanx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ash_content",
+   "fieldtype": "Data",
+   "label": "Ash Content"
+  },
+  {
+   "fieldname": "section_break_lwo8g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "trial_no_1",
+   "fieldtype": "Heading",
+   "label": "Trial No 1"
+  },
+  {
+   "fieldname": "section_break_sezzm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "weight_gm",
+   "fieldtype": "Int",
+   "label": "Weight (Gm)"
+  },
+  {
+   "fieldname": "cut_off_time_sec",
+   "fieldtype": "Int",
+   "label": "Cut Off Time (Sec)"
+  },
+  {
+   "fieldname": "mfi",
+   "fieldtype": "Int",
+   "label": "MFI"
+  },
+  {
+   "fieldname": "column_break_meom6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sn_2_weight_gm",
+   "fieldtype": "Int",
+   "label": "Weight (Gm)"
+  },
+  {
+   "fieldname": "sn_2_cut_off_time_sec",
+   "fieldtype": "Int",
+   "label": "Cut Off Time (Sec)"
+  },
+  {
+   "fieldname": "sn_2_mfi",
+   "fieldtype": "Int",
+   "label": "MFI"
+  },
+  {
+   "fieldname": "column_break_xyzdx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sn_3_weight_gm",
+   "fieldtype": "Int",
+   "label": "Weight (Gm)"
+  },
+  {
+   "fieldname": "sn_3_cut_off_time_sec",
+   "fieldtype": "Int",
+   "label": "Cut Off Time (Sec)"
+  },
+  {
+   "fieldname": "sn_3_mfi",
+   "fieldtype": "Int",
+   "label": "MFI"
+  },
+  {
+   "fieldname": "section_break_1hx3g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "trial_no_2",
+   "fieldtype": "Heading",
+   "label": "Trial No 2"
+  },
+  {
+   "fieldname": "section_break_nrtul",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sn_4_wg",
+   "fieldtype": "Int",
+   "label": "Weight (Gm)"
+  },
+  {
+   "fieldname": "sn_4_ct",
+   "fieldtype": "Int",
+   "label": "Cut Off Time (Sec)"
+  },
+  {
+   "fieldname": "sn_4_mfi",
+   "fieldtype": "Int",
+   "label": "MFI"
+  },
+  {
+   "fieldname": "column_break_vgifj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sn_5_weight_gm",
+   "fieldtype": "Int",
+   "label": "Weight (Gm)"
+  },
+  {
+   "fieldname": "sn_5_cut_off_time_sec",
+   "fieldtype": "Int",
+   "label": "Cut Off Time (Sec)"
+  },
+  {
+   "fieldname": "sn_5_mfi",
+   "fieldtype": "Int",
+   "label": "MFI"
+  },
+  {
+   "fieldname": "column_break_zqcc1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sn_6_weight_gm",
+   "fieldtype": "Int",
+   "label": "Weight (Gm)"
+  },
+  {
+   "fieldname": "sn_6_cut_off_time_sec",
+   "fieldtype": "Int",
+   "label": "Cut Off Time (Sec)"
+  },
+  {
+   "fieldname": "sn_6_mfi",
+   "fieldtype": "Int",
+   "label": "MFI"
+  },
+  {
+   "fieldname": "section_break_njq3a",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "trial_no_3",
+   "fieldtype": "Heading",
+   "label": "Trial No 3"
+  },
+  {
+   "fieldname": "section_break_rzxs4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sn_7_weight_gm",
+   "fieldtype": "Int",
+   "label": "Weight (Gm)"
+  },
+  {
+   "fieldname": "sn_7_cut_off_time_sec",
+   "fieldtype": "Int",
+   "label": "Cut Off Time (Sec)"
+  },
+  {
+   "fieldname": "sn_7_mfi",
+   "fieldtype": "Int",
+   "label": "MFI"
+  },
+  {
+   "fieldname": "column_break_eifga",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sn_8_weight_gm",
+   "fieldtype": "Int",
+   "label": "Weight (Gm)"
+  },
+  {
+   "fieldname": "sn_8_cut_off_time_sec",
+   "fieldtype": "Int",
+   "label": "Cut Off Time (Sec)"
+  },
+  {
+   "fieldname": "sn_8_mfi",
+   "fieldtype": "Int",
+   "label": "MFI"
+  },
+  {
+   "fieldname": "column_break_npj0p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sn_9_weight_gm",
+   "fieldtype": "Data",
+   "label": "Weight (Gm)"
+  },
+  {
+   "fieldname": "sn_9_cut_off_time_sec",
+   "fieldtype": "Data",
+   "label": "Cut Off Time (Sec)"
+  },
+  {
+   "fieldname": "sn_9_mfi",
+   "fieldtype": "Data",
+   "label": "MFI"
+  },
+  {
+   "fieldname": "section_break_qgkp3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "trial_no_4",
+   "fieldtype": "Heading",
+   "label": "Trial No 4"
+  },
+  {
+   "fieldname": "section_break_doffn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sn_10_weight_gm",
+   "fieldtype": "Int",
+   "label": "Weight (Gm)"
+  },
+  {
+   "fieldname": "sn_10_cut_off_time_sec",
+   "fieldtype": "Int",
+   "label": "Cut Off Time (Sec)"
+  },
+  {
+   "fieldname": "sn_10_mfi",
+   "fieldtype": "Int",
+   "label": "MFI"
+  },
+  {
+   "fieldname": "column_break_j23iz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sn_11_weight_gm",
+   "fieldtype": "Int",
+   "label": "Weight (Gm)"
+  },
+  {
+   "fieldname": "sn_11_cut_off_time_sec",
+   "fieldtype": "Int",
+   "label": "Cut Off Time (Sec)"
+  },
+  {
+   "fieldname": "sn_11_mfi",
+   "fieldtype": "Int",
+   "label": "MFI"
+  },
+  {
+   "fieldname": "column_break_isxds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sn_12_weight_gm",
+   "fieldtype": "Int",
+   "label": "Weight (Gm)"
+  },
+  {
+   "fieldname": "sn_12_cut_off_time_sec",
+   "fieldtype": "Int",
+   "label": "Cut Off Time (Sec)"
+  },
+  {
+   "fieldname": "sn_12_mfi",
+   "fieldtype": "Int",
+   "label": "MFI"
+  },
+  {
+   "fieldname": "section_break_vms1t",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "average_value_of_mfi",
+   "fieldtype": "Int",
+   "label": "Average Value of MFI"
+  },
+  {
+   "fieldname": "value_in",
+   "fieldtype": "Select",
+   "label": "Value in ",
+   "options": "gm/10 min."
+  },
+  {
+   "fieldname": "section_break_egqs9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "checked_by",
+   "fieldtype": "Data",
+   "label": "Checked By"
+  },
+  {
+   "fieldname": "column_break_oeesc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "MFI Test Report",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-03 13:56:59.556628",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "MFI Test Report",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

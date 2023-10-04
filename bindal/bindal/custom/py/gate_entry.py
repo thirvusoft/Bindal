@@ -2,8 +2,8 @@ import frappe
 import json
 from frappe.model.naming import parse_naming_series
 from io import BytesIO
-from barcode import Code128
-from barcode.writer import ImageWriter
+# from barcode import Code128
+# from barcode.writer import ImageWriter
 import base64
 
 

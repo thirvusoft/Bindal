@@ -2,8 +2,8 @@ import frappe
 import json
 from frappe.model.naming import parse_naming_series
 from io import BytesIO
-from barcode import Code128
-from barcode.writer import ImageWriter
+# from barcode import Code128
+# from barcode.writer import ImageWriter
 import base64
 import pyqrcode
 
@@ -50,20 +50,20 @@ def on_submit(doc,event):
 def barcode(barcode):
     return get_ewaybill_barcode(barcode)
 
-def get_ewaybill_barcode(ewaybill):
-    stream = BytesIO()
-    Code128(str(ewaybill), writer=ImageWriter()).write(
-        stream,
-        {
-            "module_width": 0.4,
-            "text_distance": 1,
-            "font_size": 20,
-        },
-    )
-    barcode_base64 = base64.b64encode(stream.getbuffer()).decode()
-    stream.close()
+# def get_ewaybill_barcode(ewaybill):
+#     stream = BytesIO()
+#     Code128(str(ewaybill), writer=ImageWriter()).write(
+#         stream,
+#         {
+#             "module_width": 0.4,
+#             "text_distance": 1,
+#             "font_size": 20,
+#         },
+#     )
+#     barcode_base64 = base64.b64encode(stream.getbuffer()).decode()
+#     stream.close()
 
-    return barcode_base64
+#     return barcode_base64
 
 @frappe.whitelist()
 def get_qr_code(data, scale):

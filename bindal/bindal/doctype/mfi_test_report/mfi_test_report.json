@@ -206,17 +206,17 @@
   },
   {
    "fieldname": "weight_gm",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Weight (Gm)"
   },
   {
    "fieldname": "cut_off_time_sec",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Cut Off Time (Sec)"
   },
   {
    "fieldname": "mfi",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "MFI"
   },
   {
@@ -225,17 +225,17 @@
   },
   {
    "fieldname": "sn_2_weight_gm",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Weight (Gm)"
   },
   {
    "fieldname": "sn_2_cut_off_time_sec",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Cut Off Time (Sec)"
   },
   {
    "fieldname": "sn_2_mfi",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "MFI"
   },
   {
@@ -244,17 +244,17 @@
   },
   {
    "fieldname": "sn_3_weight_gm",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Weight (Gm)"
   },
   {
    "fieldname": "sn_3_cut_off_time_sec",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Cut Off Time (Sec)"
   },
   {
    "fieldname": "sn_3_mfi",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "MFI"
   },
   {
@@ -272,17 +272,17 @@
   },
   {
    "fieldname": "sn_4_wg",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Weight (Gm)"
   },
   {
    "fieldname": "sn_4_ct",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Cut Off Time (Sec)"
   },
   {
    "fieldname": "sn_4_mfi",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "MFI"
   },
   {
@@ -291,17 +291,17 @@
   },
   {
    "fieldname": "sn_5_weight_gm",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Weight (Gm)"
   },
   {
    "fieldname": "sn_5_cut_off_time_sec",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Cut Off Time (Sec)"
   },
   {
    "fieldname": "sn_5_mfi",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "MFI"
   },
   {
@@ -310,17 +310,17 @@
   },
   {
    "fieldname": "sn_6_weight_gm",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Weight (Gm)"
   },
   {
    "fieldname": "sn_6_cut_off_time_sec",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Cut Off Time (Sec)"
   },
   {
    "fieldname": "sn_6_mfi",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "MFI"
   },
   {
@@ -500,11 +500,10 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-03 13:56:59.556628",
+ "modified": "2023-10-05 16:05:13.570225",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "MFI Test Report",
- "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -524,7 +523,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
  "track_changes": 1,
  "track_seen": 1
 }

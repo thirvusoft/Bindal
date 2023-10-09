@@ -1,0 +1,356 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-10-03 12:22:40.173121",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "naming_series",
+  "section_break1",
+  "item",
+  "model_name",
+  "material",
+  "shift",
+  "column_break1",
+  "test_method",
+  "period",
+  "conducted_by",
+  "customer_name",
+  "section_break2",
+  "observation",
+  "section_break3",
+  "sample_1",
+  "length_1",
+  "width_1",
+  "thickness_1",
+  "tensile_peak_1",
+  "tensile_break_1",
+  "elongation_1",
+  "strength_1",
+  "coloum_break2",
+  "sample_2",
+  "length_2",
+  "width_2",
+  "thickness_2",
+  "tensile_peak_2",
+  "tensile_break_2",
+  "elongation_2",
+  "strength_2",
+  "coloum_break3",
+  "sample_3",
+  "length_3",
+  "width_3",
+  "thickness_3",
+  "tensile_peak_3",
+  "tensile_break_3",
+  "elongation_3",
+  "strength_3",
+  "section_break4",
+  "sepc",
+  "note",
+  "remark_4",
+  "section_break5",
+  "checked",
+  "coloum_break4",
+  "approve",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Record Number"
+  },
+  {
+   "fieldname": "section_break1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "model_name",
+   "fieldtype": "Data",
+   "label": "Model Name"
+  },
+  {
+   "fieldname": "material",
+   "fieldtype": "Data",
+   "label": "Material"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "Shift-A\nShift-B"
+  },
+  {
+   "fieldname": "column_break1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "ASTM D638",
+   "fieldname": "test_method",
+   "fieldtype": "Read Only",
+   "label": "Test Method"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Data",
+   "label": "Period"
+  },
+  {
+   "fieldname": "conducted_by",
+   "fieldtype": "Data",
+   "label": "Conducted By"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "section_break2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "observation",
+   "fieldtype": "Heading",
+   "label": "Observation"
+  },
+  {
+   "fieldname": "section_break3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "sample_1",
+   "fieldtype": "Read Only",
+   "label": "Sample No"
+  },
+  {
+   "fieldname": "length_1",
+   "fieldtype": "Float",
+   "label": "Specimen Length (mm)"
+  },
+  {
+   "fieldname": "width_1",
+   "fieldtype": "Float",
+   "label": "Specimen Width (mm)"
+  },
+  {
+   "fieldname": "thickness_1",
+   "fieldtype": "Float",
+   "label": "Specimen Thickness (mm)"
+  },
+  {
+   "fieldname": "tensile_peak_1",
+   "fieldtype": "Float",
+   "label": "Tensile @ Peak Load"
+  },
+  {
+   "fieldname": "tensile_break_1",
+   "fieldtype": "Float",
+   "label": "Tensile @ Break Load"
+  },
+  {
+   "fieldname": "elongation_1",
+   "fieldtype": "Float",
+   "label": "Elongation @ Yield"
+  },
+  {
+   "fieldname": "strength_1",
+   "fieldtype": "Float",
+   "label": "Tensile Strength in MPA"
+  },
+  {
+   "fieldname": "coloum_break2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "2",
+   "fieldname": "sample_2",
+   "fieldtype": "Read Only",
+   "label": "Sample No"
+  },
+  {
+   "fieldname": "length_2",
+   "fieldtype": "Float",
+   "label": "Specimen Length (mm)"
+  },
+  {
+   "fieldname": "width_2",
+   "fieldtype": "Float",
+   "label": "Specimen Width (mm)"
+  },
+  {
+   "fieldname": "thickness_2",
+   "fieldtype": "Float",
+   "label": "Specimen Thickness (mm)"
+  },
+  {
+   "fieldname": "tensile_peak_2",
+   "fieldtype": "Float",
+   "label": "Tensile @ Peak Load"
+  },
+  {
+   "fieldname": "tensile_break_2",
+   "fieldtype": "Float",
+   "label": "Tensile @ Break Load"
+  },
+  {
+   "fieldname": "elongation_2",
+   "fieldtype": "Float",
+   "label": "Elongation @ Yield"
+  },
+  {
+   "fieldname": "strength_2",
+   "fieldtype": "Float",
+   "label": "Tensile Strength in MPA"
+  },
+  {
+   "fieldname": "coloum_break3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "3",
+   "fieldname": "sample_3",
+   "fieldtype": "Read Only",
+   "label": "Sample No"
+  },
+  {
+   "fieldname": "length_3",
+   "fieldtype": "Float",
+   "label": "Specimen Length (mm)"
+  },
+  {
+   "fieldname": "width_3",
+   "fieldtype": "Float",
+   "label": "Specimen Width (mm)"
+  },
+  {
+   "fieldname": "thickness_3",
+   "fieldtype": "Float",
+   "label": "Specimen Thickness (mm)"
+  },
+  {
+   "fieldname": "tensile_peak_3",
+   "fieldtype": "Float",
+   "label": "Tensile @ Peak Load"
+  },
+  {
+   "fieldname": "tensile_break_3",
+   "fieldtype": "Float",
+   "label": "Tensile @ Break Load"
+  },
+  {
+   "fieldname": "elongation_3",
+   "fieldtype": "Float",
+   "label": "Elongation @ Yield"
+  },
+  {
+   "fieldname": "strength_3",
+   "fieldtype": "Float",
+   "label": "Tensile Strength in MPA"
+  },
+  {
+   "fieldname": "section_break4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Min.23 mpa",
+   "fieldname": "sepc",
+   "fieldtype": "Read Only",
+   "label": "Spec-"
+  },
+  {
+   "default": "1Kgf/m2= 9.8065 j/m",
+   "fieldname": "note",
+   "fieldtype": "Read Only",
+   "label": "Note:-"
+  },
+  {
+   "default": "TS @p1/9.8065",
+   "fieldname": "remark_4",
+   "fieldtype": "Read Only",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "section_break5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "checked",
+   "fieldtype": "Data",
+   "label": "Checked By"
+  },
+  {
+   "fieldname": "coloum_break4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approve",
+   "fieldtype": "Data",
+   "label": "Approved By"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Tensile Strength Test",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-09 18:46:27.161902",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Tensile Strength Test",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

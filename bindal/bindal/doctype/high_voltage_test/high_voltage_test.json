@@ -1,0 +1,831 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-10-01 16:14:54.392255",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "data_zfeim",
+  "naming_series",
+  "bh",
+  "item_name",
+  "model_name",
+  "material",
+  "shift",
+  "column_break_8",
+  "test_method",
+  "period",
+  "conducted_by",
+  "customer",
+  "section_break_3",
+  "observation",
+  "section_break_5",
+  "sno2",
+  "first_cell",
+  "wall_thickness",
+  "ball_drop_height_mm",
+  "constant_current_in_ma",
+  "supplied_voltage",
+  "leakage",
+  "remarks",
+  "column_break_hcjoc",
+  "section_break_km5qz",
+  "location",
+  "wall_thickness2",
+  "supplied_voltage_in_kv",
+  "constant_current_in_ma2",
+  "supplied_voltage2",
+  "leakage2",
+  "remarks2",
+  "column_break_bzjku",
+  "sno3",
+  "location2",
+  "wall_thickness3",
+  "supplied_voltage_in_kv2",
+  "constant_current_in_ma3",
+  "supplied_voltage3",
+  "leakage3",
+  "remarks3",
+  "column_break_pd7qo",
+  "sno4",
+  "location3",
+  "wall_thickness4",
+  "supplied_voltage_in_kv4",
+  "constant_current_in_ma4",
+  "supplied_voltage4",
+  "leakage4",
+  "remarks4",
+  "column_break_jedid",
+  "sno5",
+  "location5",
+  "wall_thickness5",
+  "supplied_voltage_in_kv5",
+  "constant_current_in_ma5",
+  "supplied_voltage5",
+  "leakage5",
+  "remark5",
+  "data_7wcpx",
+  "sno6",
+  "location6",
+  "wall_thickness6",
+  "supplied_voltage_in_kv6",
+  "constant_current_in_ma6",
+  "supplied_voltage6",
+  "leakage6",
+  "remark6",
+  "column_break_f3omu",
+  "sno7",
+  "location7",
+  "wall_thickness7",
+  "supplied_voltage_in_kv7",
+  "constant_current_in_ma7",
+  "supplied_voltage7",
+  "leakage7",
+  "remark7",
+  "column_break_rahok",
+  "sno8",
+  "location8",
+  "wall_thickness8",
+  "supplied_voltage_in_kv8",
+  "constant_current_in_ma8",
+  "supplied_voltage8",
+  "leakage8",
+  "remark8",
+  "column_break_own6g",
+  "sno9",
+  "location9",
+  "wall_thickness9",
+  "supplied_voltage_in_kv9",
+  "constant_current_in_ma9",
+  "supplied_voltage9",
+  "leakage9",
+  "remark9",
+  "column_break_jphvu",
+  "sno10",
+  "location10",
+  "wall_thickness10",
+  "supplied_voltage_in_kv10",
+  "constant_current_in_ma10",
+  "supplied_voltage10",
+  "leakage10",
+  "remark10",
+  "column_break_ckcyg",
+  "sno11",
+  "location11",
+  "wall_thickness11",
+  "supplied_voltage_in_kv11",
+  "constant_current_in_ma11",
+  "supplied_voltage11",
+  "leakage11",
+  "remark11",
+  "section_break_uvwhw",
+  "remark12",
+  "section_break_1avz3",
+  "result",
+  "section_break_aqzjf",
+  "check_by",
+  "column_break_hrip8",
+  "approved_by",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "data_zfeim",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Record Number"
+  },
+  {
+   "fieldname": "bh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "label": "Item Name",
+   "options": "Item"
+  },
+  {
+   "fieldname": "model_name",
+   "fieldtype": "Data",
+   "label": "Model Name"
+  },
+  {
+   "fieldname": "material",
+   "fieldtype": "Data",
+   "label": "Material Grade"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "Shift-A\nShift-B"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "test_method",
+   "fieldtype": "Select",
+   "label": "Test Method",
+   "options": "IS-2-1960"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Data",
+   "label": "Period"
+  },
+  {
+   "fieldname": "conducted_by",
+   "fieldtype": "Data",
+   "label": "Conducted By"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "observation",
+   "fieldtype": "Heading",
+   "label": "Observations"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sno2",
+   "fieldtype": "Select",
+   "label": "S.No",
+   "options": "1"
+  },
+  {
+   "fieldname": "first_cell",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "Cell 1&2"
+  },
+  {
+   "fieldname": "wall_thickness",
+   "fieldtype": "Float",
+   "label": "Wall Thickness"
+  },
+  {
+   "fieldname": "ball_drop_height_mm",
+   "fieldtype": "Float",
+   "label": "Supplied Voltage In KV"
+  },
+  {
+   "fieldname": "constant_current_in_ma",
+   "fieldtype": "Select",
+   "label": "Constant Current In MA",
+   "options": "10"
+  },
+  {
+   "fieldname": "supplied_voltage",
+   "fieldtype": "Select",
+   "label": "Supplied Voltage",
+   "options": "60"
+  },
+  {
+   "fieldname": "leakage",
+   "fieldtype": "Select",
+   "label": "Leakage",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_hcjoc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_km5qz",
+   "fieldtype": "Select",
+   "label": "S.No",
+   "options": "2"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "Cell 2&3"
+  },
+  {
+   "fieldname": "wall_thickness2",
+   "fieldtype": "Float",
+   "label": "Wall Thickness"
+  },
+  {
+   "fieldname": "supplied_voltage_in_kv",
+   "fieldtype": "Float",
+   "label": "Supplied Voltage In KV"
+  },
+  {
+   "fieldname": "constant_current_in_ma2",
+   "fieldtype": "Select",
+   "label": "Constant Current In MA",
+   "options": "10"
+  },
+  {
+   "fieldname": "supplied_voltage2",
+   "fieldtype": "Select",
+   "label": "Supplied Voltage",
+   "options": "60"
+  },
+  {
+   "fieldname": "leakage2",
+   "fieldtype": "Select",
+   "label": "Leakage",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "remarks2",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_bzjku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sno3",
+   "fieldtype": "Select",
+   "label": "S.No",
+   "options": "3"
+  },
+  {
+   "fieldname": "location2",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "Cell 3&4"
+  },
+  {
+   "fieldname": "wall_thickness3",
+   "fieldtype": "Float",
+   "label": "Wall Thickness"
+  },
+  {
+   "fieldname": "supplied_voltage_in_kv2",
+   "fieldtype": "Float",
+   "label": "Supplied Voltage In KV"
+  },
+  {
+   "fieldname": "constant_current_in_ma3",
+   "fieldtype": "Select",
+   "label": "Constant Current In MA",
+   "options": "10"
+  },
+  {
+   "fieldname": "supplied_voltage3",
+   "fieldtype": "Select",
+   "label": "Supplied Voltage",
+   "options": "60"
+  },
+  {
+   "fieldname": "leakage3",
+   "fieldtype": "Select",
+   "label": "Leakage",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "remarks3",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_pd7qo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sno4",
+   "fieldtype": "Select",
+   "label": "S.No",
+   "options": "4"
+  },
+  {
+   "fieldname": "location3",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "Cell 3&4"
+  },
+  {
+   "fieldname": "wall_thickness4",
+   "fieldtype": "Float",
+   "label": "Wall Thickness"
+  },
+  {
+   "fieldname": "supplied_voltage_in_kv4",
+   "fieldtype": "Float",
+   "label": "Supplied Voltage In KV"
+  },
+  {
+   "fieldname": "constant_current_in_ma4",
+   "fieldtype": "Select",
+   "label": "Constant Current In MA",
+   "options": "10"
+  },
+  {
+   "fieldname": "supplied_voltage4",
+   "fieldtype": "Select",
+   "label": "Supplied Voltage",
+   "options": "60"
+  },
+  {
+   "fieldname": "leakage4",
+   "fieldtype": "Select",
+   "label": "Leakage",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "remarks4",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_jedid",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sno5",
+   "fieldtype": "Select",
+   "label": "S.No",
+   "options": "5"
+  },
+  {
+   "fieldname": "location5",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "Cell 5&6"
+  },
+  {
+   "fieldname": "wall_thickness5",
+   "fieldtype": "Float",
+   "label": "Wall Thickness"
+  },
+  {
+   "fieldname": "supplied_voltage_in_kv5",
+   "fieldtype": "Float",
+   "label": "Supplied Voltage In KV"
+  },
+  {
+   "fieldname": "constant_current_in_ma5",
+   "fieldtype": "Select",
+   "label": "Constant Current In MA",
+   "options": "10"
+  },
+  {
+   "fieldname": "supplied_voltage5",
+   "fieldtype": "Select",
+   "label": "Supplied Voltage",
+   "options": "60"
+  },
+  {
+   "fieldname": "leakage5",
+   "fieldtype": "Select",
+   "label": "Leakage",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "remark5",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "data_7wcpx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sno6",
+   "fieldtype": "Select",
+   "label": "S.No",
+   "options": "6"
+  },
+  {
+   "fieldname": "location6",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "Cell 1"
+  },
+  {
+   "fieldname": "wall_thickness6",
+   "fieldtype": "Float",
+   "label": "Wall Thickness"
+  },
+  {
+   "fieldname": "supplied_voltage_in_kv6",
+   "fieldtype": "Float",
+   "label": "Supplied Voltage In KV"
+  },
+  {
+   "fieldname": "constant_current_in_ma6",
+   "fieldtype": "Select",
+   "label": "Constant Current In MA",
+   "options": "10"
+  },
+  {
+   "fieldname": "supplied_voltage6",
+   "fieldtype": "Select",
+   "label": "Supplied Voltage",
+   "options": "60"
+  },
+  {
+   "fieldname": "leakage6",
+   "fieldtype": "Select",
+   "label": "Leakage",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "remark6",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_f3omu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sno7",
+   "fieldtype": "Select",
+   "label": "S.No",
+   "options": "7"
+  },
+  {
+   "fieldname": "location7",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "Cell 2"
+  },
+  {
+   "fieldname": "wall_thickness7",
+   "fieldtype": "Float",
+   "label": "Wall Thickness"
+  },
+  {
+   "fieldname": "supplied_voltage_in_kv7",
+   "fieldtype": "Float",
+   "label": "Supplied Voltage In KV"
+  },
+  {
+   "fieldname": "constant_current_in_ma7",
+   "fieldtype": "Select",
+   "label": "Constant Current In MA",
+   "options": "10"
+  },
+  {
+   "fieldname": "supplied_voltage7",
+   "fieldtype": "Select",
+   "label": "Supplied Voltage",
+   "options": "60"
+  },
+  {
+   "fieldname": "leakage7",
+   "fieldtype": "Select",
+   "label": "Leakage",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "remark7",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_rahok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sno8",
+   "fieldtype": "Select",
+   "label": "S.No",
+   "options": "8"
+  },
+  {
+   "fieldname": "location8",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "Cell 3"
+  },
+  {
+   "fieldname": "wall_thickness8",
+   "fieldtype": "Float",
+   "label": "Wall Thickness"
+  },
+  {
+   "fieldname": "supplied_voltage_in_kv8",
+   "fieldtype": "Float",
+   "label": "Supplied Voltage In KV"
+  },
+  {
+   "fieldname": "constant_current_in_ma8",
+   "fieldtype": "Select",
+   "label": "Constant Current In MA",
+   "options": "10"
+  },
+  {
+   "fieldname": "supplied_voltage8",
+   "fieldtype": "Select",
+   "label": "Supplied Voltage",
+   "options": "60"
+  },
+  {
+   "fieldname": "leakage8",
+   "fieldtype": "Select",
+   "label": "Leakage",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "remark8",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_own6g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sno9",
+   "fieldtype": "Select",
+   "label": "S.No",
+   "options": "9"
+  },
+  {
+   "fieldname": "location9",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "Cell 4"
+  },
+  {
+   "fieldname": "wall_thickness9",
+   "fieldtype": "Float",
+   "label": "Wall Thickness"
+  },
+  {
+   "fieldname": "supplied_voltage_in_kv9",
+   "fieldtype": "Float",
+   "label": "Supplied Voltage In KV"
+  },
+  {
+   "fieldname": "constant_current_in_ma9",
+   "fieldtype": "Select",
+   "label": "Constant Current In MA",
+   "options": "10"
+  },
+  {
+   "fieldname": "supplied_voltage9",
+   "fieldtype": "Select",
+   "label": "Supplied Voltage",
+   "options": "60"
+  },
+  {
+   "fieldname": "leakage9",
+   "fieldtype": "Select",
+   "label": "Leakage",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "remark9",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_jphvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sno10",
+   "fieldtype": "Select",
+   "label": "S.No",
+   "options": "10"
+  },
+  {
+   "fieldname": "location10",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "Cell 5"
+  },
+  {
+   "fieldname": "wall_thickness10",
+   "fieldtype": "Float",
+   "label": "Wall Thickness"
+  },
+  {
+   "fieldname": "supplied_voltage_in_kv10",
+   "fieldtype": "Float",
+   "label": "Supplied Voltage In KV"
+  },
+  {
+   "fieldname": "constant_current_in_ma10",
+   "fieldtype": "Select",
+   "label": "Constant Current In MA",
+   "options": "10"
+  },
+  {
+   "fieldname": "supplied_voltage10",
+   "fieldtype": "Select",
+   "label": "Supplied Voltage",
+   "options": "60"
+  },
+  {
+   "fieldname": "leakage10",
+   "fieldtype": "Select",
+   "label": "Leakage",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "remark10",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_ckcyg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sno11",
+   "fieldtype": "Select",
+   "label": "S.No",
+   "options": "11"
+  },
+  {
+   "fieldname": "location11",
+   "fieldtype": "Select",
+   "label": "Location",
+   "options": "Cell 6"
+  },
+  {
+   "fieldname": "wall_thickness11",
+   "fieldtype": "Float",
+   "label": "Wall Thickness"
+  },
+  {
+   "fieldname": "supplied_voltage_in_kv11",
+   "fieldtype": "Float",
+   "label": "Supplied Voltage In KV"
+  },
+  {
+   "fieldname": "constant_current_in_ma11",
+   "fieldtype": "Select",
+   "label": "Constant Current In MA",
+   "options": "10"
+  },
+  {
+   "fieldname": "supplied_voltage11",
+   "fieldtype": "Select",
+   "label": "Supplied Voltage",
+   "options": "60"
+  },
+  {
+   "fieldname": "leakage11",
+   "fieldtype": "Select",
+   "label": "Leakage",
+   "options": "YES\nNO"
+  },
+  {
+   "fieldname": "remark11",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "section_break_uvwhw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remark12",
+   "fieldtype": "Select",
+   "label": "Remarks",
+   "options": "There should be no break-down or flashover"
+  },
+  {
+   "fieldname": "section_break_1avz3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "OK\nNOT OK"
+  },
+  {
+   "fieldname": "section_break_aqzjf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "check_by",
+   "fieldtype": "Data",
+   "label": "Check By"
+  },
+  {
+   "fieldname": "column_break_hrip8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved by"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "High Voltage Test",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-09 18:46:26.590573",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "High Voltage Test",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

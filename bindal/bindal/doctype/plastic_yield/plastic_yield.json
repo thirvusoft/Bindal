@@ -1,0 +1,376 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-10-03 12:26:35.612868",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "naming_series",
+  "section_break1",
+  "item",
+  "model_name",
+  "material",
+  "shift",
+  "column_break1",
+  "test_method",
+  "period",
+  "conducted_by",
+  "customer_name",
+  "section_break2",
+  "observation",
+  "section_break3",
+  "srno1",
+  "dimension_1",
+  "load_1",
+  "temp_1",
+  "time_1",
+  "initial_1",
+  "final_1",
+  "yield_1",
+  "remark_1",
+  "coloum_break2",
+  "srno2",
+  "dimension_2",
+  "load_2",
+  "temp_2",
+  "time_2",
+  "initial_2",
+  "final_2",
+  "yield_2",
+  "remark_2",
+  "coloum_break3",
+  "srno3",
+  "dimension_3",
+  "load_3",
+  "temp_3",
+  "time_3",
+  "initial_3",
+  "final_3",
+  "yield_3",
+  "remark_3",
+  "section_break4",
+  "sepc",
+  "remark_4",
+  "section_break5",
+  "checked",
+  "coloum_break4",
+  "approve",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Record Number"
+  },
+  {
+   "fieldname": "section_break1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "model_name",
+   "fieldtype": "Data",
+   "label": "Model Name"
+  },
+  {
+   "fieldname": "material",
+   "fieldtype": "Data",
+   "label": "Material"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "Shift-A\nShift-B"
+  },
+  {
+   "fieldname": "column_break1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "IS: 1146",
+   "fieldname": "test_method",
+   "fieldtype": "Read Only",
+   "label": "Test Method"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Data",
+   "label": "Period"
+  },
+  {
+   "fieldname": "conducted_by",
+   "fieldtype": "Data",
+   "label": "Conducted By"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "section_break2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "observation",
+   "fieldtype": "Heading",
+   "label": "Observation"
+  },
+  {
+   "fieldname": "section_break3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "srno1",
+   "fieldtype": "Read Only",
+   "label": "SrNo"
+  },
+  {
+   "fieldname": "dimension_1",
+   "fieldtype": "Float",
+   "label": "Specimen Dimension"
+  },
+  {
+   "fieldname": "load_1",
+   "fieldtype": "Float",
+   "label": "Applied Load (gm)"
+  },
+  {
+   "default": "60",
+   "fieldname": "temp_1",
+   "fieldtype": "Read Only",
+   "label": "Temp (C)"
+  },
+  {
+   "default": "30",
+   "fieldname": "time_1",
+   "fieldtype": "Read Only",
+   "label": "Time For Applied Load (Min)"
+  },
+  {
+   "default": "7.00",
+   "fieldname": "initial_1",
+   "fieldtype": "Read Only",
+   "label": "Initial Position After Load Applied (mm)"
+  },
+  {
+   "fieldname": "final_1",
+   "fieldtype": "Float",
+   "label": "Final Postion After Load Applied (mm)"
+  },
+  {
+   "fieldname": "yield_1",
+   "fieldtype": "Float",
+   "label": "Plastic Yield (mm)"
+  },
+  {
+   "fieldname": "remark_1",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "coloum_break2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "2",
+   "fieldname": "srno2",
+   "fieldtype": "Read Only",
+   "label": "SrNo"
+  },
+  {
+   "fieldname": "dimension_2",
+   "fieldtype": "Float",
+   "label": "Specimen Dimension"
+  },
+  {
+   "fieldname": "load_2",
+   "fieldtype": "Float",
+   "label": "Applied Load (gm)"
+  },
+  {
+   "default": "60",
+   "fieldname": "temp_2",
+   "fieldtype": "Read Only",
+   "label": "Temp (C)"
+  },
+  {
+   "default": "30",
+   "fieldname": "time_2",
+   "fieldtype": "Read Only",
+   "label": "Time For Applied Load (Min)"
+  },
+  {
+   "default": "7.00",
+   "fieldname": "initial_2",
+   "fieldtype": "Read Only",
+   "label": "Initial Position After Load Applied (mm)"
+  },
+  {
+   "fieldname": "final_2",
+   "fieldtype": "Float",
+   "label": "Final Postion After Load Applied (mm)"
+  },
+  {
+   "fieldname": "yield_2",
+   "fieldtype": "Float",
+   "label": "Plastic Yield (mm)"
+  },
+  {
+   "fieldname": "remark_2",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "coloum_break3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "3",
+   "fieldname": "srno3",
+   "fieldtype": "Read Only",
+   "label": "SrNo"
+  },
+  {
+   "fieldname": "dimension_3",
+   "fieldtype": "Float",
+   "label": "Specimen Dimension"
+  },
+  {
+   "fieldname": "load_3",
+   "fieldtype": "Float",
+   "label": "Applied Load (gm)"
+  },
+  {
+   "default": "60",
+   "fieldname": "temp_3",
+   "fieldtype": "Read Only",
+   "label": "Temp (C)"
+  },
+  {
+   "default": "30",
+   "fieldname": "time_3",
+   "fieldtype": "Read Only",
+   "label": "Time For Applied Load (Min)"
+  },
+  {
+   "default": "7.00",
+   "fieldname": "initial_3",
+   "fieldtype": "Read Only",
+   "label": "Initial Position After Load Applied (mm)"
+  },
+  {
+   "fieldname": "final_3",
+   "fieldtype": "Float",
+   "label": "Final Postion After Load Applied (mm)"
+  },
+  {
+   "fieldname": "yield_3",
+   "fieldtype": "Float",
+   "label": "Plastic Yield (mm)"
+  },
+  {
+   "fieldname": "remark_3",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "section_break4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Not greater than 5.0mm",
+   "fieldname": "sepc",
+   "fieldtype": "Read Only",
+   "label": "Spec-"
+  },
+  {
+   "default": "Plastic Yield= Initial Postion- Final Postion (After defenation)",
+   "fieldname": "remark_4",
+   "fieldtype": "Read Only",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "section_break5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "checked",
+   "fieldtype": "Data",
+   "label": "Checked By"
+  },
+  {
+   "fieldname": "coloum_break4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approve",
+   "fieldtype": "Data",
+   "label": "Approved By"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Plastic Yield",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-09 18:46:27.467498",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Plastic Yield",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

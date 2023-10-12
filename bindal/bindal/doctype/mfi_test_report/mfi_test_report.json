@@ -144,8 +144,9 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "ASTM D 1238",
    "fieldname": "test_method",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Test Method"
   },
   {
@@ -338,17 +339,17 @@
   },
   {
    "fieldname": "sn_7_weight_gm",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Weight (Gm)"
   },
   {
    "fieldname": "sn_7_cut_off_time_sec",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Cut Off Time (Sec)"
   },
   {
    "fieldname": "sn_7_mfi",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "MFI"
   },
   {
@@ -357,17 +358,17 @@
   },
   {
    "fieldname": "sn_8_weight_gm",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Weight (Gm)"
   },
   {
    "fieldname": "sn_8_cut_off_time_sec",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Cut Off Time (Sec)"
   },
   {
    "fieldname": "sn_8_mfi",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "MFI"
   },
   {
@@ -376,17 +377,17 @@
   },
   {
    "fieldname": "sn_9_weight_gm",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Weight (Gm)"
   },
   {
    "fieldname": "sn_9_cut_off_time_sec",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Cut Off Time (Sec)"
   },
   {
    "fieldname": "sn_9_mfi",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "MFI"
   },
   {
@@ -404,17 +405,17 @@
   },
   {
    "fieldname": "sn_10_weight_gm",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Weight (Gm)"
   },
   {
    "fieldname": "sn_10_cut_off_time_sec",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Cut Off Time (Sec)"
   },
   {
    "fieldname": "sn_10_mfi",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "MFI"
   },
   {
@@ -423,17 +424,17 @@
   },
   {
    "fieldname": "sn_11_weight_gm",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Weight (Gm)"
   },
   {
    "fieldname": "sn_11_cut_off_time_sec",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Cut Off Time (Sec)"
   },
   {
    "fieldname": "sn_11_mfi",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "MFI"
   },
   {
@@ -442,17 +443,17 @@
   },
   {
    "fieldname": "sn_12_weight_gm",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Weight (Gm)"
   },
   {
    "fieldname": "sn_12_cut_off_time_sec",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Cut Off Time (Sec)"
   },
   {
    "fieldname": "sn_12_mfi",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "MFI"
   },
   {
@@ -461,14 +462,14 @@
   },
   {
    "fieldname": "average_value_of_mfi",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Average Value of MFI"
   },
   {
    "fieldname": "value_in",
    "fieldtype": "Select",
    "label": "Value in ",
-   "options": "gm/10 min."
+   "options": "\n8to10gm/10min\n9to14gm/10min\n30to40gm/10min"
   },
   {
    "fieldname": "section_break_egqs9",
@@ -500,7 +501,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-05 16:05:13.570225",
+ "modified": "2023-10-11 16:32:53.924402",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "MFI Test Report",

@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-02 19:06:17.141308",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "location",
+  "ball_weight",
+  "height_mm",
+  "result",
+  "height_mm_2",
+  "result1",
+  "height_mm_3",
+  "result2",
+  "height_mm_4",
+  "result3",
+  "height_mm_5",
+  "result4",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "location",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Location",
+   "options": "\nBottom",
+   "reqd": 1
+  },
+  {
+   "default": "1008",
+   "fieldname": "ball_weight",
+   "fieldtype": "Read Only",
+   "label": "Ball Weight"
+  },
+  {
+   "default": "125",
+   "fieldname": "height_mm",
+   "fieldtype": "Read Only",
+   "label": "Height (mm)"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "OK\nNOT OK"
+  },
+  {
+   "default": "175",
+   "fieldname": "height_mm_2",
+   "fieldtype": "Read Only",
+   "label": "Height (mm)"
+  },
+  {
+   "fieldname": "result1",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "OK\nNOT OK"
+  },
+  {
+   "default": "175",
+   "fieldname": "height_mm_3",
+   "fieldtype": "Read Only",
+   "label": "Height (mm)"
+  },
+  {
+   "fieldname": "result2",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "OK\nNOT OK"
+  },
+  {
+   "default": "200",
+   "fieldname": "height_mm_4",
+   "fieldtype": "Data",
+   "label": "Height (mm)"
+  },
+  {
+   "fieldname": "result3",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "OK\nNOT OK"
+  },
+  {
+   "default": "225",
+   "fieldname": "height_mm_5",
+   "fieldtype": "Data",
+   "label": "Height (mm)"
+  },
+  {
+   "fieldname": "result4",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "OK\nNOT OK"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-12 09:24:22.245373",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "balldrop bottom",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

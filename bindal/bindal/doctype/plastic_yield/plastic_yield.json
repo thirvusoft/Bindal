@@ -144,7 +144,7 @@
   },
   {
    "fieldname": "dimension_1",
-   "fieldtype": "Float",
+   "fieldtype": "Data",
    "label": "Specimen Dimension"
   },
   {
@@ -197,7 +197,7 @@
   },
   {
    "fieldname": "dimension_2",
-   "fieldtype": "Float",
+   "fieldtype": "Data",
    "label": "Specimen Dimension"
   },
   {
@@ -250,7 +250,7 @@
   },
   {
    "fieldname": "dimension_3",
-   "fieldtype": "Float",
+   "fieldtype": "Data",
    "label": "Specimen Dimension"
   },
   {
@@ -338,7 +338,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-09 18:46:27.467498",
+ "modified": "2023-10-11 16:29:09.712859",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Plastic Yield",

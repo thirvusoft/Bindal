@@ -37,5 +37,21 @@ frappe.ui.form.on("Production Plan Item", {
                 frappe.msgprint("Kindly Enter Planned Start Date")
             }    
         }
-    }
+    },
+    planned_qty:async function(frm,cdt,cdn){
+        let row = locals[cdt][cdn]
+
+        let time = row.cycle_time
+        await frappe.model.set_value(row.doctype, row.name, 'cycle_time','')
+        await frappe.model.set_value(row.doctype, row.name, 'cycle_time',time)
+
+    },
+    planned_start_date:async function(frm,cdt,cdn){
+        let row = locals[cdt][cdn]
+
+        let time = row.cycle_time
+        await frappe.model.set_value(row.doctype, row.name, 'cycle_time','')
+        await frappe.model.set_value(row.doctype, row.name, 'cycle_time',time)
+
+    },
 })

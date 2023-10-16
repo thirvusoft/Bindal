@@ -178,12 +178,16 @@
   }
  ],
  "is_submittable": 1,
- "links": [],
- "modified": "2023-09-20 16:53:44.381614",
+ "links": [
+  {
+   "link_doctype": "MFI Test Report",
+   "link_fieldname": "gate_entry"
+  }
+ ],
+ "modified": "2023-10-16 19:11:35.910909",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Gate Entry",
- "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -202,7 +206,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
  "track_changes": 1,
  "track_seen": 1
 }

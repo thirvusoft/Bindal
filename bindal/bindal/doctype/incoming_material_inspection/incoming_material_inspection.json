@@ -1,0 +1,351 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:INIR-{#####}",
+ "creation": "2023-10-17 10:23:52.701683",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "supplier",
+  "item_name",
+  "date",
+  "supplier_insp_report_ref",
+  "received_date",
+  "quality_insp_name",
+  "column_break_8s29f",
+  "invoice_no",
+  "description",
+  "qty",
+  "grn__lot_code",
+  "insp_date",
+  "observation_section",
+  "length",
+  "width",
+  "height",
+  "no_of_ply",
+  "bursting_strength",
+  "paper_thickness",
+  "printing_colour",
+  "print_quality",
+  "weight",
+  "remark",
+  "column_break_shxrs",
+  "length_1",
+  "width_1",
+  "height_1",
+  "no_of_ply_1",
+  "bursting_strength_1",
+  "paper_thickness_1",
+  "printing_colour_1",
+  "print_quality_1",
+  "weight_1",
+  "remark_1",
+  "column_break_qy4g5",
+  "length_2",
+  "width_2",
+  "height_2",
+  "no_of_ply_2",
+  "bursting_strength_2",
+  "paper_thickness_2",
+  "printing_colour_2",
+  "print_quality_2",
+  "weight_2",
+  "remark_2",
+  "section_break_pyid3",
+  "remark_3",
+  "section_break_bv7yz",
+  "checked_by",
+  "amended_from",
+  "column_break_zkazm",
+  "approved_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Incoming Material Inspection",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "column_break_8s29f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "label": "Invoice No"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Data",
+   "label": "Qty"
+  },
+  {
+   "fieldname": "supplier_insp_report_ref",
+   "fieldtype": "Data",
+   "label": "Supplier insp. report ref."
+  },
+  {
+   "fieldname": "received_date",
+   "fieldtype": "Date",
+   "label": "Received date"
+  },
+  {
+   "fieldname": "quality_insp_name",
+   "fieldtype": "Data",
+   "label": "Quality Insp. Name"
+  },
+  {
+   "fieldname": "grn__lot_code",
+   "fieldtype": "Data",
+   "label": "GRN / Lot Code"
+  },
+  {
+   "fieldname": "insp_date",
+   "fieldtype": "Date",
+   "label": "Insp. date"
+  },
+  {
+   "fieldname": "observation_section",
+   "fieldtype": "Section Break",
+   "label": "Observation"
+  },
+  {
+   "fieldname": "bursting_strength",
+   "fieldtype": "Float",
+   "label": "Bursting strength of corrugated board (Kg/cm2)"
+  },
+  {
+   "fieldname": "printing_colour",
+   "fieldtype": "Data",
+   "label": "Printing Colour"
+  },
+  {
+   "fieldname": "print_quality",
+   "fieldtype": "Data",
+   "label": "Print Quality"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Float",
+   "label": "Length (mm)"
+  },
+  {
+   "fieldname": "width",
+   "fieldtype": "Float",
+   "label": "Width (mm)"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "label": "Height (mm)"
+  },
+  {
+   "fieldname": "no_of_ply",
+   "fieldtype": "Float",
+   "label": "No of ply (mm)"
+  },
+  {
+   "fieldname": "paper_thickness",
+   "fieldtype": "Float",
+   "label": "Paper Thickness (mm)"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight (Kg)"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_shxrs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "length_1",
+   "fieldtype": "Float",
+   "label": "Length (mm)"
+  },
+  {
+   "fieldname": "width_1",
+   "fieldtype": "Float",
+   "label": "Width (mm)"
+  },
+  {
+   "fieldname": "height_1",
+   "fieldtype": "Float",
+   "label": "Height (mm)"
+  },
+  {
+   "fieldname": "no_of_ply_1",
+   "fieldtype": "Float",
+   "label": "No of ply (mm)"
+  },
+  {
+   "fieldname": "bursting_strength_1",
+   "fieldtype": "Float",
+   "label": "Bursting strength of corrugated board (Kg/cm2)"
+  },
+  {
+   "fieldname": "paper_thickness_1",
+   "fieldtype": "Float",
+   "label": "Paper Thickness (mm)"
+  },
+  {
+   "fieldname": "printing_colour_1",
+   "fieldtype": "Data",
+   "label": "Printing Colour"
+  },
+  {
+   "fieldname": "print_quality_1",
+   "fieldtype": "Data",
+   "label": "Print Quality"
+  },
+  {
+   "fieldname": "weight_1",
+   "fieldtype": "Float",
+   "label": "Weight (Kg)"
+  },
+  {
+   "fieldname": "remark_1",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_qy4g5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "length_2",
+   "fieldtype": "Float",
+   "label": "Length (mm)"
+  },
+  {
+   "fieldname": "width_2",
+   "fieldtype": "Float",
+   "label": "Width (mm)"
+  },
+  {
+   "fieldname": "height_2",
+   "fieldtype": "Float",
+   "label": "Height (mm)"
+  },
+  {
+   "fieldname": "no_of_ply_2",
+   "fieldtype": "Float",
+   "label": "No of ply (mm)"
+  },
+  {
+   "fieldname": "bursting_strength_2",
+   "fieldtype": "Float",
+   "label": "Bursting strength of corrugated board (Kg/cm2)"
+  },
+  {
+   "fieldname": "paper_thickness_2",
+   "fieldtype": "Float",
+   "label": "Paper Thickness (mm)"
+  },
+  {
+   "fieldname": "printing_colour_2",
+   "fieldtype": "Data",
+   "label": "Printing Colour"
+  },
+  {
+   "fieldname": "print_quality_2",
+   "fieldtype": "Data",
+   "label": "Print Quality"
+  },
+  {
+   "fieldname": "weight_2",
+   "fieldtype": "Float",
+   "label": "Weight (Kg)"
+  },
+  {
+   "fieldname": "remark_2",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "label": "Item Name",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item_name.description",
+   "fetch_if_empty": 1,
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_pyid3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remark_3",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "section_break_bv7yz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "checked_by",
+   "fieldtype": "Data",
+   "label": "Checked By"
+  },
+  {
+   "fieldname": "column_break_zkazm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-17 11:12:37.412480",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Incoming Material Inspection",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

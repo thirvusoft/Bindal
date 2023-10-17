@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-17 11:56:43.855608",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "product_characteristics",
+  "product_specifications",
+  "measurement_technique",
+  "check"
+ ],
+ "fields": [
+  {
+   "fieldname": "product_characteristics",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Product Characteristics"
+  },
+  {
+   "fieldname": "product_specifications",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Product Specifications"
+  },
+  {
+   "fieldname": "measurement_technique",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Measurement technique"
+  },
+  {
+   "default": "0",
+   "fieldname": "check",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Check"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-17 11:57:02.529081",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Incoming Material Inspection Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

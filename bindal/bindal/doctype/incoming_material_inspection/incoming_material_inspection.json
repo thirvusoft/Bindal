@@ -19,6 +19,8 @@
   "qty",
   "grn_lot_code",
   "insp_date",
+  "default_values_section",
+  "incoming_material_inspection_table",
   "observation_section",
   "length",
   "width",
@@ -415,6 +417,7 @@
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Incoming Material Inspection",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -431,5 +434,6 @@
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }

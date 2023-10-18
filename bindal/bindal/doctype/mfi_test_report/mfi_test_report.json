@@ -218,7 +218,7 @@
   {
    "fieldname": "mfi",
    "fieldtype": "Float",
-   "label": "MFI"
+   "label": "MFI (gm/10 min)"
   },
   {
    "fieldname": "column_break_meom6",
@@ -237,7 +237,7 @@
   {
    "fieldname": "sn_2_mfi",
    "fieldtype": "Float",
-   "label": "MFI"
+   "label": "MFI (gm/10 min)"
   },
   {
    "fieldname": "column_break_xyzdx",
@@ -256,7 +256,7 @@
   {
    "fieldname": "sn_3_mfi",
    "fieldtype": "Float",
-   "label": "MFI"
+   "label": "MFI (gm/10 min)"
   },
   {
    "fieldname": "section_break_1hx3g",
@@ -284,7 +284,7 @@
   {
    "fieldname": "sn_4_mfi",
    "fieldtype": "Float",
-   "label": "MFI"
+   "label": "MFI (gm/10 min)"
   },
   {
    "fieldname": "column_break_vgifj",
@@ -303,7 +303,7 @@
   {
    "fieldname": "sn_5_mfi",
    "fieldtype": "Float",
-   "label": "MFI"
+   "label": "MFI (gm/10 min)"
   },
   {
    "fieldname": "column_break_zqcc1",
@@ -322,7 +322,7 @@
   {
    "fieldname": "sn_6_mfi",
    "fieldtype": "Float",
-   "label": "MFI"
+   "label": "MFI (gm/10 min)"
   },
   {
    "fieldname": "section_break_njq3a",
@@ -350,7 +350,7 @@
   {
    "fieldname": "sn_7_mfi",
    "fieldtype": "Float",
-   "label": "MFI"
+   "label": "MFI (gm/10 min)"
   },
   {
    "fieldname": "column_break_eifga",
@@ -369,7 +369,7 @@
   {
    "fieldname": "sn_8_mfi",
    "fieldtype": "Float",
-   "label": "MFI"
+   "label": "MFI (gm/10 min)"
   },
   {
    "fieldname": "column_break_npj0p",
@@ -388,7 +388,7 @@
   {
    "fieldname": "sn_9_mfi",
    "fieldtype": "Float",
-   "label": "MFI"
+   "label": "MFI (gm/10 min)"
   },
   {
    "fieldname": "section_break_qgkp3",
@@ -416,7 +416,7 @@
   {
    "fieldname": "sn_10_mfi",
    "fieldtype": "Float",
-   "label": "MFI"
+   "label": "MFI (gm/10 min)"
   },
   {
    "fieldname": "column_break_j23iz",
@@ -435,7 +435,7 @@
   {
    "fieldname": "sn_11_mfi",
    "fieldtype": "Float",
-   "label": "MFI"
+   "label": "MFI (gm/10 min)"
   },
   {
    "fieldname": "column_break_isxds",
@@ -454,7 +454,7 @@
   {
    "fieldname": "sn_12_mfi",
    "fieldtype": "Float",
-   "label": "MFI"
+   "label": "MFI (gm/10 min)"
   },
   {
    "fieldname": "section_break_vms1t",
@@ -501,7 +501,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-11 16:32:53.924402",
+ "modified": "2023-10-18 14:03:37.675327",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "MFI Test Report",

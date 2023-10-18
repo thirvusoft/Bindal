@@ -133,16 +133,19 @@
    "options": "PO Item"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "laden_weight",
    "fieldtype": "Data",
    "label": "Laden Weight"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "unladen_weight",
    "fieldtype": "Data",
    "label": "Unladen Weight"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "net_actual_weight_of_consigmnet",
    "fieldtype": "Data",
    "label": "Net Actual Weight of Consigmnet"
@@ -184,7 +187,7 @@
    "link_fieldname": "gate_entry"
   }
  ],
- "modified": "2023-10-16 19:11:35.910909",
+ "modified": "2023-10-18 12:49:59.724815",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Gate Entry",

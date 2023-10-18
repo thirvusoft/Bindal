@@ -159,17 +159,17 @@
   {
    "fieldname": "tensile_peak_1",
    "fieldtype": "Float",
-   "label": "Tensile @ Peak Load"
+   "label": "Tensile @ Peak Load (kg)"
   },
   {
    "fieldname": "tensile_break_1",
    "fieldtype": "Float",
-   "label": "Tensile @ Break Load"
+   "label": "Tensile @ Break Load (kg)"
   },
   {
    "fieldname": "elongation_1",
    "fieldtype": "Float",
-   "label": "Elongation @ Yield"
+   "label": "Elongation @ Yield (mm)"
   },
   {
    "fieldname": "strength_1",
@@ -204,17 +204,17 @@
   {
    "fieldname": "tensile_peak_2",
    "fieldtype": "Float",
-   "label": "Tensile @ Peak Load"
+   "label": "Tensile @ Peak Load (kg)"
   },
   {
    "fieldname": "tensile_break_2",
    "fieldtype": "Float",
-   "label": "Tensile @ Break Load"
+   "label": "Tensile @ Break Load (kg)"
   },
   {
    "fieldname": "elongation_2",
    "fieldtype": "Float",
-   "label": "Elongation @ Yield"
+   "label": "Elongation @ Yield (mm)"
   },
   {
    "fieldname": "strength_2",
@@ -249,17 +249,17 @@
   {
    "fieldname": "tensile_peak_3",
    "fieldtype": "Float",
-   "label": "Tensile @ Peak Load"
+   "label": "Tensile @ Peak Load (kg)"
   },
   {
    "fieldname": "tensile_break_3",
    "fieldtype": "Float",
-   "label": "Tensile @ Break Load"
+   "label": "Tensile @ Break Load (kg)"
   },
   {
    "fieldname": "elongation_3",
    "fieldtype": "Float",
-   "label": "Elongation @ Yield"
+   "label": "Elongation @ Yield (mm)"
   },
   {
    "fieldname": "strength_3",
@@ -324,7 +324,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-16 18:54:41.247911",
+ "modified": "2023-10-18 14:05:08.786883",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Tensile Strength Test",

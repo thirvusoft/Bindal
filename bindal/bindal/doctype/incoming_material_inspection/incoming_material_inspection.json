@@ -408,16 +408,27 @@
    "fieldname": "paper_thickness_2_sheet3",
    "fieldtype": "Float",
    "label": "Paper Thickness (mm) Sheet - 3"
+  },
+  {
+   "fieldname": "default_values_section",
+   "fieldtype": "Section Break",
+   "label": "Default Values"
+  },
+  {
+   "fieldname": "incoming_material_inspection_table",
+   "fieldtype": "Table",
+   "label": "Incoming Material Inspection Table",
+   "options": "Incoming Material Inspection Table",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-17 17:40:10.686709",
+ "modified": "2023-10-17 18:59:43.593016",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Incoming Material Inspection",
- "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -434,6 +445,5 @@
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC",
- "states": []
+ "sort_order": "DESC"
 }

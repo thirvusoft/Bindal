@@ -84,6 +84,7 @@
   "sn_12_mfi",
   "section_break_vms1t",
   "average_value_of_mfi",
+  "result",
   "value_in",
   "section_break_egqs9",
   "checked_by",
@@ -497,11 +498,17 @@
    "options": "MFI Test Report",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "Pass\nFail"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-18 14:03:37.675327",
+ "modified": "2023-11-03 09:58:55.320491",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "MFI Test Report",

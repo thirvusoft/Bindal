@@ -52,6 +52,7 @@
   "sepc",
   "note",
   "average",
+  "result",
   "remark_4",
   "section_break5",
   "checked",
@@ -319,12 +320,18 @@
    "fieldname": "average",
    "fieldtype": "Float",
    "label": "Average(mpa)"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "Pass\nFail"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-18 14:05:08.786883",
+ "modified": "2023-11-03 09:57:48.744301",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Tensile Strength Test",

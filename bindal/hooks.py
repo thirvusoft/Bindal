@@ -29,7 +29,8 @@ app_license = "MIT"
 doctype_js = {
 			"Work Order" : "bindal/custom/js/work_order.js",
 			"Gate Entry":"bindal/custom/js/gate_entry.js",
-			"Production Plan":"bindal/custom/js/production_plan.js"
+			"Production Plan":"bindal/custom/js/production_plan.js",
+            "Item":"bindal/custom/js/item.js"
 			}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}

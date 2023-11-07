@@ -133,16 +133,19 @@
    "options": "PO Item"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "laden_weight",
    "fieldtype": "Data",
    "label": "Laden Weight"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "unladen_weight",
    "fieldtype": "Data",
    "label": "Unladen Weight"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "net_actual_weight_of_consigmnet",
    "fieldtype": "Data",
    "label": "Net Actual Weight of Consigmnet"
@@ -178,12 +181,16 @@
   }
  ],
  "is_submittable": 1,
- "links": [],
- "modified": "2023-09-20 16:53:44.381614",
+ "links": [
+  {
+   "link_doctype": "MFI Test Report",
+   "link_fieldname": "gate_entry"
+  }
+ ],
+ "modified": "2023-10-18 12:49:59.724815",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Gate Entry",
- "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -202,7 +209,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
  "track_changes": 1,
  "track_seen": 1
 }

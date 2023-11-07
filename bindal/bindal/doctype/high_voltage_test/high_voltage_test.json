@@ -164,7 +164,7 @@
    "fieldname": "shift",
    "fieldtype": "Select",
    "label": "Shift",
-   "options": "Shift-A\nShift-B"
+   "options": "A\nB"
   },
   {
    "fieldname": "column_break_8",
@@ -790,7 +790,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-09 18:46:26.590573",
+ "modified": "2023-10-16 18:55:03.927300",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "High Voltage Test",

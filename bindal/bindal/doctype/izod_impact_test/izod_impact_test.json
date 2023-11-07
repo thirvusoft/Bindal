@@ -91,7 +91,7 @@
    "fieldname": "shift",
    "fieldtype": "Select",
    "label": "Shift",
-   "options": "Shift-A\nShift-B"
+   "options": "A\nB"
   },
   {
    "fieldname": "column_break1",
@@ -309,7 +309,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-09 18:46:27.798191",
+ "modified": "2023-10-16 18:55:33.528221",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Izod Impact Test",

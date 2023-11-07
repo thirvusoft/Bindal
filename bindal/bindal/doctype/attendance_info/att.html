@@ -1,0 +1,106 @@
+<style>
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .card {
+        width: 200px;
+        height: 150px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgb(118, 195, 240);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .department-name {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .count {
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(39, 79, 209);
+    }
+
+    .count a {
+        text-decoration: none;
+        color: inherit;
+    }
+</style>
+
+<div class="card-container">
+    <div class="card">
+        <div class="department-name">
+            TOTAL CURRENT SHIFT
+        </div>
+        <span class="count" style = "color: green;" onclick='bindal.redirectToList("{{date}}")'>
+            {{ total_count }}           
+        </span>
+    </div>
+    {% for i in department %}
+    <div class="card" onclick='bindal.redirectToEmployee("{{i.department}}","{{i.branch}}","{{i.date}}")'>
+        <div class="department-name">
+            {{ i.department }}
+        </div>
+        <span class="count">
+            {{ i.count }}           
+        </span>
+    </div>
+    {% endfor %}
+</div>
+<style>
+    table{
+    border-collapse:collapse;  
+    width: 100%;
+    font-size: 16px;
+    line-height:2.5
+    }
+    table tr td, th{
+    border:1px solid #ccc;
+    padding:5px;
+    color:black
+    }
+    tr:nth-child(even) {background-color: #f2f2f2;}
+
+    table tr:hover{  
+    background: rgb(182, 182, 182);
+    }
+    </style>
+    <table>
+    <tr style="background-color: rgb(137, 187, 240);">
+
+    {% for j in checkin %}
+        {% if j == checkin[0] %}
+        <th>Name</th>
+        <th>Employee Code</th>
+        <th>In / Out</th>
+        <th>Time</th>                                  
+        </tr> 
+        {% endif %}
+    <tr>
+    <td>{{j.employee}}</td>
+    <td>{{j.employee_name}}</td>
+    <td>{{j.log_type}}</td>
+    <td>{{j.time}}</td>                                  
+    </tr>
+    {% endfor %}
+
+    </table>
+

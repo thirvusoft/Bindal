@@ -40,5 +40,6 @@ def get_department(branch):
 			total_count += row.get('count')
 			list_of_department.append(row)
 			checkin += frappe.get_all("Employee Checkin",{'department':i.get('department'),'time':("between",[nowdate(),nowdate()])},['employee','employee_name','time','log_type'],limit=10,order_by='creation desc')
-
+	if len(checkin) > 10:
+		checkin  = checkin[0:10]
 	return list_of_department,total_count,checkin,nowdate()

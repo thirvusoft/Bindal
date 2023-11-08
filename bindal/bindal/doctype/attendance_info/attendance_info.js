@@ -23,7 +23,7 @@ frappe.ui.form.on('Attendance Info', {
             callback:function(res){
 				console.log(res.message)
 				$(
-					frappe.render_template("att",{department:res.message[0],checkin:res.message[2],date:res.message[3],total_count:res.message[1]})
+					frappe.render_template("att",{department:res.message[0],checkin:res.message[2],date:res.message[3],branch:frm.doc.branch,total_count:res.message[1]})
 				).appendTo(frm.fields_dict.info.$wrapper.empty());	
 			}
 		})
@@ -37,9 +37,9 @@ bindal.redirectToEmployee = function (department,branch,date) {
     )
         
 }
-bindal.redirectToList = function (date) {
+bindal.redirectToList = function (date,branch) {
     frappe.set_route('List', "Employee Checkin",
-        {'time':['between',[date,date]]}
+        {'time':['between',[date,date]],'branch':branch}
     )
         
 }

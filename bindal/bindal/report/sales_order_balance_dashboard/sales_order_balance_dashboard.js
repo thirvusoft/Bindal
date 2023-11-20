@@ -30,11 +30,11 @@ frappe.query_reports["Sales Order Balance Dashboard"] = {
 			"default": frappe.datetime.get_today()
 		},
 		{
-			"fieldname":"customer",
-			"label": __("Customer"),
+			"fieldname":"customer_group",
+			"label": __("Customer Group"),
 			"fieldtype": "Link",
 			"width": "80",
-			'options':"Customer"
+			'options':"Customer Group"
 		},
 		{
 			"fieldname": "sales_order",

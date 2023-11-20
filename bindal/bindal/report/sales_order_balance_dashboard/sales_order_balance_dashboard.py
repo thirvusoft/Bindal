@@ -44,8 +44,8 @@ def get_conditions(filters):
 	if filters.get("from_date") and filters.get("to_date"):
 		conditions += " and so.transaction_date between %(from_date)s and %(to_date)s"
 	
-	if filters.get("customer"):
-		conditions += " and so.customer = %(customer)s"
+	if filters.get("customer_group"):
+		conditions += " and cu.customer_group = %(customer_group)s"
 
 	if filters.get("company"):
 		conditions += " and so.company = %(company)s"
@@ -82,11 +82,13 @@ def get_data(conditions, filters):
 			soi.description as description
 		FROM
 			`tabSales Order` so,
+			`tabCustomer` cu,
 			`tabSales Order Item` soi
 		LEFT JOIN `tabSales Invoice Item` sii
 			ON sii.so_detail = soi.name and sii.docstatus = 1
 		WHERE
 			soi.parent = so.name
+			and	cu.name =  so.customer
 			and so.status not in ('Stopped', 'Closed', 'On Hold')
 			and so.docstatus = 1
 			{conditions}

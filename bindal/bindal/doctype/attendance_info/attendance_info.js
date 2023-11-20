@@ -16,6 +16,12 @@ frappe.ui.form.on('Attendance Info', {
 
 
     },
+    onload:function(frm){
+        frm.trigger('trigger_branch')
+    },
+    branch:function(frm){
+        frm.trigger('trigger_branch')
+    },
 	trigger_branch:function(frm){
 		frappe.call({
 			'method':"bindal.bindal.doctype.attendance_info.attendance_info.get_department",

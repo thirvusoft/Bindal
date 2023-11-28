@@ -124,9 +124,9 @@ doc_events = {
 # Overriding Methods
 # ------------------------------
 #
-override_whitelisted_methods = {
-	"erpnext.hr.doctype.employee_checkin.employee_checkin.add_log_based_on_employee_field": "bindal.bindal.custom.py.employee_checkin.add_log_based_on_employee_field"
-}
+# override_whitelisted_methods = {
+# 	"erpnext.hr.doctype.employee_checkin.employee_checkin.add_log_based_on_employee_field": "bindal.bindal.custom.py.employee_checkin.add_log_based_on_employee_field"
+# }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,

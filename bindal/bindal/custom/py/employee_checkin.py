@@ -85,5 +85,5 @@ def add_log_based_on_employee_field(
             doc.skip_auto_attendance = "1"
         doc.insert()
         
-    frappe.db.commit()
+    frappe.log_error('title'='Biometric',message=doc)
     return doc

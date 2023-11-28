@@ -470,7 +470,7 @@
    "fieldname": "value_in",
    "fieldtype": "Select",
    "label": "Value in ",
-   "options": "\n8to10gm/10min\n9to14gm/10min\n30to40gm/10min"
+   "options": "\n3to5gm/10min\n8to10gm/10min\n8to12gm/10min\n9to11gm/10min\n9to14gm/10min\n30\u00b110gm/10min\n30\u00b120gm/10min\n50\u00b120gm/10min\n40\u00b120gm/10min\n40\u00b110gm/10min"
   },
   {
    "fieldname": "section_break_egqs9",
@@ -508,7 +508,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-03 09:58:55.320491",
+ "modified": "2023-11-26 16:48:13.094433",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "MFI Test Report",
@@ -523,6 +523,31 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Master Manager",
    "share": 1,
    "submit": 1,
    "write": 1

@@ -26,7 +26,7 @@ def get_department(branch):
 					emp.department = '{i.get('department')}'
 					AND checkin.time BETWEEN '{start_time}' AND '{end_time}'
 				GROUP BY checkin.employee
-			    HAVING COUNT(DISTINCT checkin.log_type) % 2 = 1
+				HAVING SUM(CASE WHEN checkin.log_type = 'IN' THEN 1 ELSE -1 END) > 0;
 
 		''', as_dict=1)
 

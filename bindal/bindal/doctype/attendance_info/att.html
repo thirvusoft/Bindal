@@ -46,11 +46,11 @@
 </style>
 
 <div class="card-container">
-    <div class="card">
+    <div class="card" onclick='bindal.redirectToList("{{date}}","{{branch}}")'>
         <div class="department-name">
             TOTAL CURRENT SHIFT
         </div>
-        <span class="count" style = "color: green;" onclick='bindal.redirectToList("{{date}}","{{branch}}")'>
+        <span class="count" style = "color: green;" >
             {{ total_count }}           
         </span>
     </div>

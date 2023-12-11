@@ -20,15 +20,18 @@ def get_department(branch):
 			end_time = f"{getdate()} 23:59:59"
 			count = frappe.db.sql(f'''
 				SELECT
-					checkin.employee
+					checkin.employee,
+					MAX(checkin.time) AS last_checkin_time,
+					MAX(checkin.log_type) AS last_checkin_log_type,
+					COUNT(*) AS total_checkins
 				FROM `tabEmployee Checkin` AS checkin
 				LEFT JOIN `tabEmployee` AS emp ON emp.name = checkin.employee
 				WHERE emp.branch = '{branch}' AND
 					emp.department = '{i.get('department')}'
 					AND checkin.time BETWEEN '{start_time}' AND '{end_time}'
 				GROUP BY checkin.employee
-				HAVING (Select sub.log_type from `tabEmployee Checkin` as sub order by sub.time desc limit 1 ) = 'IN';
-								
+				HAVING MAX(CASE WHEN checkin.log_type = 'IN' THEN 1 ELSE 0 END) > 0
+					AND last_checkin_log_type = 'IN';
 			''', as_dict=True)
 
 			

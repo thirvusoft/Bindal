@@ -88,8 +88,6 @@ def add_log_based_on_employee_field(
 		if cint(skip_auto_attendance) == 1:
 			doc.skip_auto_attendance = "1"
 
-		doc.insert()
-
 	else:
 	    doc = frappe.new_doc("Employee Checkin")
 	    doc.employee = employee.name
@@ -102,6 +100,10 @@ def add_log_based_on_employee_field(
 	        doc.log_type = 'IN'
 	    if cint(skip_auto_attendance) == 1:
 	        doc.skip_auto_attendance = "1"
-	    doc.insert()
+	    
+	doc.insert()
 
 	return doc
+
+def fetch_branch(doc,event):
+	doc.db_set('branch',frappe.get_value('Attendance Device',{'location__device_id':doc.device_id},'parent'))

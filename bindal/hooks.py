@@ -92,6 +92,9 @@ doc_events = {
 	"Gate Entry": {
 		"on_submit":"bindal.bindal.custom.py.gate_entry.on_submit"
 	},
+	'Employee Checkin':{
+		'after_insert':"bindal.bindal.custom.py.employee_checkin.fetch_branch"
+	}
 
 }
 

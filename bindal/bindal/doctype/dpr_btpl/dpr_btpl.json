@@ -1,0 +1,353 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-12-28 14:17:19.913584",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "column_break1",
+  "naming_series",
+  "column_break2",
+  "shift_1",
+  "section_break1",
+  "op_name",
+  "column_break3",
+  "inc_name",
+  "column_break4",
+  "zone_1",
+  "column_break5",
+  "workstation",
+  "section_break2",
+  "item_name",
+  "mould_name1",
+  "colour_1",
+  "t_prod_1",
+  "a_prod_1",
+  "rej_prod_1",
+  "ok_prod_1",
+  "section_break3",
+  "s_mould_1",
+  "column_break6",
+  "f_mould_1",
+  "column_break7",
+  "s_qty_1",
+  "section_break4",
+  "ss_qty_1",
+  "column_break9",
+  "b_qty_1",
+  "column_break10",
+  "w_qty_1",
+  "section_break5",
+  "e_qty_1",
+  "column_break11",
+  "cp_qty_1",
+  "column_break12",
+  "d_qty_1",
+  "section_break6",
+  "sc_qty_1",
+  "column_break13",
+  "mi_qty_1",
+  "section_break7",
+  "other_1",
+  "qty_2",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Record Number"
+  },
+  {
+   "fieldname": "column_break2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shift_1",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "Shift-A\nShift-B"
+  },
+  {
+   "fieldname": "section_break1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "op_name",
+   "fieldtype": "Data",
+   "label": "Operator Name"
+  },
+  {
+   "fieldname": "column_break3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inc_name",
+   "fieldtype": "Data",
+   "label": "Incharge Name"
+  },
+  {
+   "fieldname": "column_break4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "zone_1",
+   "fieldtype": "Select",
+   "label": "Zone",
+   "options": "Zone-A\nZone-B\nZone-C\nZone-D\nZone-E\nZone-F\nZone-G\nZone-H\nZone-I\nUnit-2\nUnit-3"
+  },
+  {
+   "fieldname": "column_break5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "label": "Machine Name",
+   "options": "Workstation"
+  },
+  {
+   "fieldname": "section_break2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "label": "Item Name",
+   "options": "Item"
+  },
+  {
+   "fieldname": "mould_name1",
+   "fieldtype": "Data",
+   "label": "Mould name"
+  },
+  {
+   "fieldname": "colour_1",
+   "fieldtype": "Data",
+   "label": "Colour"
+  },
+  {
+   "fieldname": "t_prod_1",
+   "fieldtype": "Int",
+   "label": "Target Production"
+  },
+  {
+   "fieldname": "a_prod_1",
+   "fieldtype": "Int",
+   "label": "Actual Production"
+  },
+  {
+   "fieldname": "ok_prod_1",
+   "fieldtype": "Int",
+   "label": "OK Production"
+  },
+  {
+   "fieldname": "rej_prod_1",
+   "fieldtype": "Int",
+   "label": "Rejected Production"
+  },
+  {
+   "fieldname": "section_break3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "s_mould_1",
+   "fieldtype": "Int",
+   "label": "Short Moulding Qty"
+  },
+  {
+   "fieldname": "column_break6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "f_mould_1",
+   "fieldtype": "Int",
+   "label": "Flash Qty"
+  },
+  {
+   "fieldname": "column_break7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "s_qty_1",
+   "fieldtype": "Int",
+   "label": "Shrinkage Qty"
+  },
+  {
+   "fieldname": "section_break4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ss_qty_1",
+   "fieldtype": "Int",
+   "label": "Silver Streaks Qty"
+  },
+  {
+   "fieldname": "column_break9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "b_qty_1",
+   "fieldtype": "Int",
+   "label": "Black Spot Qty"
+  },
+  {
+   "fieldname": "column_break10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "w_qty_1",
+   "fieldtype": "Int",
+   "label": "Weld Line/ Flow Mark Qty"
+  },
+  {
+   "fieldname": "section_break5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "e_qty_1",
+   "fieldtype": "Int",
+   "label": "Ejector Mark Qty"
+  },
+  {
+   "fieldname": "column_break11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cp_qty_1",
+   "fieldtype": "Int",
+   "label": "Colour Problem Qty"
+  },
+  {
+   "fieldname": "column_break12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "d_qty_1",
+   "fieldtype": "Int",
+   "label": "Damage/ Crack"
+  },
+  {
+   "fieldname": "section_break6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sc_qty_1",
+   "fieldtype": "Int",
+   "label": "Scratch Qty"
+  },
+  {
+   "fieldname": "column_break13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mi_qty_1",
+   "fieldtype": "Int",
+   "label": "Mixing Qty"
+  },
+  {
+   "fieldname": "section_break7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "other_1",
+   "fieldtype": "Data",
+   "label": "Other Defect Name"
+  },
+  {
+   "fieldname": "qty_2",
+   "fieldtype": "Int",
+   "label": "Other Defect Qty"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "DPR BTPL",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-03 15:28:22.051488",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "DPR BTPL",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

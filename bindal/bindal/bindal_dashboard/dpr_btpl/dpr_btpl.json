@@ -2,6 +2,10 @@
  "cards": [],
  "charts": [
   {
+   "chart": "Target Production, OK Production, Rejected Qty Wise Chart",
+   "width": "Full"
+  },
+  {
    "chart": "Flash Qty in Line Chart",
    "width": "Full"
   },
@@ -22,11 +26,11 @@
    "width": "Full"
   },
   {
-   "chart": "Weld Line/Flow Mark Qty in Line Chart",
+   "chart": "Weld Line Qty in Line Chart",
    "width": "Full"
   },
   {
-   "chart": "Damage/ Crack Qty in Line Chart",
+   "chart": "Damage Qty in Line Chart",
    "width": "Full"
   },
   {
@@ -44,6 +48,10 @@
   {
    "chart": "Others Qty in Line Chart",
    "width": "Full"
+  },
+  {
+   "chart": "Expense Head Wise Amount",
+   "width": "Full"
   }
  ],
  "creation": "2024-01-20 10:52:28.283302",
@@ -53,7 +61,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2024-01-20 18:17:12.117394",
+ "modified": "2024-01-20 18:33:52.809019",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "DPR BTPL",

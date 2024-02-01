@@ -1,0 +1,21 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Expense Head Wise Amount",
+   "width": "Full"
+  }
+ ],
+ "creation": "2024-01-29 16:58:49.109194",
+ "dashboard_name": "Expense Head Wise Purchase Report",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2024-01-29 16:58:49.109194",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Expense Head Wise Purchase Report",
+ "owner": "Administrator"
+}

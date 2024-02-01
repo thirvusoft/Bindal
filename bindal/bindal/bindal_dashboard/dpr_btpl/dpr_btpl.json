@@ -2,7 +2,7 @@
  "cards": [],
  "charts": [
   {
-   "chart": "Target Production, OK Production, Rejected Qty Wise Chart",
+   "chart": "Target Production, OK Production, Rejected Qty-Wise Chart",
    "width": "Full"
   },
   {
@@ -50,7 +50,7 @@
    "width": "Full"
   },
   {
-   "chart": "Expense Head Wise Amount",
+   "chart": "Total Production Vs Total Defects Trends",
    "width": "Full"
   }
  ],
@@ -61,7 +61,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2024-01-20 18:33:52.809019",
+ "modified": "2024-01-29 17:03:21.524027",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "DPR BTPL",

@@ -1,0 +1,37 @@
+{
+ "chart_name": "Total Production Vs Total Defects Trends",
+ "chart_type": "Report",
+ "creation": "2024-01-29 15:46:15.578034",
+ "custom_options": "{\"x_field\": \"test_date\", \"chart_type\": \"Line\", \"y_axis_fields\": [{\"idx\": 1, \"__islocal\": true, \"name\": \"row 1\", \"y_field\": \"actual_production\", \"color\": \"#29CD42\"}, {\"idx\": 2, \"__islocal\": true, \"name\": \"row 2\", \"y_field\": \"rejected_production\", \"color\": \"#cc0c0c\"}], \"y_fields\": [\"actual_production\", \"rejected_production\"], \"colors\": [\"#29CD42\", \"#cc0c0c\"]}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "filters_json": "{\"zone\":\"Zone-I\"}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2024-01-29 15:46:21.949986",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Total Production Vs Total Defects Trends",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Actual Production and Rejected Production Zone wise",
+ "roles": [],
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "x_field": "test_date",
+ "y_axis": [
+  {
+   "color": "#29CD42",
+   "y_field": "actual_production"
+  },
+  {
+   "color": "#cc0c0c",
+   "y_field": "rejected_production"
+  }
+ ]
+}

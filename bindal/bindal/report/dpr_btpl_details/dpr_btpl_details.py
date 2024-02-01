@@ -28,6 +28,12 @@ def get_columns(filters):
 				"width": 150
 			},
 			{
+				"label": _("Target Production"),
+				"fieldtype": "Float",
+				"fieldname": "target_production",
+				"width": 150
+			},
+			{
 				"label": _("Actual Production"),
 				"fieldtype": "Float",
 				"fieldname": "actual_production",
@@ -131,7 +137,7 @@ def get_data(filters):
 		dpr_filter.update({'date':["<=", filters.get('to_date')]})
 	if filters.get("from_date") and filters.get("to_date"):
 		dpr_filter.update({'date':["between", [filters.get('from_date'), filters.get('to_date')]]})
-	dpr_list=frappe.db.get_list("DPR BTPL", filters=dpr_filter, fields=["zone_1", "workstation", "sum(a_prod_1) as a_prod_1", "sum(rej_prod_1) as rej_prod_1", "sum(ok_prod_1) as ok_prod_1", 
+	dpr_list=frappe.db.get_list("DPR BTPL", filters=dpr_filter, fields=["zone_1", "workstation", "sum(t_prod_1) as t_prod_1", "sum(a_prod_1) as a_prod_1", "sum(rej_prod_1) as rej_prod_1", "sum(ok_prod_1) as ok_prod_1", 
                                 "sum(s_mould_1) as s_mould_1", "sum(f_mould_1) as f_mould_1", "sum(s_qty_1) as s_qty_1", "sum(ss_qty_1) as ss_qty_1", "sum(b_qty_1) as b_qty_1", 
                                 "sum(w_qty_1) as w_qty_1", "sum(e_qty_1) as e_qty_1", "sum(cp_qty_1) as cp_qty_1", "sum(d_qty_1) as d_qty_1", "sum(sc_qty_1) as sc_qty_1", "sum(mi_qty_1) as mi_qty_1", 
                                 "sum(qty_2) as qty_2"], group_by="zone_1, workstation", order_by="zone_1")
@@ -142,6 +148,7 @@ def get_data(filters):
 			sub_data.update({
 					"zone":dpr.zone_1 if zone != dpr.zone_1 else "",
 					"machine":dpr.workstation,
+					"target_production":dpr.t_prod_1,
 					"actual_production":dpr.a_prod_1,
 					"rejected_production":dpr.rej_prod_1,
 					"ok_production":dpr.ok_prod_1,

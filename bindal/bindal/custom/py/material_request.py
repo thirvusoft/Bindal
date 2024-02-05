@@ -13,7 +13,7 @@ class _MaterialRequest(MaterialRequest):
     def validate_material_request_type(self):
         """Validate fields in accordance with selected type"""
 
-        if self.material_request_type not in ["Sales", "Customer Provided"]:
+        if self.material_request_type not in ["Sales", "Customer Provided", "Manufacture"]:
             self.customer = None
     
     def get_mr_items_ordered_qty(self, mr_items):

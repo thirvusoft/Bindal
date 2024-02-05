@@ -30,7 +30,9 @@ doctype_js = {
 			"Work Order" : "bindal/custom/js/work_order.js",
 			"Gate Entry":"bindal/custom/js/gate_entry.js",
 			"Production Plan":"bindal/custom/js/production_plan.js",
-            "Item":"bindal/custom/js/item.js"
+            "Item":"bindal/custom/js/item.js",
+            "Material Request": "bindal/custom/js/material_request.js",
+            "Sales Order": "bindal/custom/js/sales_order.js",
 			}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -61,7 +63,10 @@ doctype_js = {
 
 # before_install = "bindal.install.before_install"
 after_install = "bindal.utils.py.stock_settings.stock_customization"
-after_migrate = "bindal.utils.py.stock_settings.stock_customization"
+after_migrate = [
+	"bindal.utils.py.stock_settings.stock_customization",
+	"bindal.bindal.custom.py.material_request.material_request_type"
+]
 
 # Desk Notifications
 # ------------------
@@ -92,8 +97,20 @@ doc_events = {
 	"Gate Entry": {
 		"on_submit":"bindal.bindal.custom.py.gate_entry.on_submit"
 	},
-
+	"Sales Order": {
+        "on_submit": [
+            "bindal.bindal.custom.py.sales_order.update_completed_and_requested_qty"
+		],
+        "on_cancel": [
+            "bindal.bindal.custom.py.sales_order.update_completed_and_requested_qty"
+		]
+	}
 }
+
+override_doctype_class = {
+	"Material Request": "bindal.bindal.custom.py.material_request._MaterialRequest"
+}
+
 
 # Scheduled Tasks
 # ---------------

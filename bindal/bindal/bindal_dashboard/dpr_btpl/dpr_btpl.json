@@ -1,0 +1,69 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Target Production, OK Production, Rejected Qty-Wise Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Flash Qty in Line Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Short Moulding Qty in Line Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Black Spot Qty in Line Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Scratch Qty in Line Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Mixing Qty in Line Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Weld Line Qty in Line Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Damage Qty in Line Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Colour Problem Qty in Line Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Silver Streaks Qty in Line Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Shrinkage Qty in Line Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Others Qty in Line Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Total Production Vs Total Defects Trends",
+   "width": "Full"
+  }
+ ],
+ "creation": "2024-01-20 10:52:28.283302",
+ "dashboard_name": "DPR BTPL",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2024-01-29 17:03:21.524027",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "DPR BTPL",
+ "owner": "Administrator"
+}

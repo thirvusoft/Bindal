@@ -256,7 +256,7 @@
    "fieldtype": "Section Break"
   },
   {
-   "default": "Min.9 Kgf/m2",
+   "default": "Min.250 to 400 Kgf/m2",
    "fieldname": "sepc",
    "fieldtype": "Read Only",
    "label": "Spec-"
@@ -309,7 +309,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-16 18:55:33.528221",
+ "modified": "2023-12-08 14:50:42.058303",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Izod Impact Test",

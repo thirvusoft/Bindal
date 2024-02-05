@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-03 12:59:17.573147",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "stamp_images",
+  "tick_mark",
+  "digital_sign"
+ ],
+ "fields": [
+  {
+   "fieldname": "stamp_images",
+   "fieldtype": "Attach Image",
+   "label": "Stamp Images"
+  },
+  {
+   "fieldname": "digital_sign",
+   "fieldtype": "Text Editor",
+   "label": "Digital Sign"
+  },
+  {
+   "fieldname": "tick_mark",
+   "fieldtype": "Attach Image",
+   "label": "Tick Mark"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-01-03 15:06:28.020640",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Print Footer Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

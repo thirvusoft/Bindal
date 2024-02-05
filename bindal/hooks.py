@@ -97,6 +97,9 @@ doc_events = {
 	"Gate Entry": {
 		"on_submit":"bindal.bindal.custom.py.gate_entry.on_submit"
 	},
+  'Employee Checkin':{
+		'after_insert':"bindal.bindal.custom.py.employee_checkin.fetch_branch"
+	},
 	"Sales Order": {
         "on_submit": [
             "bindal.bindal.custom.py.sales_order.update_completed_and_requested_qty"
@@ -104,7 +107,7 @@ doc_events = {
         "on_cancel": [
             "bindal.bindal.custom.py.sales_order.update_completed_and_requested_qty"
 		]
-	}
+	},
 }
 
 override_doctype_class = {

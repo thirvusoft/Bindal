@@ -23,6 +23,12 @@ frappe.query_reports["Expense Head Wise Amount"] = {
 			"label": __("Supplier"),
 			"fieldtype": "Link",
 			"options":"Supplier"
+		},
+		{
+			"fieldname": "expense_account",
+			"label": __("Expense Account"),
+			"fieldtype": "Link",
+			"options":"Account"
 		}
 	]
 };

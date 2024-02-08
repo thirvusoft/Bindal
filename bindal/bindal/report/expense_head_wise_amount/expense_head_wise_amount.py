@@ -37,6 +37,9 @@ def get_data(filters):
 				]
 	if filters.get("supplier"):
 		expense_filter.append(["supplier", "=", filters.get("supplier")])
+	if filters.get("expense_account"):
+		expense_filter.append(["Purchase Invoice Item", "expense_account", "=",filters.get("expense_account")])
+	
 	purchase_invoice=frappe.db.get_list("Purchase Invoice", filters=expense_filter, fields=["`tabPurchase Invoice Item`.expense_account as expense_account", 
 							"sum(`tabPurchase Invoice Item`.amount) as amount"], group_by="`tabPurchase Invoice Item`.expense_account")
 	for row in purchase_invoice:

@@ -116,7 +116,7 @@ def make_sales_order(source_name, target_doc=None):
                 "doctype": "Sales Order",
                 "validation": {
                     "docstatus": ["=", 1],
-                    "material_request_type": ["in", ["Sales"]],
+                    "material_request_type": ["in", ["Sales","Manufacture"]],
                 },
             },
             "Material Request Item": {

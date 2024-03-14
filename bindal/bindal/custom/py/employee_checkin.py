@@ -4,10 +4,10 @@ from frappe.model.document import Document
 from frappe.utils import cint, get_datetime, get_link_to_form , nowdate
 from datetime import datetime, timedelta, time
 
-from erpnext.hr.doctype.shift_assignment.shift_assignment import (
-    get_actual_start_end_datetime_of_shift,
-)
-from erpnext.hr.utils import validate_active_employee
+# from erpnext.hr.doctype.shift_assignment.shift_assignment import (
+#     get_actual_start_end_datetime_of_shift,
+# )
+# from erpnext.hr.utils import validate_active_employee
 
 
 @frappe.whitelist()

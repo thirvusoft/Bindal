@@ -470,7 +470,7 @@
    "fieldname": "value_in",
    "fieldtype": "Select",
    "label": "Value in ",
-   "options": "\n3to5gm/10min\n8to10gm/10min\n8to12gm/10min\n9to11gm/10min\n9to14gm/10min\n30\u00b110gm/10min\n30\u00b120gm/10min\n50\u00b120gm/10min\n40\u00b120gm/10min\n40\u00b110gm/10min"
+   "options": "\n3to5gm/10min\n8to10gm/10min\n8to12gm/10min\n9to11gm/10min\n9to14gm/10min\n30\u00b110gm/10min\n30\u00b120gm/10min\n50\u00b120gm/10min\n40\u00b120gm/10min\n40\u00b110gm/10min\n35\u00b110gm/10min\n55\u00b15gm/10min\n60\u00b15gm/10min\n20\u00b110gm/10min"
   },
   {
    "fieldname": "section_break_egqs9",
@@ -508,7 +508,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-26 16:48:13.094433",
+ "modified": "2024-02-16 15:15:22.966430",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "MFI Test Report",

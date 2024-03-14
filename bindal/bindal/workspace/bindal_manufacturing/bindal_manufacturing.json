@@ -1,0 +1,453 @@
+{
+ "charts": [
+  {
+   "chart_name": "Produced Quantity",
+   "label": "Produced Quantity"
+  }
+ ],
+ "content": "[{\"id\":\"09oGEk9u09\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Bindal Manufacturing</span>\",\"col\":12}},{\"id\":\"gtSzWL0EZn\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Produced Quantity\",\"col\":12}},{\"id\":\"G44Fn7Lf2I\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"r1XUux1NFp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"e8hqSAU0f0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BOM\",\"col\":3}},{\"id\":\"bpO5fzMool\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work Order\",\"col\":3}},{\"id\":\"Sx11DmD2I3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Production Plan\",\"col\":3}},{\"id\":\"TrKwW0mZ8e\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Forecasting\",\"col\":3}},{\"id\":\"mPgAY8Obrm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work Order Summary\",\"col\":3}},{\"id\":\"zDB61kd8BY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BOM Stock Report\",\"col\":3}},{\"id\":\"ZwfCMJYS49\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Manufacturing\",\"col\":3}},{\"id\":\"FPrXw-RHjy\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hiIERM7CbQ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"a8F62n73qh\",\"type\":\"card\",\"data\":{\"card_name\":\"PRODUCTION\",\"col\":4}},{\"id\":\"sxR9OjFTws\",\"type\":\"card\",\"data\":{\"card_name\":\"Bill of Materials\",\"col\":4}},{\"id\":\"N4M8m0_RnZ\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"_YGy17CfcT\",\"type\":\"card\",\"data\":{\"card_name\":\"Tools\",\"col\":4}},{\"id\":\"NMpTactEug\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"v6YosOhyVK\",\"type\":\"card\",\"data\":{\"card_name\":\"Planning Reports\",\"col\":4}}]",
+ "creation": "2024-02-26 12:42:08.962093",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "organization",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Bindal Manufacturing",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "PRODUCTION",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Work Order",
+   "link_count": 0,
+   "link_to": "Work Order",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Production Plan",
+   "link_count": 0,
+   "link_to": "Production Plan",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Entry",
+   "link_count": 0,
+   "link_to": "Stock Entry",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Job Card",
+   "link_count": 0,
+   "link_to": "Job Card",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Downtime Entry",
+   "link_count": 0,
+   "link_to": "Downtime Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bill of Materials",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BOM",
+   "link_count": 0,
+   "link_to": "BOM",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Workstation",
+   "link_count": 0,
+   "link_to": "Workstation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operation",
+   "link_count": 0,
+   "link_to": "Operation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Routing",
+   "link_count": 0,
+   "link_to": "Routing",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 10,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning Report",
+   "link_count": 0,
+   "link_to": "Planning Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Machine Availablity Report",
+   "link_count": 0,
+   "link_to": "Machine Availablity Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Work Order Summary",
+   "link_count": 0,
+   "link_to": "Work Order Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality Inspection Summary",
+   "link_count": 0,
+   "link_to": "Quality Inspection Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Downtime Analysis",
+   "link_count": 0,
+   "link_to": "Downtime Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Job Card Summary",
+   "link_count": 0,
+   "link_to": "Job Card Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BOM Search",
+   "link_count": 0,
+   "link_to": "BOM Search",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BOM Stock Report",
+   "link_count": 0,
+   "link_to": "BOM Stock Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Production Analytics",
+   "link_count": 0,
+   "link_to": "Production Analytics",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BOM Operations Time",
+   "link_count": 0,
+   "link_to": "BOM Operations Time",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tools",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BOM Update Log",
+   "link_count": 0,
+   "link_to": "BOM Update Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BOM Comparison Tool",
+   "link_count": 0,
+   "link_to": "bom-comparison-tool",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning Reports",
+   "link_count": 7,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning Report",
+   "link_count": 0,
+   "link_to": "Planning Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning Report Unit-3",
+   "link_count": 0,
+   "link_to": "Planning Report Unit-3",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning Report Zone BCDEI",
+   "link_count": 0,
+   "link_to": "Planning Report Zone BCDEI",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning Report Zone F",
+   "link_count": 0,
+   "link_to": "Planning Report Zone F",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning Report Zone G",
+   "link_count": 0,
+   "link_to": "Planning Report Zone G",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning Report Zone H",
+   "link_count": 0,
+   "link_to": "Planning Report Zone H",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning Report Unit 2",
+   "link_count": 0,
+   "link_to": "Planning Report Unit 2",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Manufacturing Settings",
+   "link_count": 0,
+   "link_to": "Manufacturing Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-02-26 13:16:32.656152",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Bindal Manufacturing",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 39.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} Active",
+   "label": "Item",
+   "link_to": "Item",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} Active",
+   "label": "BOM",
+   "link_to": "BOM",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "format": "{} Open",
+   "label": "Work Order",
+   "link_to": "Work Order",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "format": "{} Open",
+   "label": "Production Plan",
+   "link_to": "Production Plan",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Forecasting",
+   "link_to": "Exponential Smoothing Forecasting",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Work Order Summary",
+   "link_to": "Work Order Summary",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "BOM Stock Report",
+   "link_to": "BOM Stock Report",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Manufacturing",
+   "link_to": "Manufacturing",
+   "type": "Dashboard"
+  }
+ ],
+ "title": "Bindal Manufacturing"
+}

@@ -109,6 +109,9 @@ doc_events = {
             "bindal.bindal.custom.py.sales_order.update_completed_and_requested_qty"
 		]
 	},
+	"User": {
+		"validate": "bindal.bindal.custom.py.user.role_login_updation"
+	}
 }
 
 override_doctype_class = {

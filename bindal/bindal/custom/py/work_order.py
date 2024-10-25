@@ -29,7 +29,7 @@ def get_barcode(doc):
         barcode.item = doc.production_item
         barcode.save()
         if count == int(qty)+starting_count:
-            frappe.set_value("Item",doc.production_item,'last_updated_series',count)
+            frappe.db.set_value("Item",doc.production_item,'last_updated_series',count)
 
     return 1
 

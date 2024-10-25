@@ -49,7 +49,8 @@ def get_barcode(doc):
     return 1
 
 def on_submit(doc,event):
-    frappe.enqueue(get_barcode,queue="long",doc=doc.name)
+    pass
+    # frappe.enqueue(get_barcode,queue="long",doc=doc.name)
     # get_barcode(doc.name)
 
 @frappe.whitelist()
@@ -92,3 +93,14 @@ def update_barcode(doc,data):
     #     else:
     #         frappe.throw("Series not found for Finished Goods in Stock Settings")
     # return 1
+
+def delete_barcode():
+    a=1
+    label = frappe.get_all('Barcode Label',limit=1000,pluck='name')
+    while label:
+        print(a)
+        a=a+1
+        frappe.db.sql(f'''delete from `tabBarcode Label` where name in {tuple(label)} ''')
+        label = frappe.get_all('Barcode Label',limit=1000,pluck='name')
+
+        frappe.db.commit()

@@ -116,7 +116,6 @@ doc_events = {
 
 override_doctype_class = {
 	"Material Request": "bindal.bindal.custom.py.material_request._MaterialRequest" ,
-	"Stock Entry" : "bindal.bindal.custom.py.stock_entry.TSStockEntry"
 }
 
 

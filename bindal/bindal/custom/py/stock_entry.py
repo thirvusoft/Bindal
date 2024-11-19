@@ -13,7 +13,7 @@ class TSStockEntry(StockEntry):
         and their quantities.
         """
         try:
-            if self.work_order:
+            if self.work_order and not self.items:
                 
                 self.pro_doc = frappe.get_doc("Work Order", self.work_order)
                 self.stock_entry_type = "Manufacture"
@@ -41,8 +41,8 @@ class TSStockEntry(StockEntry):
                     item_row = self.append("items")
                     item_row.item_code = item["item_code"]
                     item_row.qty = flt(item["qty"]) * flt(self.pro_doc.qty or 1)  # Adjust quantity based on Work Order
-                    item_row.uom = frappe.db.get_value("Item", item["item_code"], "stock_uom")
-                    item_row.stock_uom = item_row.uom
+                    item_row.uom = item_row.uom
+                    item_row.stock_uom = item_row.stock_uom
                     item_row.is_finished_item = 0  
                     item_row.conversion_factor = 1
                     item_row.transfer_qty = item_row.qty

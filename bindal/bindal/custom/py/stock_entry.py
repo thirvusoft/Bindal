@@ -39,10 +39,6 @@ class TSStockEntry(StockEntry):
 
             for item in bom_items:
                 item_row = self.append("items")
-                print("---------------------------------")
-                print(item['qty'])
-                print(self.fg_completed_qty)
-                print('---------------------------------')
                 
                 item_row.item_code = item["item_code"]
                 item_row.qty = (item['qty'] / bom.quantity) * self.fg_completed_qty  if bom.quantity > 1  else item['qty']

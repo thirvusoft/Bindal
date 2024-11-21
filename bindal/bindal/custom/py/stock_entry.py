@@ -41,7 +41,7 @@ class TSStockEntry(StockEntry):
                 item_row = self.append("items")
                 
                 item_row.item_code = item["item_code"]
-                item_row.qty = (item['qty'] / bom.quantity) * self.fg_completed_qty  if bom.quantity > 1  else item['qty']
+                item_row.qty = (item['qty'] / bom.quantity) * self.fg_completed_qty  if bom.quantity > 1  else item['qty'] * self.fg_completed_qty
                 item_row.uom = item_row.uom
                 item_row.stock_uom = item_row.stock_uom
                 item_row.is_finished_item = 0  

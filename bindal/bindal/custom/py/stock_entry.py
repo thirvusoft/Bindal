@@ -39,25 +39,26 @@ class TSStockEntry(StockEntry):
 
             for item in bom_items:
                 item_row = self.append("items")
+                
                 item_row.item_code = item["item_code"]
-                item_row.qty = flt(item["qty"]) * flt(self.pro_doc.qty or 1)  # Adjust quantity based on Work Order
+                item_row.qty = (item['qty'] / bom.quantity) * self.fg_completed_qty  if bom.quantity > 1  else item['qty'] * self.fg_completed_qty
                 item_row.uom = item_row.uom
                 item_row.stock_uom = item_row.stock_uom
                 item_row.is_finished_item = 0  
-                item_row.conversion_factor = 1
-                item_row.transfer_qty = item_row.qty
-                # item  = get_item_defaults(item_row.item_code, self.company)
-                item_row.s_warehouse = self.pro_doc.source_warehouse           
-                # item_row.rate = item.rate
-
+                item_row.conversion_factor = item_row.conversion_factor
+                item_row.transfer_qty =  self.fg_completed_qty 
+                item_row.s_warehouse = self.pro_doc.source_warehouse  
+                         
+                
             # for adding finished item as last
             finished_item_row = self.append("items")
             finished_item_row.item_code = bom.item
-            finished_item_row.qty = self.pro_doc.qty or 1
+            finished_item_row.qty = self.fg_completed_qty
             finished_item_row.uom = frappe.db.get_value("Item", bom.item, "stock_uom")
             finished_item_row.stock_uom = finished_item_row.uom
             finished_item_row.is_finished_item = 1 
             finished_item_row.conversion_factor = 1
+            finished_item_row.transfer_qty = self.fg_completed_qty
             finished_item_row.t_warehouse = self.pro_doc.fg_warehouse            
 
             self.validate_posting_time()

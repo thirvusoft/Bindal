@@ -276,6 +276,25 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Manufacturing Settings",
+   "link_count": 0,
+   "link_to": "Manufacturing Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Planning Reports",
    "link_count": 7,
    "link_type": "DocType",
@@ -305,9 +324,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Planning Report Zone BCDEI",
+   "label": "Planning Report Zone U1B",
    "link_count": 0,
-   "link_to": "Planning Report Zone BCDEI",
+   "link_to": "Planning Report Unit-1B",
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
@@ -315,9 +334,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Planning Report Zone F",
+   "label": "Planning Report Zone U1C",
    "link_count": 0,
-   "link_to": "Planning Report Zone F",
+   "link_to": "Planning Report Unit-1C",
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
@@ -325,9 +344,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Planning Report Zone G",
+   "label": "Planning Report Zone U1D",
    "link_count": 0,
-   "link_to": "Planning Report Zone G",
+   "link_to": "Planning Report Unit-1D",
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
@@ -335,9 +354,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Planning Report Zone H",
+   "label": "Planning Report Zone U1E",
    "link_count": 0,
-   "link_to": "Planning Report Zone H",
+   "link_to": "Planning Report Unit-1E",
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
@@ -351,28 +370,9 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Settings",
-   "link_count": 1,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Manufacturing Settings",
-   "link_count": 0,
-   "link_to": "Manufacturing Settings",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
   }
  ],
- "modified": "2024-02-26 13:16:32.656152",
+ "modified": "2024-11-29 14:22:07.127754",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Bindal Manufacturing",

@@ -33,7 +33,8 @@ doctype_js = {
             "Item":"bindal/custom/js/item.js",
             "Material Request": "bindal/custom/js/material_request.js",
             "Sales Order": "bindal/custom/js/sales_order.js",
-			"Purchase Invoice":'bindal/custom/js/purchase_invoice.js'
+			"Purchase Invoice":'bindal/custom/js/purchase_invoice.js',
+            "Sales Invoice": "bindal/custom/js/sales_invoice.js"
 			}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}

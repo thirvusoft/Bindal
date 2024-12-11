@@ -34,7 +34,8 @@ doctype_js = {
             "Material Request": "bindal/custom/js/material_request.js",
             "Sales Order": "bindal/custom/js/sales_order.js",
 			"Purchase Invoice":'bindal/custom/js/purchase_invoice.js',
-            "Sales Invoice": "bindal/custom/js/sales_invoice.js"
+            "Sales Invoice": "bindal/custom/js/sales_invoice.js",
+			"Attendance":"bindal/custom/js/attendance.js",
 			}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -112,6 +113,9 @@ doc_events = {
 	},
 	"User": {
 		"validate": "bindal.bindal.custom.py.user.role_login_updation"
+	},
+	"Attendance": {
+		"validate": "bindal.bindal.custom.py.attendance.permission_check"
 	}
 }
 

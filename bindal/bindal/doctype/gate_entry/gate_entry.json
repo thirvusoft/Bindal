@@ -22,6 +22,7 @@
   "item",
   "section_break_3",
   "vehicle_number",
+  "deppt_2",
   "driver_name",
   "weighment_required",
   "column_break_6",
@@ -178,6 +179,13 @@
    "fieldname": "barcode_item",
    "fieldtype": "Data",
    "label": "Barcode Item"
+  },
+  {
+   "fieldname": "deppt_2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Department Name",
+   "options": "\nWarehouse & Dispatch \u2013 BTPL\nSales & Marketing \u2013 BTPL\nAssurance & Quality Control \u2013 BTPL\nProcess & Operations \u2013 BTPL\nEngineering & Maintenance \u2013 BTPL\nHuman Capital & Administration \u2013 BTPL\nFinance & Purchase - BTPL"
   }
  ],
  "is_submittable": 1,
@@ -187,10 +195,11 @@
    "link_fieldname": "gate_entry"
   }
  ],
- "modified": "2023-10-18 12:49:59.724815",
+ "modified": "2025-02-12 11:14:45.627907",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Gate Entry",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -209,6 +218,7 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1,
  "track_seen": 1
 }

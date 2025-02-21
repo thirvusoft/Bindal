@@ -61,19 +61,19 @@ class TSStockEntry(StockEntry):
             finished_item_row.transfer_qty = self.fg_completed_qty
             finished_item_row.t_warehouse = self.pro_doc.fg_warehouse            
 
+            self.validate_duplicate_serial_and_batch_bundle("items")
             self.validate_posting_time()
             self.validate_purpose()
             self.validate_item()
             self.validate_customer_provided_item()
-            self.validate_qty()
             self.set_transfer_qty()
             self.validate_uom_is_integer("uom", "qty")
             self.validate_uom_is_integer("stock_uom", "transfer_qty")
+            self.validate_warehouse()
             self.validate_work_order()
             self.validate_bom()
             self.set_process_loss_qty()
             self.validate_purchase_order()
-            self.validate_subcontracting_order()
 
             if self.purpose in ("Manufacture", "Repack"):
                 self.mark_finished_and_scrap_items()
@@ -88,16 +88,18 @@ class TSStockEntry(StockEntry):
             self.validate_job_card_item()
             self.set_purpose_for_stock_entry()
             self.clean_serial_nos()
-            self.validate_duplicate_serial_no()
 
             if not self.from_bom:
                 self.fg_completed_qty = 0.0
 
+            self.make_serial_and_batch_bundle_for_outward()
             self.validate_serialized_batch()
             self.calculate_rate_and_amount()
             self.validate_putaway_capacity()
+            self.validate_component_and_quantities()
 
             if not self.get("purpose") == "Manufacture":
+                # ignore scrap item wh difference and empty source/target wh
+                # in Manufacture Entry
                 self.reset_default_field_value("from_warehouse", "items", "s_warehouse")
                 self.reset_default_field_value("to_warehouse", "items", "t_warehouse")
-    

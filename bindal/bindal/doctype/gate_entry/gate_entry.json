@@ -84,7 +84,7 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Record Number",
-   "options": "\nU1-GE-2324-\nGE-REJ-\nU2-GE-2324-\nU3-GE-2324-\nWH-GE-2324-\nGATE-U-1-\nGATE-U-2-\nGATE-U-3-\nGATE-WH-"
+   "options": "\nHO-GE26-.####\nU1-GE26-.####\nU2-GE26-.####\nU3-GE26-.####\nU4-GE26-.####"
   },
   {
    "fieldname": "supporting_document",
@@ -195,7 +195,7 @@
    "link_fieldname": "gate_entry"
   }
  ],
- "modified": "2025-02-12 11:14:45.627907",
+ "modified": "2025-03-31 13:02:02.693369",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Gate Entry",

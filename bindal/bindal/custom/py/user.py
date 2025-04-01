@@ -2,7 +2,7 @@ import frappe
 from frappe.utils import now
 
 def role_login_updation(doc, action):
-    if doc.roles and doc.user_type == "System User":
+    if doc.roles and doc.user_type == "System User" and not doc.get("__islocal"):
         before_roles_list = []
         user_doc = frappe.get_doc("User", doc.name)
         

@@ -22,7 +22,7 @@
   "item",
   "section_break_3",
   "vehicle_number",
-  "deppt_2",
+  "cost_center",
   "driver_name",
   "weighment_required",
   "column_break_6",
@@ -84,7 +84,7 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Record Number",
-   "options": "\nU1-GE-2324-\nGE-REJ-\nU2-GE-2324-\nU3-GE-2324-\nWH-GE-2324-\nGATE-U-1-\nGATE-U-2-\nGATE-U-3-\nGATE-WH-"
+   "options": "\nHO-GE26-.####\nU1-GE26-.####\nU2-GE26-.####\nU3-GE26-.####\nU4-GE26-.####"
   },
   {
    "fieldname": "supporting_document",
@@ -181,11 +181,11 @@
    "label": "Barcode Item"
   },
   {
-   "fieldname": "deppt_2",
-   "fieldtype": "Select",
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Department Name",
-   "options": "\nWarehouse & Dispatch \u2013 BTPL\nSales & Marketing \u2013 BTPL\nAssurance & Quality Control \u2013 BTPL\nProcess & Operations \u2013 BTPL\nEngineering & Maintenance \u2013 BTPL\nHuman Capital & Administration \u2013 BTPL\nFinance & Purchase - BTPL"
+   "options": "Cost Center"
   }
  ],
  "is_submittable": 1,
@@ -195,7 +195,7 @@
    "link_fieldname": "gate_entry"
   }
  ],
- "modified": "2025-02-12 11:14:45.627907",
+ "modified": "2025-03-31 13:02:02.693369",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Gate Entry",

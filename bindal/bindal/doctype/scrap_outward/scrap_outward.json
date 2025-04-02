@@ -1,0 +1,221 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-09 12:26:03.102960",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "amended_from",
+  "date",
+  "branch",
+  "sc_br_1",
+  "ppsc_1",
+  "abssc_2",
+  "lumps_qty_kg",
+  "pp_runner_qty_kg",
+  "item",
+  "qty1",
+  "cr_br_1",
+  "sc_qt2",
+  "sc_br_2",
+  "rs_sc",
+  "rk_",
+  "sc_qcs",
+  "sc_qcg"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Scrap Outward",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Select",
+   "label": "Branch",
+   "options": "Unit-1\nUnit-2\nUnit-3\nUnit-4"
+  },
+  {
+   "fieldname": "sc_br_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ppsc_1",
+   "fieldtype": "Data",
+   "label": "PP Scrap Qty (KG)"
+  },
+  {
+   "fieldname": "abssc_2",
+   "fieldtype": "Data",
+   "label": "ABS Scrap Qty (KG)"
+  },
+  {
+   "fieldname": "lumps_qty_kg",
+   "fieldtype": "Data",
+   "label": "Lumps Qty (KG)"
+  },
+  {
+   "fieldname": "pp_runner_qty_kg",
+   "fieldtype": "Data",
+   "label": "PP Runner Qty( KG)"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Table",
+   "label": "Lead Item",
+   "options": "Scrap Item"
+  },
+  {
+   "fieldname": "qty1",
+   "fieldtype": "Select",
+   "label": "Lead Qty (UOM)",
+   "options": "Pcs"
+  },
+  {
+   "fieldname": "cr_br_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sc_qt2",
+   "fieldtype": "Data",
+   "label": "Scrap Qty In Nos"
+  },
+  {
+   "fieldname": "sc_br_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rs_sc",
+   "fieldtype": "Data",
+   "label": "Reason Of Scrap"
+  },
+  {
+   "fieldname": "rk_",
+   "fieldtype": "Data",
+   "label": "Remark If Any"
+  },
+  {
+   "fieldname": "sc_qcs",
+   "fieldtype": "Data",
+   "label": "Sign of QC Dept"
+  },
+  {
+   "fieldname": "sc_qcg",
+   "fieldtype": "Data",
+   "label": "Sign of Guard"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-02 10:09:46.735121",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Scrap Outward",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "QC User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Master Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

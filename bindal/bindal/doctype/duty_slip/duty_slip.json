@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-01 18:49:42.625833",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "section_1",
+  "travel_1",
+  "travel_2",
+  "fare_1",
+  "coloum_1",
+  "driver_2",
+  "vehic_1",
+  "location_1",
+  "section_2",
+  "desc_1",
+  "cloumn_3",
+  "emp_2",
+  "coloumn_2",
+  "emp_1",
+  "coloumn_3",
+  "driver_1",
+  "coloumn_4",
+  "app_1",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Sr No"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "travel_1",
+   "fieldtype": "Date",
+   "label": "Travel Date"
+  },
+  {
+   "fieldname": "travel_2",
+   "fieldtype": "Select",
+   "label": "Travel Type",
+   "options": "PICK UP\nDROP"
+  },
+  {
+   "fieldname": "fare_1",
+   "fieldtype": "Int",
+   "label": "Fare"
+  },
+  {
+   "fieldname": "coloum_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "driver_2",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "fieldname": "vehic_1",
+   "fieldtype": "Data",
+   "label": "Vehicle No"
+  },
+  {
+   "fieldname": "location_1",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "section_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "desc_1",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "cloumn_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "emp_2",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "coloumn_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "emp_1",
+   "fieldtype": "Data",
+   "label": "Employee Sign"
+  },
+  {
+   "fieldname": "coloumn_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "driver_1",
+   "fieldtype": "Data",
+   "label": "Driver Sign"
+  },
+  {
+   "fieldname": "coloumn_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "app_1",
+   "fieldtype": "Data",
+   "label": "Approver Sign"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Duty Slip",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-02 10:13:23.118594",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Duty Slip",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

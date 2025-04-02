@@ -10,6 +10,7 @@
   "barcode",
   "barcode_item",
   "barcode_type",
+  "branch",
   "bh",
   "type",
   "supporting_document",
@@ -186,6 +187,12 @@
    "in_list_view": 1,
    "label": "Department Name",
    "options": "Cost Center"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
   }
  ],
  "is_submittable": 1,
@@ -195,7 +202,7 @@
    "link_fieldname": "gate_entry"
   }
  ],
- "modified": "2025-03-31 13:02:02.693369",
+ "modified": "2025-04-01 20:17:18.539867",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Gate Entry",

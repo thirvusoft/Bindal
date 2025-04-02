@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-10-24 12:59:34.276288",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date_1",
+  "branch_1",
+  "customer",
+  "item_name",
+  "item_1",
+  "workstation",
+  "col_1",
+  "ash_1",
+  "stan_1",
+  "res_1",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_1",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "branch_1",
+   "fieldtype": "Select",
+   "label": "Branch",
+   "options": "Unit-1\nUnit-2\nUnit-3\nUnit-4"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "item_1",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "label": "workstation",
+   "options": "Workstation"
+  },
+  {
+   "fieldname": "col_1",
+   "fieldtype": "Data",
+   "label": "Colour"
+  },
+  {
+   "fieldname": "ash_1",
+   "fieldtype": "Data",
+   "label": "Ash Content Value"
+  },
+  {
+   "fieldname": "stan_1",
+   "fieldtype": "Select",
+   "label": "Standard Ash Content",
+   "options": "2.7%\n4.0%\n10.0%"
+  },
+  {
+   "fieldname": "res_1",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "OK\nNOT OK"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ash Content Testing",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-02 11:36:59.301690",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Ash Content Testing",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

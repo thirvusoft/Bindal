@@ -1,0 +1,801 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-10-24 16:21:12.241087",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "item",
+  "rm_1",
+  "cl_1",
+  "bre_1",
+  "model_1",
+  "workstation",
+  "qc_1",
+  "shift_1",
+  "op_1",
+  "scb_1",
+  "cr_12",
+  "cr_1",
+  "leng_1",
+  "cr_2",
+  "width_1",
+  "cr_3",
+  "hr_1",
+  "cr_4",
+  "seal_1",
+  "cr_5",
+  "seal_2",
+  "cr_6",
+  "neck_1",
+  "cr_7",
+  "bush_1",
+  "cr_8",
+  "bush_2",
+  "cr_9",
+  "he_1",
+  "cr_10",
+  "fit_1",
+  "cr_11",
+  "wg_1",
+  "sr_1",
+  "cr_13",
+  "cr_14",
+  "leng_2",
+  "cr_15",
+  "width_2",
+  "cr_18",
+  "hr_2",
+  "cr_16",
+  "seal_3",
+  "cr_17",
+  "seal_4",
+  "cr_45",
+  "neck_2",
+  "cr_19",
+  "bush_3",
+  "cr_20",
+  "bush_4",
+  "cr_21",
+  "bush_h_1",
+  "cr_22",
+  "fit_2",
+  "cr_23",
+  "wg_2",
+  "scb_3",
+  "cr_24",
+  "cr_25",
+  "lengh_3",
+  "cr_26",
+  "wid_4",
+  "cr_27",
+  "he_4",
+  "cr_28",
+  "seal_8",
+  "cr_29",
+  "seal_9",
+  "cr_30",
+  "neck_5",
+  "cr_31",
+  "bush_7",
+  "cr_32",
+  "bush_8",
+  "cr_33",
+  "bush_9",
+  "cr_34",
+  "ftit_6",
+  "cr_35",
+  "weg_1",
+  "scb_5",
+  "cr_36",
+  "cr_37",
+  "leng_4",
+  "cr_38",
+  "wid_5",
+  "cr_39",
+  "heg_6",
+  "cr_40",
+  "leng_7",
+  "cr_41",
+  "seal_5",
+  "cr_42",
+  "he_8",
+  "cr_43",
+  "bush_18",
+  "cr_44",
+  "bush_19",
+  "cr_46",
+  "bush_21",
+  "cr_47",
+  "bush_22",
+  "cr_48",
+  "wgi_10",
+  "sb_3",
+  "cr_49",
+  "cr_50",
+  "lengh_23",
+  "cr_51",
+  "wid_11",
+  "cr_52",
+  "he_12",
+  "cr_53",
+  "out_1",
+  "cr_54",
+  "out_2",
+  "cr_55",
+  "neck_7",
+  "cr_56",
+  "dia_1",
+  "cr_57",
+  "dia_2",
+  "cr_58",
+  "bush_14",
+  "cr_59",
+  "fit_30",
+  "cr_60",
+  "wg_4",
+  "scb_45",
+  "check_1",
+  "cr_61",
+  "apprvo_1",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Part Name",
+   "options": "Item"
+  },
+  {
+   "fieldname": "rm_1",
+   "fieldtype": "Data",
+   "label": "Raw Material Grade"
+  },
+  {
+   "fieldname": "cl_1",
+   "fieldtype": "Data",
+   "label": "Colour"
+  },
+  {
+   "fieldname": "bre_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model_1",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "label": "Machine Name",
+   "options": "Workstation"
+  },
+  {
+   "fieldname": "qc_1",
+   "fieldtype": "Data",
+   "label": "QC Incharge Name"
+  },
+  {
+   "fieldname": "shift_1",
+   "fieldtype": "Select",
+   "label": "Shift ",
+   "options": "Shift - A\nShift - B"
+  },
+  {
+   "fieldname": "op_1",
+   "fieldtype": "Data",
+   "label": "Operator Name"
+  },
+  {
+   "fieldname": "scb_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cr_12",
+   "fieldtype": "Column Break",
+   "label": "Spec's As Per Drawing"
+  },
+  {
+   "fieldname": "cr_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "leng_1",
+   "fieldtype": "Int",
+   "label": "Total Length"
+  },
+  {
+   "fieldname": "cr_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "width_1",
+   "fieldtype": "Int",
+   "label": "Total Width"
+  },
+  {
+   "fieldname": "cr_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hr_1",
+   "fieldtype": "Int",
+   "label": "Total Height"
+  },
+  {
+   "fieldname": "cr_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seal_1",
+   "fieldtype": "Int",
+   "label": "Sealing Length Outer"
+  },
+  {
+   "fieldname": "cr_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seal_2",
+   "fieldtype": "Int",
+   "label": "Sealing Width Outer"
+  },
+  {
+   "fieldname": "cr_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "neck_1",
+   "fieldtype": "Int",
+   "label": "Nech Height"
+  },
+  {
+   "fieldname": "cr_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_1",
+   "fieldtype": "Int",
+   "label": "Bush Outer Dia(+)"
+  },
+  {
+   "fieldname": "cr_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_2",
+   "fieldtype": "Int",
+   "label": "Bush Outer Dia (-)"
+  },
+  {
+   "fieldname": "cr_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "he_1",
+   "fieldtype": "Int",
+   "label": "Bush Height"
+  },
+  {
+   "fieldname": "cr_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fit_1",
+   "fieldtype": "Int",
+   "label": "Fitment With Cont & Lid"
+  },
+  {
+   "fieldname": "cr_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wg_1",
+   "fieldtype": "Int",
+   "label": "Weight (Gms)"
+  },
+  {
+   "fieldname": "sr_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cr_13",
+   "fieldtype": "Column Break",
+   "label": "Sample 1 (08:00 to 11:00)"
+  },
+  {
+   "fieldname": "cr_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "leng_2",
+   "fieldtype": "Int",
+   "label": "Total Length"
+  },
+  {
+   "fieldname": "cr_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "width_2",
+   "fieldtype": "Data",
+   "label": "Total Width"
+  },
+  {
+   "fieldname": "cr_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hr_2",
+   "fieldtype": "Int",
+   "label": "Total Height"
+  },
+  {
+   "fieldname": "cr_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seal_3",
+   "fieldtype": "Int",
+   "label": "Sealing Length Outer"
+  },
+  {
+   "fieldname": "cr_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seal_4",
+   "fieldtype": "Int",
+   "label": "Sealing Width Outer"
+  },
+  {
+   "fieldname": "cr_45",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "neck_2",
+   "fieldtype": "Int",
+   "label": "Nech Height"
+  },
+  {
+   "fieldname": "cr_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_3",
+   "fieldtype": "Int",
+   "label": "Bush Outer Dia(+)"
+  },
+  {
+   "fieldname": "cr_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_4",
+   "fieldtype": "Int",
+   "label": "Bush Outer Dia (-)"
+  },
+  {
+   "fieldname": "cr_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_h_1",
+   "fieldtype": "Int",
+   "label": "Bush Height"
+  },
+  {
+   "fieldname": "cr_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fit_2",
+   "fieldtype": "Int",
+   "label": "Fitment with Cont & Lid"
+  },
+  {
+   "fieldname": "cr_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wg_2",
+   "fieldtype": "Int",
+   "label": "Weight (Gms)"
+  },
+  {
+   "fieldname": "scb_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cr_24",
+   "fieldtype": "Column Break",
+   "label": "Sample 2 (11:00 to 02:00)"
+  },
+  {
+   "fieldname": "cr_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lengh_3",
+   "fieldtype": "Int",
+   "label": "Total Length"
+  },
+  {
+   "fieldname": "cr_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wid_4",
+   "fieldtype": "Int",
+   "label": "Total Width"
+  },
+  {
+   "fieldname": "cr_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "he_4",
+   "fieldtype": "Int",
+   "label": "Total Height"
+  },
+  {
+   "fieldname": "cr_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seal_8",
+   "fieldtype": "Int",
+   "label": "Sealing Length Outer"
+  },
+  {
+   "fieldname": "cr_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seal_9",
+   "fieldtype": "Int",
+   "label": "Sealing Width Outer"
+  },
+  {
+   "fieldname": "cr_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "neck_5",
+   "fieldtype": "Int",
+   "label": "Neck Height"
+  },
+  {
+   "fieldname": "cr_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_7",
+   "fieldtype": "Int",
+   "label": "Bush Outer Dia (+)"
+  },
+  {
+   "fieldname": "cr_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_8",
+   "fieldtype": "Int",
+   "label": "Bush Outer Dia (-)"
+  },
+  {
+   "fieldname": "cr_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_9",
+   "fieldtype": "Int",
+   "label": "Bush Height"
+  },
+  {
+   "fieldname": "cr_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ftit_6",
+   "fieldtype": "Int",
+   "label": "Fitment With Cont & Lid"
+  },
+  {
+   "fieldname": "cr_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weg_1",
+   "fieldtype": "Int",
+   "label": "Weight (Gms)"
+  },
+  {
+   "fieldname": "scb_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cr_36",
+   "fieldtype": "Column Break",
+   "label": "Sample 3 (02:00 to 05:00)"
+  },
+  {
+   "fieldname": "cr_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "leng_4",
+   "fieldtype": "Int",
+   "label": "Total Length"
+  },
+  {
+   "fieldname": "cr_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wid_5",
+   "fieldtype": "Int",
+   "label": "Total Width"
+  },
+  {
+   "fieldname": "cr_39",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "heg_6",
+   "fieldtype": "Int",
+   "label": "Total Height"
+  },
+  {
+   "fieldname": "cr_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "leng_7",
+   "fieldtype": "Int",
+   "label": "Sealing Length Outer"
+  },
+  {
+   "fieldname": "cr_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seal_5",
+   "fieldtype": "Int",
+   "label": "Sealing Width Outer"
+  },
+  {
+   "fieldname": "cr_42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "he_8",
+   "fieldtype": "Int",
+   "label": "Neck Height"
+  },
+  {
+   "fieldname": "cr_43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_18",
+   "fieldtype": "Int",
+   "label": "Bush Outer Dia (+)"
+  },
+  {
+   "fieldname": "cr_44",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_19",
+   "fieldtype": "Int",
+   "label": "Bush Outer Dia (-)"
+  },
+  {
+   "fieldname": "cr_46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_21",
+   "fieldtype": "Int",
+   "label": "Bush Height"
+  },
+  {
+   "fieldname": "cr_47",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_22",
+   "fieldtype": "Int",
+   "label": "Fitment With Cont & Lid"
+  },
+  {
+   "fieldname": "cr_48",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wgi_10",
+   "fieldtype": "Int",
+   "label": "Weight (Gms)"
+  },
+  {
+   "fieldname": "sb_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cr_49",
+   "fieldtype": "Column Break",
+   "label": "Sample 4 (05:00 to 08:00)"
+  },
+  {
+   "fieldname": "cr_50",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lengh_23",
+   "fieldtype": "Int",
+   "label": "Total Length"
+  },
+  {
+   "fieldname": "cr_51",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wid_11",
+   "fieldtype": "Int",
+   "label": "Total Width"
+  },
+  {
+   "fieldname": "cr_52",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "he_12",
+   "fieldtype": "Int",
+   "label": "Total Height"
+  },
+  {
+   "fieldname": "cr_53",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "out_1",
+   "fieldtype": "Int",
+   "label": "Sealing Length Outer"
+  },
+  {
+   "fieldname": "cr_54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "out_2",
+   "fieldtype": "Int",
+   "label": "Sealing Width Outer"
+  },
+  {
+   "fieldname": "cr_55",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "neck_7",
+   "fieldtype": "Int",
+   "label": "Neck Height"
+  },
+  {
+   "fieldname": "cr_56",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dia_1",
+   "fieldtype": "Int",
+   "label": "Bush Outer Dia (+)"
+  },
+  {
+   "fieldname": "cr_57",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dia_2",
+   "fieldtype": "Int",
+   "label": "Bush Outer Dia (-)"
+  },
+  {
+   "fieldname": "cr_58",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bush_14",
+   "fieldtype": "Int",
+   "label": "Bush Height"
+  },
+  {
+   "fieldname": "cr_59",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fit_30",
+   "fieldtype": "Int",
+   "label": "Fitment With Cont & Lid"
+  },
+  {
+   "fieldname": "cr_60",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wg_4",
+   "fieldtype": "Int",
+   "label": "Weight (Gms)"
+  },
+  {
+   "fieldname": "scb_45",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "check_1",
+   "fieldtype": "Data",
+   "label": "Checked By"
+  },
+  {
+   "fieldname": "cr_61",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "apprvo_1",
+   "fieldtype": "Data",
+   "label": "Approved By"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Online Inspection Report",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-02 11:36:52.517677",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Online Inspection Report",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

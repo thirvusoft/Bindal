@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "creation": "2025-02-05 12:25:05.906794",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "qty",
+  "barcode"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Item Name",
+   "options": "Item"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Data",
+   "label": "Qty"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "barcode",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Barcode",
+   "no_copy": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-02 11:36:43.801309",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Scrap Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

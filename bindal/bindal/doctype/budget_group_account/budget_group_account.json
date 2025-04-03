@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-03 17:23:47.511701",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "group_account",
+  "budget_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "group_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Group Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "budget_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Budget Amount"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-03 17:24:39.139760",
+ "modified_by": "Administrator",
+ "module": "Bindal",
+ "name": "Budget Group Account",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

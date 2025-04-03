@@ -50,7 +50,8 @@ doctype_js = {
             "Payroll Entry": "bindal/custom/js/payroll_entry.js",
             "Salary Structure": "bindal/custom/js/salary_structure.js",
             "Salary Slip": "bindal/custom/js/salary_slip.js",
-			"Purchase Receipt": "bindal/custom/js/purchase_receipt.js"
+			"Purchase Receipt": "bindal/custom/js/purchase_receipt.js",
+            "Budget": "bindal/custom/js/budget.js"
 			}
 
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}

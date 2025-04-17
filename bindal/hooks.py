@@ -152,6 +152,9 @@ doc_events = {
 	},
     "Purchase Receipt": {
         'validate': "bindal.bindal.custom.py.accounting_dimension.set_accounting_dimension",
+	},
+    "Delivery Note": {
+        'validate': "bindal.bindal.custom.py.accounting_dimension.set_accounting_dimension",
 	}
 }
 

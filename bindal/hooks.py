@@ -126,7 +126,8 @@ doc_events = {
 		],
         "on_cancel": [
             "bindal.bindal.custom.py.sales_order.update_completed_and_requested_qty"
-		]
+		],
+        'validate': "bindal.bindal.custom.py.accounting_dimension.set_accounting_dimension"
 	},
 	"User": {
 		"validate": "bindal.bindal.custom.py.user.role_login_updation"
@@ -142,8 +143,22 @@ doc_events = {
 	},
     "Salary Slip": {
         "autoname": "bindal.bindal.custom.py.salary_slip.create_name"
+	},
+    "Purchase Invoice": {
+        'validate': "bindal.bindal.custom.py.accounting_dimension.set_accounting_dimension",
+	},
+    "Sales Invoice": {
+        'validate': "bindal.bindal.custom.py.accounting_dimension.set_accounting_dimension",
+	},
+    "Purchase Receipt": {
+        'validate': "bindal.bindal.custom.py.accounting_dimension.set_accounting_dimension",
+	},
+    "Delivery Note": {
+        'validate': "bindal.bindal.custom.py.accounting_dimension.set_accounting_dimension",
 	}
 }
+
+
 
 override_doctype_class = {
 	"Material Request": "bindal.bindal.custom.py.material_request._MaterialRequest" ,

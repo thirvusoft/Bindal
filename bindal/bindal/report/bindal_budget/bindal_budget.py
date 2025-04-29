@@ -233,60 +233,60 @@ def get_target_distribution_details(filters):
 
 
 # Get actual details from gl entry
-def get_actual_details(name, filters):
-	budget_against = frappe.scrub(filters.get("budget_against"))
-	cond = ""
+# def get_actual_details(name, filters):
+# 	budget_against = frappe.scrub(filters.get("budget_against"))
+# 	cond = ""
 
-	if filters.get("budget_against") == "Cost Center":
-		cc_lft, cc_rgt = frappe.db.get_value("Cost Center", name, ["lft", "rgt"])
-		cond = f"""
-				and lft >= "{cc_lft}"
-				and rgt <= "{cc_rgt}"
-			"""
+# 	if filters.get("budget_against") == "Cost Center":
+# 		cc_lft, cc_rgt = frappe.db.get_value("Cost Center", name, ["lft", "rgt"])
+# 		cond = f"""
+# 				and lft >= "{cc_lft}"
+# 				and rgt <= "{cc_rgt}"
+# 			"""
 
-	ac_details = frappe.db.sql(
-		f"""
-			select
-				gl.account,
-				gl.debit,
-				gl.credit,
-				gl.fiscal_year,
-				MONTHNAME(gl.posting_date) as month_name,
-				b.{budget_against} as budget_against
-			from
-				`tabGL Entry` gl,
-				`tabBudget Account` ba,
-				`tabBudget` b
-			where
-				b.name = ba.parent
-				and b.docstatus = 1
-				and ba.account=gl.account
-				and b.{budget_against} = gl.{budget_against}
-				and gl.fiscal_year between %s and %s
-				and gl.is_cancelled = 0
-				and b.{budget_against} = %s
-				and exists(
-					select
-						name
-					from
-						`tab{filters.budget_against}`
-					where
-						name = gl.{budget_against}
-						{cond}
-				)
-				group by
-					gl.name
-				order by gl.fiscal_year
-		""",
-		(filters.from_fiscal_year, filters.to_fiscal_year, name),
-		as_dict=1,
-	)
+# 	ac_details = frappe.db.sql(
+# 		f"""
+# 			select
+# 				gl.account,
+# 				gl.debit,
+# 				gl.credit,
+# 				gl.fiscal_year,
+# 				MONTHNAME(gl.posting_date) as month_name,
+# 				b.{budget_against} as budget_against
+# 			from
+# 				`tabGL Entry` gl,
+# 				`tabBudget Account` ba,
+# 				`tabBudget` b
+# 			where
+# 				b.name = ba.parent
+# 				and b.docstatus = 1
+# 				and ba.account=gl.account
+# 				and b.{budget_against} = gl.{budget_against}
+# 				and gl.fiscal_year between %s and %s
+# 				and gl.is_cancelled = 0
+# 				and b.{budget_against} = %s
+# 				and exists(
+# 					select
+# 						name
+# 					from
+# 						`tab{filters.budget_against}`
+# 					where
+# 						name = gl.{budget_against}
+# 						{cond}
+# 				)
+# 				group by
+# 					gl.name
+# 				order by gl.fiscal_year
+# 		""",
+# 		(filters.from_fiscal_year, filters.to_fiscal_year, name),
+# 		as_dict=1,
+# 	)
 
-	cc_actual_details = {}
-	for d in ac_details:
-		cc_actual_details.setdefault(d.account, []).append(d)
+# 	cc_actual_details = {}
+# 	for d in ac_details:
+# 		cc_actual_details.setdefault(d.account, []).append(d)
 
-	return cc_actual_details
+# 	return cc_actual_details
 
 
 def get_dimension_account_month_map(filters):
@@ -314,7 +314,7 @@ def get_dimension_account_month_map(filters):
 
 			# ✅ New logic for actual debit
 			child_accounts = get_child_accounts(ccd.account)
-			debit_sum = get_actual_debit_sum(child_accounts, month, ccd.fiscal_year, filters.get("company"))
+			debit_sum = get_actual_debit_sum(ccd.budget_against, child_accounts, month, ccd.fiscal_year, filters.get("company"))
 			tav_dict.actual = debit_sum
 
 	return cam_map
@@ -330,7 +330,7 @@ def get_child_accounts(account):
         accounts.extend(get_child_accounts(child))
     return accounts
 
-def get_actual_debit_sum(accounts, month, fiscal_year, company):
+def get_actual_debit_sum(budget_against_value, accounts, month, fiscal_year, company):
     month_number = datetime.datetime.strptime(month, "%B").month
     start_date = datetime.date(int(fiscal_year.split('-')[0]), month_number, 1)
     end_date = frappe.utils.get_last_day(start_date)
@@ -341,7 +341,8 @@ def get_actual_debit_sum(accounts, month, fiscal_year, company):
             "account": ["in", accounts],
             "posting_date": ["between", [start_date, end_date]],
             "company": company,
-			"is_cancelled": 0
+			"is_cancelled": 0,
+			"cost_center": budget_against_value
         },
         "sum(debit)"
     ) or 0.0

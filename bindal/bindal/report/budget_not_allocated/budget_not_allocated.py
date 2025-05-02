@@ -62,9 +62,15 @@ def get_data(filters=None):
 
     account_names = [acc.name for acc in group_accounts]
 
+    budgets = frappe.get_all(
+        "Budget",
+        filters={"cost_center": filters['costcenter']},
+        pluck="name"
+    )
+
     budget_accounts = frappe.get_all(
         "Budget Account",
-        filters={"account": ["in", account_names], "docstatus": 1},
+        filters={"account": ["in", account_names], "docstatus": 1, 'parent':['in', budgets]},
         fields=["account", "budget_amount"]
     )
 

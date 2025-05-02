@@ -88,7 +88,7 @@ def get_data(filters=None):
         if acc.name in budget_dict:
             # Calculate Actual for each account and cost center
             for cost_center in cost_center_names:
-                actual_amount = get_actual_amount(acc.name, cost_center, filters["from_fiscal_year"], filters["to_fiscal_year"], filters["company"])
+                actual_amount = get_actual_amount(acc.name, cost_center, filters["from_fiscal_year"], filters["from_date"],filters["to_date"], filters["company"])
                 variance = budget_dict[acc.name] - actual_amount
 
                 # Append the data for the account and cost center
@@ -105,7 +105,7 @@ def get_data(filters=None):
         else:
             # If there's no budget for this account, set budget to 0 and calculate actual and variance
             for cost_center in cost_center_names:
-                actual_amount = get_actual_amount(acc.name, cost_center, filters["from_fiscal_year"], filters["to_fiscal_year"], filters["company"])
+                actual_amount = get_actual_amount(acc.name, cost_center, filters["from_fiscal_year"], filters["from_date"],filters["to_date"], filters["company"])
                 account_data.append({
                     "account": acc.name,
                     "account_name": acc.account_name,
@@ -119,11 +119,12 @@ def get_data(filters=None):
 
     return account_data
 
-def get_actual_amount(account, cost_center, from_fiscal_year, to_fiscal_year, company):
+def get_actual_amount(account, cost_center, from_fiscal_year, from_date, to_date, company):
     child_accounts = get_child_accounts(account)
 
-    from_date = get_fiscal_year_start_date(from_fiscal_year)
-    to_date = get_fiscal_year_end_date(to_fiscal_year)
+    fiscal_year = from_fiscal_year
+    # from_date = get_fiscal_year_start_date(from_fiscal_year)
+    # to_date = get_fiscal_year_end_date(to_fiscal_year)
 
     actual_debit = frappe.db.sql("""
         SELECT SUM(debit) FROM `tabGL Entry`
@@ -132,12 +133,14 @@ def get_actual_amount(account, cost_center, from_fiscal_year, to_fiscal_year, co
         AND company = %(company)s
         AND posting_date BETWEEN %(from_date)s AND %(to_date)s
         AND is_cancelled = 0
+        AND fiscal_year = %(fiscal_year)s
     """, {
         "accounts": tuple(child_accounts),
         "cost_center": cost_center,
         "company": company,
         "from_date": from_date,
-        "to_date": to_date
+        "to_date": to_date,
+        "fiscal_year": fiscal_year
     })[0][0] or 0.0
 
     return actual_debit
@@ -163,24 +166,3 @@ def get_child_accounts(account):
     for child in child_accounts:
         accounts.extend(get_child_accounts(child))
     return accounts
-
-
-def get_actual_debit_sum(budget_against_value, accounts, month, fiscal_year, company):
-    month_number = datetime.datetime.strptime(month, "%B").month
-    start_date = datetime.date(int(fiscal_year.split('-')[0]), month_number, 1)
-    end_date = frappe.utils.get_last_day(start_date)
-
-    total_debit = frappe.db.get_value(
-        "GL Entry",
-        {
-            "account": ["in", accounts],
-            "posting_date": ["between", [start_date, end_date]],
-            "company": company,
-			"is_cancelled": 0,
-			"cost_center": budget_against_value
-        },
-        "sum(debit)"
-    ) or 0.0
-
-    return total_debit
-

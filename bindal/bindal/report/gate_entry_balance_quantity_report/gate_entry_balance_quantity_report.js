@@ -3,7 +3,8 @@
 /* eslint-disable */
 
 frappe.query_reports["Gate Entry Balance Quantity Report"] = {
-	"filters": [{
+	"filters": [
+		{
 		"fieldname": "purchase_order",
 		"label": __("Purchase Order"),
 		"fieldtype": "Link",

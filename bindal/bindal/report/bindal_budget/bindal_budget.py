@@ -232,62 +232,6 @@ def get_target_distribution_details(filters):
 	return target_details
 
 
-# Get actual details from gl entry
-# def get_actual_details(name, filters):
-# 	budget_against = frappe.scrub(filters.get("budget_against"))
-# 	cond = ""
-
-# 	if filters.get("budget_against") == "Cost Center":
-# 		cc_lft, cc_rgt = frappe.db.get_value("Cost Center", name, ["lft", "rgt"])
-# 		cond = f"""
-# 				and lft >= "{cc_lft}"
-# 				and rgt <= "{cc_rgt}"
-# 			"""
-
-# 	ac_details = frappe.db.sql(
-# 		f"""
-# 			select
-# 				gl.account,
-# 				gl.debit,
-# 				gl.credit,
-# 				gl.fiscal_year,
-# 				MONTHNAME(gl.posting_date) as month_name,
-# 				b.{budget_against} as budget_against
-# 			from
-# 				`tabGL Entry` gl,
-# 				`tabBudget Account` ba,
-# 				`tabBudget` b
-# 			where
-# 				b.name = ba.parent
-# 				and b.docstatus = 1
-# 				and ba.account=gl.account
-# 				and b.{budget_against} = gl.{budget_against}
-# 				and gl.fiscal_year between %s and %s
-# 				and gl.is_cancelled = 0
-# 				and b.{budget_against} = %s
-# 				and exists(
-# 					select
-# 						name
-# 					from
-# 						`tab{filters.budget_against}`
-# 					where
-# 						name = gl.{budget_against}
-# 						{cond}
-# 				)
-# 				group by
-# 					gl.name
-# 				order by gl.fiscal_year
-# 		""",
-# 		(filters.from_fiscal_year, filters.to_fiscal_year, name),
-# 		as_dict=1,
-# 	)
-
-# 	cc_actual_details = {}
-# 	for d in ac_details:
-# 		cc_actual_details.setdefault(d.account, []).append(d)
-
-# 	return cc_actual_details
-
 
 def get_dimension_account_month_map(filters):
 	dimension_target_details = get_dimension_target_details(filters)

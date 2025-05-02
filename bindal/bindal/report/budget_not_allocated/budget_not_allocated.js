@@ -21,17 +21,22 @@ frappe.query_reports["Budget Not Allocated"] = {
 			"reqd": 1
 		},
 		{
-			"fieldname": "from_fiscal_year",
-			"label": __("From Fiscal Year"),
-			"fieldtype": "Link",
-			"options": "Fiscal Year",
-			"default": erpnext.utils.get_fiscal_year(frappe.datetime.get_today()),
+			"fieldname": "from_date",
+			"label": __("From Date"),
+			"fieldtype": "Date",
+			"default": frappe.datetime.month_start(),
 			"width": "100",
-			"reqd": 1
 		},
 		{
-			"fieldname": "to_fiscal_year",
-			"label": __("To Fiscal Year"),
+			"fieldname": "to_date",
+			"label": __("To Date"),
+			"fieldtype": "Date",
+			"default": frappe.datetime.month_end(),
+			"width": "100",
+		},
+		{
+			"fieldname": "from_fiscal_year",
+			"label": __("Fiscal Year"),
 			"fieldtype": "Link",
 			"options": "Fiscal Year",
 			"default": erpnext.utils.get_fiscal_year(frappe.datetime.get_today()),

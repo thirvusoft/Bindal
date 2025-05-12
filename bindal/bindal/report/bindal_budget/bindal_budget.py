@@ -291,7 +291,19 @@ def get_actual_debit_sum(budget_against_value, accounts, month, fiscal_year, com
         "sum(debit)"
     ) or 0.0
 
-    return total_debit
+    total_credit = frappe.db.get_value(
+        "GL Entry",
+        {
+            "account": ["in", accounts],
+            "posting_date": ["between", [start_date, end_date]],
+            "company": company,
+			"is_cancelled": 0,
+			"cost_center": budget_against_value
+        },
+        "sum(credit)"
+    ) or 0.0
+
+    return total_debit - total_credit
 
 
 def get_fiscal_years(filters):

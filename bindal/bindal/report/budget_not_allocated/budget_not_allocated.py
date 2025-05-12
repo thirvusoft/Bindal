@@ -143,7 +143,24 @@ def get_actual_amount(account, cost_center, from_fiscal_year, from_date, to_date
         "fiscal_year": fiscal_year
     })[0][0] or 0.0
 
-    return actual_debit
+    actual_credit = frappe.db.sql("""
+        SELECT SUM(credit) FROM `tabGL Entry`
+        WHERE account IN %(accounts)s
+        AND cost_center = %(cost_center)s
+        AND company = %(company)s
+        AND posting_date BETWEEN %(from_date)s AND %(to_date)s
+        AND is_cancelled = 0
+        AND fiscal_year = %(fiscal_year)s
+    """, {
+        "accounts": tuple(child_accounts),
+        "cost_center": cost_center,
+        "company": company,
+        "from_date": from_date,
+        "to_date": to_date,
+        "fiscal_year": fiscal_year
+    })[0][0] or 0.0
+
+    return actual_debit - actual_credit
 
 
 def get_fiscal_year_start_date(fiscal_year):

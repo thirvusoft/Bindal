@@ -179,7 +179,7 @@
   {
    "fieldname": "period",
    "fieldtype": "Data",
-   "label": "Period"
+   "label": "Lot No"
   },
   {
    "fieldname": "conducted_by",
@@ -790,7 +790,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-25 16:03:21.213827",
+ "modified": "2025-08-12 12:09:58.938202",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "High Voltage Test",
@@ -838,6 +838,7 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1,
  "track_seen": 1
 }

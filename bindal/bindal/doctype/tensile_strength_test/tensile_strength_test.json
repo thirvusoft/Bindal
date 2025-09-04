@@ -110,7 +110,7 @@
   {
    "fieldname": "period",
    "fieldtype": "Data",
-   "label": "Period"
+   "label": "Lot No"
   },
   {
    "fieldname": "conducted_by",
@@ -272,16 +272,17 @@
    "fieldtype": "Section Break"
   },
   {
-   "default": "Min.23 mpa",
+   "default": "Min.18 mpa",
    "fieldname": "sepc",
    "fieldtype": "Read Only",
    "label": "Spec-"
   },
   {
-   "default": "1Kgf/m2= 9.8065 j/m",
+   "default": "18 to 28 mpa",
    "fieldname": "note",
-   "fieldtype": "Read Only",
-   "label": "Note:-"
+   "fieldtype": "Data",
+   "label": "Note:-",
+   "read_only": 1
   },
   {
    "default": "TS @p1/9.8065",
@@ -331,10 +332,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-25 16:02:29.557012",
+ "modified": "2025-08-14 18:29:08.146688",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Tensile Strength Test",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -377,5 +379,6 @@
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }

@@ -85,7 +85,7 @@
   {
    "fieldname": "period",
    "fieldtype": "Data",
-   "label": "Period"
+   "label": "Lot No"
   },
   {
    "fieldname": "conducted_by",
@@ -185,10 +185,11 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-16 18:55:18.280098",
+ "modified": "2025-08-12 12:08:31.303491",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Drop Test",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -221,6 +222,7 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1,
  "track_seen": 1
 }

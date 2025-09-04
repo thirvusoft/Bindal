@@ -15,6 +15,7 @@
   "material",
   "grade",
   "lot_no",
+  "invoice_no",
   "column_break_7",
   "test_method",
   "applied_load",
@@ -504,11 +505,16 @@
    "fieldtype": "Select",
    "label": "Result",
    "options": "Pass\nFail"
+  },
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "label": "Invoice No"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-16 15:15:22.966430",
+ "modified": "2025-08-12 12:09:08.449395",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "MFI Test Report",
@@ -556,6 +562,7 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1,
  "track_seen": 1
 }

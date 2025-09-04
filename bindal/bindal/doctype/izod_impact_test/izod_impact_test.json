@@ -106,7 +106,7 @@
   {
    "fieldname": "period",
    "fieldtype": "Data",
-   "label": "Period"
+   "label": "Lot No"
   },
   {
    "fieldname": "conducted_by",
@@ -309,10 +309,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-12-08 14:50:42.058303",
+ "modified": "2025-08-12 12:10:28.131103",
  "modified_by": "Administrator",
  "module": "Bindal",
  "name": "Izod Impact Test",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -342,5 +343,6 @@
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }

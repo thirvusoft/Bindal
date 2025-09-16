@@ -15,5 +15,8 @@ frappe.ui.form.on("Purchase Order", {
         else if(frm.doc.naming_series == 'U4-PO26-.####') {
           frm.set_value('branch', 'Unit-4')
         }
+        else if(frm.doc.naming_series == 'WH1-PO26-.####') {
+          frm.set_value('branch', 'Warehouse U1')
+        }
       }
 });

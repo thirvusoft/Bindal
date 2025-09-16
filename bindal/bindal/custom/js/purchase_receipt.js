@@ -10,7 +10,8 @@ frappe.ui.form.on("Purchase Receipt", {
             'U1-MRDN26-.####': 'Unit-1',
             'U2-MRDN26-.####': 'Unit-2',
             'U3-MRDN26-.####': 'Unit-3',
-            'U4-MRDN26-.####': 'Unit-4'
+            'U4-MRDN26-.####': 'Unit-4',
+            "WH1-MR26-.####": "Warehouse U1"
         };
 
         if (branchMapping[frm.doc.naming_series]) {

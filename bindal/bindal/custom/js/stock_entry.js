@@ -16,6 +16,7 @@ frappe.ui.form.on("Stock Entry", {
             'U2-MSTE26-.####': 'Unit-2',
             'U3-MSTE26-.####': 'Unit-3',
             'U4-MSTE26-.####': 'Unit-4',
+            'WH1-MSTE26-.####': 'Warehouse U1'
         };
 
         if (branchMapping[frm.doc.naming_series]) {

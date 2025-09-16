@@ -21,7 +21,8 @@ frappe.ui.form.on("Delivery Note", {
             'U1-CR26-.####': 'Unit-1',
             'U2-CR26-.####': 'Unit-2',
             'U3-CR26-.####': 'Unit-3',
-            'U4-CR26-.####': 'Unit-4'
+            'U4-CR26-.####': 'Unit-4',
+            'WH1-DLIN26-.####': 'Warehouse U1'
         };
 
         if (branchMapping[frm.doc.naming_series]) {

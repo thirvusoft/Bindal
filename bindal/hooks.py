@@ -151,7 +151,10 @@ doc_events = {
         'validate': "bindal.bindal.custom.py.accounting_dimension.set_accounting_dimension",
 	},
     "Purchase Receipt": {
-        'validate': "bindal.bindal.custom.py.accounting_dimension.set_accounting_dimension",
+        'validate': ["bindal.bindal.custom.py.accounting_dimension.set_accounting_dimension",
+                     "bindal.bindal.custom.py.purchase_receipt.validate"
+                    ]
+        
 	},
     "Delivery Note": {
         'validate': "bindal.bindal.custom.py.accounting_dimension.set_accounting_dimension",
@@ -215,7 +218,7 @@ scheduler_events = {
 jinja = {
 	"methods": [
 		"bindal.bindal.custom.py.work_order.barcode",
-		"bindal.bindal.custom.py.work_order.get_qr_code"
-
+		"bindal.bindal.custom.py.work_order.get_qr_code",
+		"bindal.bindal.custom.py.sales_invoice.get_tax_table_pos"
 	]
 }

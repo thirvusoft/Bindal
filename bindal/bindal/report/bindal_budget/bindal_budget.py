@@ -276,7 +276,19 @@ def get_child_accounts(account):
 
 def get_actual_debit_sum(budget_against_value, accounts, month, fiscal_year, company):
     month_number = datetime.datetime.strptime(month, "%B").month
-    start_date = datetime.date(int(fiscal_year.split('-')[0]), month_number, 1)
+
+    fiscal = frappe.get_doc("Fiscal Year", fiscal_year)
+
+    fy_start = fiscal.year_start_date
+    fy_end = fiscal.year_end_date
+
+    # decide which year the month belongs to
+    if month_number >= fy_start.month:
+        year = fy_start.year
+    else:
+        year = fy_end.year
+
+    start_date = datetime.date(year, month_number, 1)
     end_date = frappe.utils.get_last_day(start_date)
 
     total_debit = frappe.db.get_value(
@@ -285,8 +297,8 @@ def get_actual_debit_sum(budget_against_value, accounts, month, fiscal_year, com
             "account": ["in", accounts],
             "posting_date": ["between", [start_date, end_date]],
             "company": company,
-			"is_cancelled": 0,
-			"cost_center": budget_against_value
+            "is_cancelled": 0,
+            "cost_center": budget_against_value
         },
         "sum(debit)"
     ) or 0.0
@@ -297,14 +309,13 @@ def get_actual_debit_sum(budget_against_value, accounts, month, fiscal_year, com
             "account": ["in", accounts],
             "posting_date": ["between", [start_date, end_date]],
             "company": company,
-			"is_cancelled": 0,
-			"cost_center": budget_against_value
+            "is_cancelled": 0,
+            "cost_center": budget_against_value
         },
         "sum(credit)"
     ) or 0.0
 
     return total_debit - total_credit
-
 
 def get_fiscal_years(filters):
 	fiscal_year = frappe.db.sql(

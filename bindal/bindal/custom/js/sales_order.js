@@ -27,11 +27,11 @@ frappe.ui.form.on("Sales Order", {
     },
 	naming_series: function(frm) {
 		const branchMapping = {
-            'HO-SO26-.####': 'Head Office',
-            'U1-SO26-.####': 'Unit-1',
-            'U2-SO26-.####': 'Unit-2',
-            'U3-SO26-.####': 'Unit-3',
-            'U4-SO26-.####': 'Unit-4'
+            'HO-SO27-.####': 'Head Office',
+            'U1-SO27-.####': 'Unit-1',
+            'U2-SO27-.####': 'Unit-2',
+            'U3-SO27-.####': 'Unit-3',
+            'U4-SO27-.####': 'Unit-4'
         };
 
         if (branchMapping[frm.doc.naming_series]) {

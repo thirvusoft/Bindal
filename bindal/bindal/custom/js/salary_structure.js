@@ -2,11 +2,11 @@ frappe.ui.form.on("Salary Structure", {
 
     custom_naming_series: function(frm) {
         const branchMapping = {
-            'HO-SS26-.####': 'Head Office',
-            'U1-SS26-.####': 'Unit-1',
-            'U2-SS26-.####': 'Unit-2',
-            'U3-SS26-.####': 'Unit-3',
-            'U4-SS26-.####': 'Unit-4'
+            'HO-SS27-.####': 'Head Office',
+            'U1-SS27-.####': 'Unit-1',
+            'U2-SS27-.####': 'Unit-2',
+            'U3-SS27-.####': 'Unit-3',
+            'U4-SS27-.####': 'Unit-4'
         };
 
         if (branchMapping[frm.doc.custom_naming_series]) {

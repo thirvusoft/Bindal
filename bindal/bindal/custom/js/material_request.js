@@ -18,11 +18,11 @@ frappe.ui.form.on("Material Request", {
 	},
     naming_series: function(frm) {
         const branchMapping = {
-            'HO-MRQ26-.####': 'Head Office',
-            'U1-MRQ26-.####': 'Unit-1',
-            'U2-MRQ26-.####': 'Unit-2',
-            'U3-MRQ26-.####': 'Unit-3',
-            'U4-MRQ26-.####': 'Unit-4'
+            'HO-MRQ27-.####': 'Head Office',
+            'U1-MRQ27-.####': 'Unit-1',
+            'U2-MRQ27-.####': 'Unit-2',
+            'U3-MRQ27-.####': 'Unit-3',
+            'U4-MRQ27-.####': 'Unit-4'
         };
         
         if (branchMapping[frm.doc.naming_series]) {

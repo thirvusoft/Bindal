@@ -13,16 +13,16 @@ frappe.ui.form.on('Sales Invoice', {
     },
     naming_series: function(frm) {
         const branchMapping = {
-            'BHO-2526-.####': 'Head Office',
-            'B1-2526-.####': 'Unit-1',
-            'B2-2526-.####': 'Unit-2',
-            'B3-2526-.####': 'Unit-3',
-            'B4-2526-.####': 'Unit-4',
-            'BHO-CR-F26-.####': 'Head Office',
-            'B1-CR-F26-.####': 'Unit-1',
-            'B2-CR-F26-.####': 'Unit-2',
-            'B3-CR-F26-.####': 'Unit-3',
-            'B4-CR-F26-.####': 'Unit-4'
+            'BHO-2627-.####': 'Head Office',
+            'B1-2627-.####': 'Unit-1',
+            'B2-2627-.####': 'Unit-2',
+            'B3-2627-.####': 'Unit-3',
+            'B4-2627-.####': 'Unit-4',
+            'BHO-CR-F27-.####': 'Head Office',
+            'B1-CR-F27-.####': 'Unit-1',
+            'B2-CR-F27-.####': 'Unit-2',
+            'B3-CR-F27-.####': 'Unit-3',
+            'B4-CR-F27-.####': 'Unit-4'
         };
 
         if (branchMapping[frm.doc.naming_series]) {

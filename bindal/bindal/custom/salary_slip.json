@@ -45,7 +45,7 @@
    "name": "Salary Slip-custom_naming_series",
    "no_copy": 0,
    "non_negative": 0,
-   "options": "\nHO-SALSLIP26-.####\nU1-SALSLIP26-.####\nU2-SALSLIP26-.####\nU3-SALSLIP26-.####\nU4-SALSLIP26-.####",
+   "options": "\nHO-SALSLIP27-.####\nU1-SALSLIP27-.####\nU2-SALSLIP27-.####\nU3-SALSLIP27-.####\nU4-SALSLIP27-.####",
    "owner": "Administrator",
    "permlevel": 0,
    "placeholder": null,
